@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="nl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tactical Guardian | Full-Service Ongediertebestrijding Antwerpen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "on-primary-fixed": "#001c38",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "on-surface": "#191c1e",
+                        "surface-container-high": "#e6e8ea",
+                        "outline": "#73777f",
+                        "on-tertiary-fixed": "#311300",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary": "#3e1a00",
+                        "surface-container-highest": "#e0e3e5",
+                        "outline-variant": "#c3c6cf",
+                        "tertiary-container": "#5e2c00",
+                        "secondary": "#b6171e",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fd820d",
+                        "surface-tint": "#426086",
+                        "surface-dim": "#d8dadc",
+                        "inverse-primary": "#abc8f4",
+                        "surface-variant": "#e0e3e5",
+                        "surface": "#f8f9fb",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1b3b5f",
+                        "on-primary-container": "#88a6cf",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-fixed-variant": "#2a486d",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-fixed-variant": "#930010",
+                        "on-secondary-fixed": "#410003",
+                        "secondary-container": "#da3433",
+                        "secondary-fixed": "#ffdad6",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f8f9fb",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#abc8f4",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d3e4ff",
+                        "primary": "#002547",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#ffb3ac",
+                        "background": "#f8f9fb",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-mesh {
+            background-color: #f8f9fb;
+            background-image: radial-gradient(at 0% 0%, rgba(0, 37, 71, 0.05) 0px, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(182, 23, 30, 0.03) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface bg-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black tracking-tighter text-blue-900 dark:text-blue-200">
+                Tactical Guardian
+            </div>
+<div class="hidden md:flex items-center gap-8 font-sans antialiased font-medium tracking-tight">
+<a class="text-blue-900 dark:text-blue-400 border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="#onze-diensten">Diensten</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors" href="#expertise">Expertise</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 dark:hover:text-blue-200 transition-colors" href="#lokale-service">Antwerpen Regio</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-white px-5 py-2.5 rounded font-bold flex items-center gap-2 hover:bg-secondary-container transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+                    Emergency Call
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-primary text-on-primary">
+<div class="absolute inset-0 opacity-20">
+<img alt="" class="w-full h-full object-cover" data-alt="Close-up of a massive Asian hornet nest hanging from a tree branch with intricate papery textures and moody lighting" src="https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+<div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-secondary px-4 py-1 text-xs font-black tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                    Full-Service Pest Control • Antwerpen
+                </div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.95]">
+                    Uw Tactische Partner voor <span class="text-on-primary-container">Elk Ongedierte</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-primary-container max-w-xl leading-relaxed">
+                    Van ratten tot de <span class="font-bold underline decoration-secondary">Aziatische hoornaar</span>; Tactical Guardian biedt gecertificeerde verdelging voor woningen en bedrijven met 2-uur responsgarantie.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-secondary hover:bg-secondary-container text-white px-8 py-4 text-lg font-bold rounded flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-secondary/20" href="tel:+3200000000">
+<span class="material-symbols-outlined" data-icon="emergency">emergency</span>
+                        Direct Verdelging Nodig?
+                    </a>
+<a class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 text-lg font-bold rounded flex items-center justify-center gap-3 transition-all" href="#onze-diensten">
+                        Al Onze Diensten
+                    </a>
+</div>
+</div>
+<div class="hidden lg:block">
+<div class="relative bg-surface-container-highest/10 backdrop-blur-xl p-2 rounded-xl border border-white/10">
+<img alt="" class="rounded-lg shadow-2xl" data-alt="Professional pest control technician in full white protective hazmat suit with headgear handling specialized equipment in a residential garden" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=800"/>
+<div class="absolute -bottom-6 -left-6 bg-white text-primary p-6 rounded shadow-2xl flex items-center gap-4">
+<div class="bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-3xl" data-icon="security">security</span>
+</div>
+<div>
+<div class="text-sm font-bold uppercase tracking-wider text-slate-500">Regio Antwerpen</div>
+<div class="text-lg font-black leading-none">100% Resultaat Garantie</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Services Section (Elevated) -->
+<section class="py-24 bg-surface-container-lowest px-6" id="onze-diensten">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Vakkundige Bestrijding van ELK Ongedierte</span>
+<h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter">Onze Expertise</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">
+                    Tactical Guardian is uw totaaloplossing. Of het nu gaat om kruipende insecten, knaagdieren of invasieve soorten, wij elimineren de bron en voorkomen herhaling.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Mice -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Muizen bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1581270023016-1b7ea9be8fad?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Muizen</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Effectieve bestrijding en preventie van muizenplagen in woningen en horeca.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Rats -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Ratten bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1718345641213-80cfe1424084?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Ratten</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Professionele rattenbestrijding met focus op hygiëne en structurele wering.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Cockroaches -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Kakkerlakken bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1611773236409-f3ee161007a1?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Kakkerlakken</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Grondige eliminatie van kakkerlakkenhaarden met geavanceerde gel-technologie.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Moles -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Mollen bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Mollen</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Bescherm uw gazon tegen mollenoverlast met onze bewezen vangtechnieken.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Bedbugs -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Bedwantsen bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1727198634627-645ef5356455?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Bedwantsen</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Hittebehandelingen en gerichte bestrijding voor een gegarandeerd resultaat.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Wasps -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Wespen bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1600366776060-2f7acc36760e?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Wespen &amp; Hoornaars</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Snel en veilig verwijderen van nesten, ook de invasieve Aziatische variant.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Ants -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Mieren bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1673954871760-8e6a3818ddff?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Mieren</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Oplossingen voor mierenplagen in keukens, terrassen en bedrijfspanden.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+<!-- Woodworms -->
+<div class="group bg-white rounded-xl border border-surface-container-high overflow-hidden hover:border-primary/20 hover:shadow-xl transition-all duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Houtworm bestrijding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1572362395634-04f7e0e8d9dd?auto=format&fit=crop&q=80&w=800"/>
+</div>
+<div class="p-8">
+<h3 class="text-xl font-bold text-primary mb-3">Houtwormen</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Preventieve en curatieve behandeling van houtwerk tegen houtaantasting.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" href="#">Lees meer <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hornet Focus (Problem/Solution) -->
+<section class="py-24 bg-surface px-6" id="hornaar-specialisme">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Specialisme: Aziatische Hoornaar</span>
+<h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter mt-2">
+                        Invasieve Dreiging Geëlimineerd.
+                    </h2>
+</div>
+<p class="text-on-surface-variant max-w-sm">
+                    Hoewel wij alle ongedierte bestrijden, vereist de Aziatische hoornaar een unieke tactische aanpak en gespecialiseerd materieel.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white p-10 rounded-xl flex flex-col justify-between min-h-[400px] shadow-sm hover:shadow-md transition-shadow group">
+<div class="space-y-4">
+<div class="bg-secondary/10 w-12 h-12 flex items-center justify-center rounded text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="warning">warning</span>
+</div>
+<h3 class="text-3xl font-bold text-primary">Aggressief &amp; Territoriaal</h3>
+<p class="text-lg text-on-surface-variant max-w-lg">
+                            De hoornaar valt in groep aan bij nestverstoring. Doe-het-zelf bestrijding is levensgevaarlijk. Wij beschikken over de juiste tactische bescherming.
+                        </p>
+</div>
+<div class="mt-8 overflow-hidden rounded-lg">
+<img alt="" class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Macro photography of an Asian hornet" src="https://images.unsplash.com/photo-1600366776060-2f7acc36760e?auto=format&fit=crop&q=80&w=800"/>
+</div>
+</div>
+<div class="bg-primary text-white p-10 rounded-xl flex flex-col justify-between shadow-lg">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-5xl text-on-primary-container" data-icon="eco">eco</span>
+<h3 class="text-3xl font-bold">Ecologische Impact</h3>
+<p class="text-on-primary-container">
+                            Deze exoot bedreigt onze inheemse bijenpopulatie. Door snelle interventie beschermen we de Antwerpse biodiversiteit.
+                        </p>
+</div>
+<div class="pt-10 flex items-center gap-2 font-bold text-secondary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+                        CERTIFIED EXPERT
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise Section -->
+<section class="py-24 bg-primary text-white overflow-hidden relative" id="expertise">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary/5 skew-x-12 translate-x-20"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl mb-4 text-secondary" data-icon="biotech">biotech</span>
+<h4 class="font-bold text-xl">Precisie Bestrijding</h4>
+<p class="text-sm text-on-primary-container mt-2">Gebruik van doelgerichte biociden die enkel het doelwit treffen.</p>
+</div>
+<div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl mb-4 text-secondary" data-icon="security">security</span>
+<h4 class="font-bold text-xl">24/7 Monitoring</h4>
+<p class="text-sm text-on-primary-container mt-2">Continu toezicht voor zakelijke klanten en horeca.</p>
+</div>
+</div>
+<div class="space-y-4 mt-8">
+<div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl mb-4 text-secondary" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h4 class="font-bold text-xl">High-Reach Materieel</h4>
+<p class="text-sm text-on-primary-container mt-2">Lansen en drones voor bestrijding op onbereikbare plaatsen.</p>
+</div>
+<div class="bg-white/5 p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-3xl mb-4 text-secondary" data-icon="policy">policy</span>
+<h4 class="font-bold text-xl">Conformiteit</h4>
+<p class="text-sm text-on-primary-container mt-2">Volledig gecertificeerd volgens Belgische en EU wetgeving.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Gecertificeerde Kwaliteit</span>
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none">
+                        Tactical Guardian <br/> Methode.
+                    </h2>
+<p class="text-xl text-on-primary-container leading-relaxed">
+                        Onze aanpak is gebaseerd op 'Integrated Pest Management'. We bestrijden niet alleen de symptomen, maar analyseren de oorzaak om een permanente oplossing te bieden voor elke ongedierte-uitdaging.
+                    </p>
+<div class="flex flex-wrap gap-8 py-6">
+<div class="text-center">
+<div class="text-4xl font-black text-white">100%</div>
+<div class="text-xs uppercase tracking-tighter text-secondary">Resultaatgarantie</div>
+</div>
+<div class="text-center border-l border-white/10 pl-8">
+<div class="text-4xl font-black text-white">2u</div>
+<div class="text-xs uppercase tracking-tighter text-secondary">Gem. Respons</div>
+</div>
+<div class="text-center border-l border-white/10 pl-8">
+<div class="text-4xl font-black text-white">10k+</div>
+<div class="text-xs uppercase tracking-tighter text-secondary">Interventies</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local & Trust Section -->
+<section class="py-24 bg-surface-container-low" id="lokale-service">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+<div class="flex-1 p-12 md:p-20 space-y-8">
+<h2 class="text-4xl font-black text-primary tracking-tighter">Lokale Service in Groot-Antwerpen</h2>
+<p class="text-lg text-on-surface-variant">
+                        Onze tactische teams zijn strategisch verspreid over de provincie voor een ultrasnelle interventie bij spoedgevallen.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Antwerpen Stad
+                        </div>
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Brasschaat
+                        </div>
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Schoten
+                        </div>
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Edegem
+                        </div>
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Wilrijk
+                        </div>
+<div class="flex items-center gap-2 font-medium text-primary">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                            Berchem
+                        </div>
+</div>
+<div class="pt-6">
+<button class="bg-primary text-white px-8 py-4 rounded font-bold hover:bg-primary-container transition-all">Check Beschikbaarheid</button>
+</div>
+</div>
+<div class="flex-1 relative min-h-[400px]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" data-alt="Map of Antwerp region" src="https://images.unsplash.com/photo-1565300480627-984f82c43518?auto=format&fit=crop&q=80&w=1200"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-grayscale-[0.5]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & FAQ -->
+<section class="py-24 bg-surface px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Pricing Side -->
+<div class="lg:col-span-5 space-y-10">
+<div class="bg-white border-t-4 border-secondary p-12 rounded shadow-2xl">
+<h3 class="text-2xl font-bold text-primary mb-2">Heldere Tarieven</h3>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-5xl font-black text-primary">€120</span>
+<span class="text-on-surface-variant font-medium">Vanaf / Incl. BTW</span>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="done_all">done_all</span> Grondige Inspectie</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="done_all">done_all</span> Volledige Verdelging</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="done_all">done_all</span> Wering Advies</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary" data-icon="done_all">done_all</span> 100% Herbezoek Garantie</li>
+</ul>
+<a class="block text-center bg-secondary text-white py-5 rounded font-black text-lg hover:bg-secondary-container transition-all" href="tel:+3200000000">
+                        BOEK DIRECT AFSPRAAK
+                    </a>
+</div>
+</div>
+<!-- FAQ Side -->
+<div class="lg:col-span-7 space-y-8">
+<h2 class="text-4xl font-black text-primary tracking-tighter">Veelgestelde Vragen</h2>
+<div class="space-y-4">
+<details class="group bg-white rounded-lg shadow-sm border-l-4 border-primary overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Welk ongedierte bestrijden jullie?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                            Tactical Guardian bestrijdt werkelijk alles: van knaagdieren (muizen, ratten) en insecten (mieren, kakkerlakken, bedwantsen) tot gespecialiseerde verwijdering van wespen en de Aziatische hoornaar.
+                        </div>
+</details>
+<details class="group bg-white rounded-lg shadow-sm border-l-4 border-primary overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Hoe snel kunnen jullie ter plaatse zijn?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                            Voor spoedgevallen in de regio Antwerpen hanteren wij een 2-uur responsgarantie. Voor niet-dringende afspraken zijn we meestal binnen de 24 uur bij u.
+                        </div>
+</details>
+<details class="group bg-white rounded-lg shadow-sm border-l-4 border-primary overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-primary list-none">
+                            Zijn de gebruikte middelen veilig?
+                            <span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                            Wij gebruiken enkel wettelijk toegelaten producten en passen technieken toe die de impact op mens en huisdier minimaliseren. Uw veiligheid is onze prioriteit.
+                        </div>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-6">
+<div class="space-y-2">
+<div class="text-lg font-bold text-blue-900 dark:text-blue-200">Tactical Guardian</div>
+<p class="text-sm font-normal leading-relaxed text-slate-500 dark:text-slate-400">© 2024 Tactical Guardian. Expert Pest Solutions.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-900 dark:hover:text-blue-300" href="#">Services</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-900 dark:hover:text-blue-300" href="#">Antwerp Dispatch</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-900 dark:hover:text-blue-300" href="#">Safety Protocols</a>
+<a class="text-sm text-slate-500 dark:text-slate-400 hover:underline hover:text-blue-900 dark:hover:text-blue-300" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+<!-- Fixed Floating CTA -->
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<a class="bg-secondary text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center animate-pulse" href="tel:+3200000000">
+<span class="material-symbols-outlined text-3xl" data-icon="phone_in_talk">phone_in_talk</span>
+</a>
+</div>
+</body></html>

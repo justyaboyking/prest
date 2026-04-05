@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="nl-BE" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Ons - SPOT Pest Control</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config for Custom Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        theme: {
+                            forest: '#1B3B36',     /* Deep green */
+                            forestLight: '#2C5A53',
+                            sand: '#F9F6F0',       /* Warm off-white */
+                            sandDark: '#EAE4D8',
+                            terra: '#D96C4A',      /* Terracotta accent */
+                            terraLight: '#F3E5E1',
+                            leaf: '#4A6B5D'        /* Soft green text */
+                        }
+                    },
+                    borderRadius: {
+                        'organic-1': '40% 60% 70% 30% / 40% 50% 60% 50%',
+                        'organic-2': '50% 50% 30% 70% / 50% 50% 70% 50%',
+                        'organic-3': '60% 40% 50% 50% / 40% 60% 50% 50%',
+                        '4xl': '2.5rem'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F9F6F0; /* bg-theme-sand */
+            color: #1B3B36; /* text-theme-forest */
+            overflow-x: hidden; /* Voorkomt horizontaal scrollen door animaties */
+        }
+        
+        .glass-nav {
+            background: rgba(249, 246, 240, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(27, 59, 54, 0.05);
+        }
+
+        /* --- Nieuwe & Verbeterde Scroll Animaties --- */
+        .reveal-element {
+            opacity: 0;
+            transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: opacity, transform;
+        }
+
+        .fade-up { transform: translateY(40px); }
+        .fade-left { transform: translateX(-50px); }
+        .fade-right { transform: translateX(50px); }
+        .zoom-in { transform: scale(0.9); }
+        
+        .reveal-element.visible {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
+
+        /* --- Organische Keyframe Animaties --- */
+        .blob-mask {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-delayed {
+            animation: float 7s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Hide scrollbar for review slider */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-theme-terra selection:text-white">
+
+    <!-- Top Info Bar -->
+    <div class="bg-theme-forest text-theme-sand py-2 text-xs font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center sm:justify-end gap-6 opacity-90">
+            <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-theme-terra"></i> Resultaat gegarandeerd</span>
+            <span class="hidden sm:flex items-center gap-2"><i data-lucide="star" class="w-3.5 h-3.5 text-theme-terra"></i> +2.200 tevreden klanten</span>
+            <span class="hidden md:flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-theme-terra"></i> Regio Leuven, Brussel & Antwerpen</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="#" class="font-display font-bold text-2xl md:text-3xl tracking-tight text-theme-forest flex items-center gap-3">
+                    <div class="w-12 h-12 bg-theme-terra rounded-organic-1 flex items-center justify-center text-white shadow-lg shadow-theme-terra/30">
+                        <i data-lucide="bug" class="w-6 h-6"></i>
+                    </div>
+                    SPOT
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#" class="text-theme-forest/70 hover:text-theme-terra font-medium transition-colors">Home</a>
+                    <a href="#" class="text-theme-forest/70 hover:text-theme-terra font-medium transition-colors flex items-center gap-1">
+                        Ongedierte <i data-lucide="chevron-down" class="w-4 h-4 opacity-50"></i>
+                    </a>
+                    <a href="#" class="text-theme-forest/70 hover:text-theme-terra font-medium transition-colors">Bedrijven</a>
+                    <a href="#" class="text-theme-terra font-semibold border-b-2 border-theme-terra pb-1">Over Ons</a>
+                    <a href="#" class="text-theme-forest/70 hover:text-theme-terra font-medium transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+32468475762" class="bg-theme-forest hover:bg-theme-forestLight text-theme-sand font-medium px-6 py-3 rounded-full transition-all flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        <i data-lucide="phone" class="w-4 h-4 text-theme-terra"></i>
+                        0468 47 57 62
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button class="text-theme-forest p-2">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-theme-terraLight/50 rounded-full blur-3xl -z-10 floating"></div>
+        <div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-[#E3E8E2] rounded-full blur-3xl -z-10 floating-delayed"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-element fade-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-theme-forest font-medium text-sm shadow-sm mb-8 hover:scale-105 transition-transform duration-300">
+                        <span class="w-2 h-2 rounded-full bg-theme-terra animate-pulse"></span>
+                        Aangenaam kennis te maken
+                    </div>
+                    <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-theme-forest leading-[1.1] mb-8">
+                        Jouw <span class="text-theme-terra italic pr-2">experts</span> in ongedierte.
+                    </h1>
+                    <p class="text-lg md:text-xl text-theme-leaf leading-relaxed max-w-lg mb-10 reveal-element fade-up" style="transition-delay: 200ms;">
+                        Wij zijn Frédérique, Anton en Pieter. Problemen oplossen, daar worden wij gelukkig van. Wij geloven in een duurzame en structurele aanpak om ongedierte een stap voor te zijn.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-6 reveal-element fade-up" style="transition-delay: 400ms;">
+                        <a href="#team" class="bg-theme-terra hover:bg-[#C55A3A] text-white font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-theme-terra/20 hover:shadow-theme-terra/40 hover:-translate-y-1">
+                            Ontmoet het team
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Abstract Hero Graphic -->
+                <div class="relative h-[500px] w-full hidden lg:block reveal-element fade-right" style="transition-delay: 300ms;">
+                    <div class="absolute inset-0 bg-theme-forest rounded-organic-2 opacity-10 scale-105 floating-delayed"></div>
+                    <div class="absolute inset-0 bg-cover bg-center blob-mask shadow-2xl transition-transform duration-700 hover:scale-[1.02]" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80');"></div>
+                    <!-- Badge overlay -->
+                    <div class="absolute bottom-10 left-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl max-w-xs floating">
+                        <div class="flex gap-1 text-theme-terra mb-2">
+                            <i data-lucide="star" class="fill-current w-5 h-5 transition-transform hover:scale-110 hover:text-yellow-400"></i>
+                            <i data-lucide="star" class="fill-current w-5 h-5 transition-transform hover:scale-110 hover:text-yellow-400" style="transition-delay: 50ms;"></i>
+                            <i data-lucide="star" class="fill-current w-5 h-5 transition-transform hover:scale-110 hover:text-yellow-400" style="transition-delay: 100ms;"></i>
+                            <i data-lucide="star" class="fill-current w-5 h-5 transition-transform hover:scale-110 hover:text-yellow-400" style="transition-delay: 150ms;"></i>
+                            <i data-lucide="star" class="fill-current w-5 h-5 transition-transform hover:scale-110 hover:text-yellow-400" style="transition-delay: 200ms;"></i>
+                        </div>
+                        <p class="text-theme-forest font-bold font-display text-lg mb-1">Passie voor het vak</p>
+                        <p class="text-sm text-theme-leaf">Meer dan 20 jaar gecombineerde ervaring in het veld.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-white rounded-[3rem] sm:rounded-[5rem] mx-2 sm:mx-6 shadow-sm relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-20 reveal-element fade-up">
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-theme-forest mb-6">Wie is SPOT?</h2>
+                <p class="text-lg text-theme-leaf max-w-2xl mx-auto">Drie unieke persoonlijkheden, één gedeelde missie: jouw leefomgeving veilig en ongediertevrij houden op een duurzame manier.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <!-- Anton -->
+                <div class="group reveal-element zoom-in" style="transition-delay: 100ms;">
+                    <div class="bg-theme-sand rounded-4xl p-8 h-full relative overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-theme-sandDark">
+                        <div class="w-32 h-32 mx-auto mb-8 rounded-organic-1 overflow-hidden shadow-lg border-4 border-white group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://webosaurus.imgix.net/spotpestcontrol/local/images/IMG_2021.jpg?auto=format,compress&fit=crop&w=400&h=400" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=80'" alt="Anton" class="w-full h-full object-cover">
+                        </div>
+                        <div class="text-center mb-6">
+                            <span class="text-theme-terra font-semibold text-sm uppercase tracking-wider mb-2 block">Stadsrat uit Brussel</span>
+                            <h3 class="font-display text-3xl font-bold text-theme-forest">Anton</h3>
+                        </div>
+                        <p class="text-theme-leaf text-center mb-8">
+                            Nieuwsgierig en analytisch. Houdt van uitdagende problemen en spitsvondige oplossingen. Fan van badminton, lopen en trektochten.
+                        </p>
+                        <div class="bg-white p-5 rounded-2xl">
+                            <p class="text-xs font-bold text-theme-forest/50 uppercase tracking-wider mb-1">Favoriete Klus</p>
+                            <p class="text-sm font-medium text-theme-forest">Marters. Leuk detectivewerk en een verscheidenheid aan oplossingen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frédérique -->
+                <div class="group reveal-element zoom-in" style="transition-delay: 300ms;">
+                    <div class="bg-theme-forest text-white rounded-4xl p-8 h-full relative overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                        <!-- Background texture -->
+                        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8cGF0aCBkPSJNMCAwbDhfOFpNOCAwTDBfOFoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==')]"></div>
+                        
+                        <div class="w-32 h-32 mx-auto mb-8 rounded-organic-2 overflow-hidden shadow-lg border-4 border-theme-forestLight group-hover:scale-105 transition-transform duration-500 relative z-10">
+                            <img src="https://webosaurus.imgix.net/spotpestcontrol/local/images/Selectie-beste-fotos/DSC_7019.jpg?auto=format,compress&fit=crop&w=400&h=400" onerror="this.src='https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&fit=crop&w=400&h=400&q=80'" alt="Frédérique" class="w-full h-full object-cover">
+                        </div>
+                        <div class="text-center mb-6 relative z-10">
+                            <span class="text-theme-terra font-semibold text-sm uppercase tracking-wider mb-2 block">Veldmuis uit Rillaar</span>
+                            <h3 class="font-display text-3xl font-bold text-white">Frédérique</h3>
+                        </div>
+                        <p class="text-theme-sand/80 text-center mb-8 relative z-10">
+                            Amicaal en behulpzaam, gedreven door actie. In zijn vrije tijd vind je hem in de modder, op de mountainbike of in de tuin.
+                        </p>
+                        <div class="bg-theme-forestLight p-5 rounded-2xl relative z-10">
+                            <p class="text-xs font-bold text-theme-sand/50 uppercase tracking-wider mb-1">Favoriete Klus</p>
+                            <p class="text-sm font-medium text-white">Bedwantsen. Nauwkeurige bestrijding en klanten iets kunnen bijleren.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pieter -->
+                <div class="group reveal-element zoom-in" style="transition-delay: 500ms;">
+                    <div class="bg-theme-sand rounded-4xl p-8 h-full relative overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 border border-transparent hover:border-theme-sandDark">
+                        <div class="w-32 h-32 mx-auto mb-8 rounded-organic-3 overflow-hidden shadow-lg border-4 border-white group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://webosaurus.imgix.net/spotpestcontrol/local/images/PXL_20260224_133812907.jpg?auto=format,compress&fit=crop&w=400&h=400" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=400&h=400&q=80'" alt="Pieter" class="w-full h-full object-cover">
+                        </div>
+                        <div class="text-center mb-6">
+                            <span class="text-theme-terra font-semibold text-sm uppercase tracking-wider mb-2 block">Bosuil uit Deurne</span>
+                            <h3 class="font-display text-3xl font-bold text-theme-forest">Pieter</h3>
+                        </div>
+                        <p class="text-theme-leaf text-center mb-8">
+                            Altijd goedgezind en al >20 jaar thuis in het vak. Buiten het werk vind je hem bij de Krav Maga of op de moto. Proper tot in de details.
+                        </p>
+                        <div class="bg-white p-5 rounded-2xl">
+                            <p class="text-xs font-bold text-theme-forest/50 uppercase tracking-wider mb-1">Favoriete Klus</p>
+                            <p class="text-sm font-medium text-theme-forest">Muizen in de stad. Sporen lezen en het probleem structureel dichtzetten.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Split Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-20">
+                
+                <div class="reveal-element fade-left">
+                    <div class="w-16 h-16 bg-theme-terraLight text-theme-terra rounded-2xl flex items-center justify-center mb-8 transform transition-transform group-hover:rotate-6 hover:scale-110 duration-300">
+                        <i data-lucide="book-open" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold text-theme-forest mb-6">Onze Know-how</h2>
+                    <div class="space-y-5 text-theme-leaf text-lg leading-relaxed">
+                        <p>Ongedierte, dat is de natuur die zich zonder het te vragen in onze werk- of leefomgeving begeeft. Mensen hebben dan de neiging om - tegen beter weten in - de natuur naar hun hand te willen zetten. Dat werkt helaas niet altijd zoals gepland.</p>
+                        <p>Preventie, detectie en bestrijding moeten daarom altijd uitgaan van kennis van het plaagdier.</p>
+                        <div class="pl-6 border-l-4 border-theme-terra mt-6 py-2">
+                            <p class="font-medium text-theme-forest italic">"Bij SPOT bouwen we die know-how uit door te leren en door te presteren. Die combinatie van theoretische kennis en intuïtieve ervaring maken samen effectieve oplossingen."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-element fade-right" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-white shadow-sm border border-theme-sandDark text-theme-forest rounded-2xl flex items-center justify-center mb-8 transform transition-transform hover:scale-110 hover:-rotate-6 duration-300">
+                        <i data-lucide="target" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="font-display text-4xl font-bold text-theme-forest mb-6">Waarom SPOT?</h2>
+                    <div class="space-y-5 text-theme-leaf text-lg leading-relaxed">
+                        <p>De kiem voor ons bedrijf werd gelegd in 2017, in een voorgaand hoofdstuk van ons beroepsleven. Vóór het ontstaan van Spot werkten we als collega's bij één van de wereldwijde marktleiders in Pest Control.</p>
+                        <p>Al snel merkten we dat afdelingen vaak naast elkaar werkten in plaats van mét elkaar. De verhouding tussen de prijs en de kwaliteit was hierdoor niet altijd evenredig.</p>
+                        <p>Uit deze vaststelling is SPOT geboren. Gericht op onze klanten, hebben we de ambitie om in het midden van Vlaanderen en in Brussel dé referentie te worden voor onze expertise in het vak.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Horizontal Scroll -->
+    <section class="py-24 bg-theme-forest text-theme-sand overflow-hidden relative">
+        <!-- Abstract BG Elements -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-[400px] h-[400px] border-[40px] border-theme-forestLight rounded-full opacity-20 floating"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-[300px] h-[300px] border-[30px] border-theme-terra rounded-full opacity-10 floating-delayed"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10 reveal-element fade-up">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">Wat klanten over ons zeggen</h2>
+            <div class="flex items-center gap-4 text-theme-sandDark">
+                <i data-lucide="star" class="fill-current text-theme-terra w-6 h-6"></i>
+                <span class="text-xl font-medium">Gebaseerd op 2.200+ succesvolle interventies</span>
+            </div>
+        </div>
+
+        <!-- Scrollable Container -->
+        <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory px-4 sm:px-6 lg:px-8 pb-10 gap-6">
+            
+            <!-- Review 1 -->
+            <div class="flex-none w-[320px] md:w-[400px] snap-center reveal-element fade-right" style="transition-delay: 100ms;">
+                <div class="bg-theme-forestLight/40 backdrop-blur-sm p-8 rounded-3xl h-full border border-theme-forestLight hover:bg-theme-forestLight/60 transition-colors duration-300">
+                    <div class="flex gap-1 text-theme-terra mb-6">
+                        <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed mb-8 italic">"Anton is super vriendelijk! Heel goede en uitgebreide uitleg gekregen. Ik was direct gerustgesteld. Een professionele aanpak! Correcte prijs, in het kort: aanrader!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-theme-terra flex items-center justify-center font-bold text-white">T</div>
+                        <span class="font-bold font-display tracking-wide">Tania Coppejans</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="flex-none w-[320px] md:w-[400px] snap-center reveal-element fade-right" style="transition-delay: 200ms;">
+                <div class="bg-theme-forestLight/40 backdrop-blur-sm p-8 rounded-3xl h-full border border-theme-forestLight hover:bg-theme-forestLight/60 transition-colors duration-300">
+                    <div class="flex gap-1 text-theme-terra mb-6">
+                        <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed mb-8 italic">"Wij hadden vorig jaar een marter in ons dak, SPOT wist perfect wat te doen. Gemakkelijk bereikbaar, snel langskomen en probleem weg!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center font-bold text-white">C</div>
+                        <span class="font-bold font-display tracking-wide">Caroline Callens</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="flex-none w-[320px] md:w-[400px] snap-center reveal-element fade-right" style="transition-delay: 300ms;">
+                <div class="bg-theme-forestLight/40 backdrop-blur-sm p-8 rounded-3xl h-full border border-theme-forestLight hover:bg-theme-forestLight/60 transition-colors duration-300">
+                    <div class="flex gap-1 text-theme-terra mb-6">
+                        <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed mb-8 italic">"Zeer tevreden over de professionele service. Zij hebben ons bedrijf ongedierte vrij gemaakt. Correcte analyse, gerichte oplossing en correcte prijs."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white">J</div>
+                        <span class="font-bold font-display tracking-wide">Jelle Paulus</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Review 4 -->
+             <div class="flex-none w-[320px] md:w-[400px] snap-center reveal-element fade-right" style="transition-delay: 400ms;">
+                <div class="bg-theme-forestLight/40 backdrop-blur-sm p-8 rounded-3xl h-full border border-theme-forestLight hover:bg-theme-forestLight/60 transition-colors duration-300">
+                    <div class="flex gap-1 text-theme-terra mb-6">
+                        <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i>
+                    </div>
+                    <p class="text-lg leading-relaxed mb-8 italic">"Snelle, vriendelijke dienstverlening met resultaat. Frederique nam de tijd voor uitleg en handelde efficiënt en met respect voor de omgeving."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center font-bold text-white">G</div>
+                        <span class="font-bold font-display tracking-wide">Gerlinde Lenaerts</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-4xl p-10 md:p-16 text-center shadow-xl border border-theme-sandDark reveal-element zoom-in">
+                <div class="w-20 h-20 bg-theme-terraLight text-theme-terra rounded-full flex items-center justify-center mx-auto mb-8 animate-bounce">
+                    <i data-lucide="phone-call" class="w-10 h-10"></i>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold text-theme-forest mb-6">Ongedierteprobleem?</h2>
+                <p class="text-xl text-theme-leaf mb-10 max-w-2xl mx-auto">
+                    Neem vandaag nog contact op met Anton, Frédérique of Pieter. We helpen je snel, transparant en met focus op de lange termijn.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:+32468475762" class="bg-theme-forest hover:bg-theme-forestLight text-white font-semibold px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg">
+                        Bel 0468 47 57 62
+                    </a>
+                    <a href="#contact" class="bg-theme-sand hover:bg-[#EAE4D8] text-theme-forest font-semibold px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2 border border-transparent hover:border-theme-forest/10">
+                        Laat je gegevens achter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-theme-forest text-theme-sandDark pt-20 pb-10 border-t border-theme-forestLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Brand & Contact -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="font-display font-bold text-2xl tracking-tight text-white flex items-center gap-2 mb-6">
+                        <i data-lucide="bug" class="w-6 h-6 text-theme-terra"></i> SPOT
+                    </a>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-theme-terra shrink-0"></i>
+                            <p>Montenaken 8, 3202 Aarschot<br>Freesiadreef 1/32, 1030 Schaarbeek</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-theme-terra shrink-0"></i>
+                            <a href="mailto:contact@spotpestcontrol.be" class="hover:text-white transition">contact@spotpestcontrol.be</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-theme-terra shrink-0"></i>
+                            <a href="tel:+32468475762" class="hover:text-white transition">+32 468 47 57 62</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ongedierte -->
+                <div>
+                    <h4 class="text-white font-display font-bold text-lg mb-6">Ongedierte</h4>
+                    <ul class="grid grid-cols-2 gap-y-3 text-sm">
+                        <li><a href="#" class="hover:text-theme-terra transition">Muizen</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Ratten</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Wespen</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Steenmarters</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Bedwantsen</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Kakkerlakken</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Mieren</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Vlooien</a></li>
+                    </ul>
+                </div>
+
+                <!-- Locaties -->
+                <div>
+                    <h4 class="text-white font-display font-bold text-lg mb-6">Locaties</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-theme-terra transition">Leuven</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Brussel</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Antwerpen</a></li>
+                    </ul>
+                </div>
+
+                <!-- Navigatie -->
+                <div>
+                    <h4 class="text-white font-display font-bold text-lg mb-6">Navigatie</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-theme-terra transition">Home</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Voor Bedrijven</a></li>
+                        <li><a href="#" class="text-theme-terra font-semibold">Over Ons</a></li>
+                        <li><a href="#" class="hover:text-theme-terra transition">Vacatures</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-theme-forestLight pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Cookies</a>
+                </div>
+                <div class="text-theme-sandDark/60">
+                    &copy; 2026 SPOT Pest Control. Website by Webosaurus.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Scroll Animations -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Scroll Animations observer (Verbeterd)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -10% 0px', // Activeert net iets voordat het element 100% in beeld is
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optioneel: unobserve als je wil dat de animatie maar 1x gebeurt. 
+                    // Voor een dynamischer effect laten we hem observeren zodat het opnieuw animeert bij terug scrollen.
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        // Selecteer alle elementen met de base class 'reveal-element'
+        document.querySelectorAll('.reveal-element').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-transparent', 'glass-nav');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+put here
