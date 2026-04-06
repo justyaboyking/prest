@@ -21,19 +21,7 @@
         }
     </script>
     <link href="/index.css" rel="stylesheet"/>
-    <script src="/main.js" defer>
-        // Intersection Observer for Scroll Reveals
-        const observerOptions = {
-            threshold: 0.01,
-            rootMargin: '0px 0px 100px 0px' // Trigger 100px before reaching viewport
-        };
-        // Trigger stats count-up if applicable
-        const counter = entry.target.querySelector('.stats-counter');
-        if (counter) {
-            const target = parseInt(counter.getAttribute('data-target'));
-            setTimeout(() => animateValue(counter, 0, target, 1500), 50);
-        }
-    </script>
+    <script src="/main.js" defer></script>
     
     <!-- Custom Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
