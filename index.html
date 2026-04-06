@@ -51,36 +51,20 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="relative pt-20 pb-20 md:pt-28 md:pb-40 overflow-hidden bg-primary text-white">
+<header class="relative min-h-[90vh] md:min-h-screen pt-24 pb-0 flex flex-col overflow-hidden bg-primary text-white">
     <div class="absolute inset-0 opacity-80 mix-blend-overlay">
         <img alt="Tactical Pest Control" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200"/>
     </div>
     <div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-transparent"></div>
     
-    <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <!-- Google Trust Signal -->
-            <div class="reveal reveal-down delay-100 flex items-center gap-3 bg-white/5 backdrop-blur-md border-l-2 border-secondary px-3 py-1.5 rounded-r-md w-fit">
-                <i class="ph-fill ph-google-logo text-white/50"></i>
-                <div class="flex items-center gap-2">
-                    <div class="flex text-secondary text-[10px]">
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                    </div>
-                    <span class="text-[11px] font-mono font-bold tracking-wider text-white">4.9/5 SCORE</span>
-                    <span class="text-[9px] font-mono text-white/40 uppercase tracking-widest border-l border-white/10 pl-2">127 VERIFIEERDE REVIEWS</span>
-                </div>
-            </div>
-
-            <h1 class="reveal reveal-left delay-200 text-4xl md:text-[4rem] font-black tracking-tighter leading-none">
+    <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center flex-1">
+        <div class="space-y-8">
+            <h1 class="reveal reveal-left delay-200 text-4xl md:text-[5rem] font-black tracking-tighter leading-none">
                 Uw Tactische Partner voor <br/> <span class="text-secondary">Elk Ongedierte</span>
             </h1>
             
-            <p class="reveal reveal-left delay-300 text-lg md:text-[1.25rem] text-slate-300 max-w-xl leading-tight font-medium">
-                Van ratten tot de <span class="text-white font-bold highlight-tactical">Aziatische hoornaar</span>; wij bieden gecertificeerde verdelging met 2-uur responsgarantie.
+            <p class="reveal reveal-left delay-300 text-lg md:text-[1.5rem] text-slate-300 max-w-xl leading-tight font-medium">
+                Van ratten tot de <span class="text-white font-bold highlight-tactical text-glow-orange">Aziatische hoornaar</span>; wij bieden gecertificeerde verdelging met 2-uur responsgarantie.
             </p>
             
             <div class="reveal reveal-up delay-400 flex flex-col sm:flex-row gap-6 items-center pt-2">
@@ -94,37 +78,66 @@
                 </a>
             </div>
 
+            <!-- Google Trust Signal (Moved below buttons) -->
+            <div class="reveal reveal-up delay-500 flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2.5 rounded-xl w-fit shadow-2xl">
+                <i class="ph-fill ph-google-logo text-white/40 text-xl"></i>
+                <div class="flex flex-col gap-0.5">
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-secondary text-[12px]">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                        </div>
+                        <span class="text-[12px] font-black tracking-widest text-white">4.9/5 SCORE</span>
+                    </div>
+                    <span class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em]">127 VERIFIEERDE REVIEWS</span>
+                </div>
+            </div>
+
         </div>
         
-        <div class="hidden md:block relative ml-0 max-w-lg reveal reveal-right delay-500">
-            <div class="relative bg-white/5 backdrop-blur-3xl p-2 rounded-2xl border border-white/10 shadow-2xl">
-                <img alt="Tactical Unit" class="rounded-xl grayscale opacity-90" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=800"/>
+        <div class="hidden md:block relative ml-0 max-w-lg reveal reveal-right delay-600">
+            <div class="relative bg-white/5 backdrop-blur-3xl p-3 rounded-2xl border border-white/10 shadow-2xl overflow-hidden group">
+                <img alt="Tactical Unit" class="rounded-xl grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=800"/>
+                <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition-colors"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Badge Strip (Moved inside Hero at bottom - Now White) -->
+    <div class="relative w-full py-10 mt-12 md:mt-auto bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-8 md:gap-4">
+            <div class="reveal flex items-center gap-3" style="transition-delay: 700ms">
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M229.19,114.21l-15.63-15.64a8,8,0,0,1-2.35-5.65V70.67a16,16,0,0,0-16-16H173a8,8,0,0,1-5.65-2.35L151.7,36.69a16,16,0,0,0-22.63,0L113.43,52.32a8,8,0,0,1-5.65,2.35H85a16,16,0,0,0-16,16V92.92a8,8,0,0,1-2.35,5.65L51.06,114.21a16,16,0,0,0,0,22.63L66.7,152.48a8,8,0,0,1,2.35,5.65v22.25a16,16,0,0,0,16,16H107.8a8,8,0,0,1,5.65,2.35l15.64,15.63a16,16,0,0,0,22.63,0l15.64-15.63a8,8,0,0,1,5.65-2.35h22.25a16,16,0,0,0,16-16V158.13a8,8,0,0,1,2.35-5.65l15.63-15.64A16,16,0,0,0,229.19,114.21ZM172,208H151.78l-15.64,15.64a8,8,0,0,1-11.31,0L109.19,208H88.85l-.18.17v-1.39a16,16,0,0,0-4.67-11.31L68.37,179.83v-30.4l-11.31-11.31a8,8,0,0,1,0-11.31l11.31-11.31V85l30.4-30.4H129.1v-1.39l.17-.18a16,16,0,0,0,11.31,4.67L156.22,69.1l30.4,30.4V129.1l30.4,30.4v30.4l-30.4,30.4V208ZM165.66,101.66a8,8,0,0,1,0,11.31l-40,40a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L120,136.69l34.34-34.35A8,8,0,0,1,165.66,101.66Z"></path></svg>
+                </div>
+                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">VLAAMSE OVERHEID CERTIFIED</span>
+            </div>
+            <div class="reveal flex items-center gap-3" style="transition-delay: 800ms">
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A24,24,0,0,0,24,64V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm8,152a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8ZM184,88a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,88Zm0,32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,120Zm0,32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,152ZM144,120a32,32,0,1,1-32-32A32,32,0,0,1,144,120Zm-16,0a16,16,0,1,0-16,16A16,16,0,0,0,128,120Zm40,56a8,8,0,0,1-8,8H56a8,8,0,0,1,0-16h104A8,8,0,0,1,168,176Z"></path></svg>
+                </div>
+                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">BIOCIDE LICENTIE 241/B</span>
+            </div>
+            <div class="reveal flex items-center gap-3" style="transition-delay: 900ms">
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M220,111.41V56a16,16,0,0,0-16-16H52A16,16,0,0,0,36,56v55.41c0,72.89,80.46,101.46,87.71,103.82a12.16,12.16,0,0,0,8.58,0C139.54,212.87,220,184.3,220,111.41ZM52,56H120v64H52V56Zm152,55.41c0,57.17-60.84,81.18-72,86.6V136h72Zm0-43.41V120H136V56h68ZM52,136H120v66.08c-11.16-5.42-72-29.43-72-86.6V120Z"></path></svg>
+                </div>
+                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">VERZEKERD & ERKEND</span>
+            </div>
+            <div class="reveal flex items-center gap-3" style="transition-delay: 1000ms">
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M200,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h40.42a15.82,15.82,0,0,0,10.63-4.08l16.12-14.73a8,8,0,0,1,10.1,0l16.12,14.73a15.82,15.82,0,0,0,10.63,4.08H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32ZM133.37,205.25a24,24,0,0,0-30.74,0l-14.21,13A8.07,8.07,0,0,1,56,208V48H200V208a8.07,8.07,0,0,1-32.42,10.25ZM176,80a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,80Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,112Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,144Z"></path></svg>
+                </div>
+                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">BEPEST PROFESSIONAL</span>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Trust Badge Strip -->
-<div class="bg-surface-offset border-b border-slate-200 py-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 opacity-80 transition-all duration-700">
-        <div class="reveal flex items-center gap-3" style="transition-delay: 100ms">
-            <i class="ph-bold ph-seal-check text-2xl text-secondary"></i>
-            <span class="font-mono text-[10px] font-black uppercase tracking-[0.2em] animate-text-reveal">VLAAMSE OVERHEID CERTIFIED</span>
-        </div>
-        <div class="reveal flex items-center gap-3" style="transition-delay: 200ms">
-            <i class="ph-bold ph-identification-card text-2xl text-secondary"></i>
-            <span class="font-mono text-[10px] font-black uppercase tracking-[0.2em] animate-text-reveal">BIOCIDE LICENTIE 241/B</span>
-        </div>
-        <div class="reveal flex items-center gap-3" style="transition-delay: 300ms">
-            <i class="ph-bold ph-shield-checkered text-2xl text-secondary"></i>
-            <span class="font-mono text-[10px] font-black uppercase tracking-[0.2em] animate-text-reveal">VERZEKERD & ERKEND</span>
-        </div>
-        <div class="reveal flex items-center gap-3" style="transition-delay: 400ms">
-            <i class="ph-bold ph-certificate text-2xl text-secondary"></i>
-            <span class="font-mono text-[10px] font-black uppercase tracking-[0.2em] animate-text-reveal">BEPEST PROFESSIONAL</span>
-        </div>
-    </div>
-</div>
+<!-- Trust Row Removed (Moved to Hero Bottom) -->
 
 <!-- Social Proof / Testimonials Row -->
 <section class="py-16 bg-surface overflow-hidden">

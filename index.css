@@ -435,6 +435,9 @@ h1, h2, h3, h4 {
 
 
 /* --- Tactical Animation Suite --- */
+.text-glow-orange {
+    text-shadow: 0 0 20px oklch(0.62 0.25 45 / 0.4);
+}
 
 /* Base Reveal Logic */
 .reveal {
