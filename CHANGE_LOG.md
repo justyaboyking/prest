@@ -13,5 +13,6 @@ This file tracks all changes that have been approved and "saved" (committed/push
 - Synchronized latest updates from GitHub.
 - **Badge Relocation**: Moved both the Google Trust Signal (Score) and Certification Badges to the bottom of the hero section for "above the fold" visibility.
 - **UI Polish**: Changed the bottom badge strip background from semi-transparent blue to **solid white** with high-contrast text.
+- **Hero Scaling**: Increased the size of both the text content and the **hero image** (`max-w-xl`) to command more screen presence.
 - **New Files**: Integrated `index.css`, `main.js`, and pest macro images.
 - **Updates**: Significant changes to `index.html` structure and content.

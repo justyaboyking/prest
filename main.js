@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Intersection Observer for Scroll Reveals
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.01,
+        rootMargin: '0px 0px 100px 0px' // Trigger 100px before reaching viewport for "instant" feel
     };
 
     // Stats Count-Up Logic
@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Trigger text scramble if applicable
                 const textReveal = entry.target.querySelector('.animate-text-reveal');
                 if (textReveal) {
-                    setTimeout(() => scrambleText(textReveal), 200);
+                    setTimeout(() => scrambleText(textReveal), 50); // Faster trigger
                 }
 
                 // Trigger stats count-up if applicable
                 const counter = entry.target.querySelector('.stats-counter');
                 if (counter) {
                     const target = parseInt(counter.getAttribute('data-target'));
-                    setTimeout(() => animateValue(counter, 0, target, 2000), 400);
+                    setTimeout(() => animateValue(counter, 0, target, 1200), 50); // Faster count-up
                 }
                 
                 observer.unobserve(entry.target);

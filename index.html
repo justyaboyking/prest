@@ -21,7 +21,19 @@
         }
     </script>
     <link href="/index.css" rel="stylesheet"/>
-    <script src="/main.js" defer></script>
+    <script src="/main.js" defer>
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            threshold: 0.01,
+            rootMargin: '0px 0px 100px 0px' // Trigger 100px before reaching viewport
+        };
+        // Trigger stats count-up if applicable
+        const counter = entry.target.querySelector('.stats-counter');
+        if (counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            setTimeout(() => animateValue(counter, 0, target, 1500), 50);
+        }
+    </script>
     
     <!-- Custom Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -51,87 +63,112 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="relative min-h-[90vh] md:min-h-screen pt-24 pb-0 flex flex-col overflow-hidden bg-primary text-white">
+<header class="relative min-h-[85vh] md:min-h-screen pt-20 pb-0 flex flex-col overflow-hidden bg-primary text-white">
     <div class="absolute inset-0 opacity-80 mix-blend-overlay">
         <img alt="Tactical Pest Control" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200"/>
     </div>
     <div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-transparent"></div>
     
-    <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center flex-1">
-        <div class="space-y-8">
-            <!-- Google Trust Signal (Moved back above headline) -->
-            <div class="reveal reveal-down delay-100 flex items-center gap-4 bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2.5 rounded-xl w-fit shadow-2xl">
-                <i class="ph-fill ph-google-logo text-white/40 text-xl"></i>
-                <div class="flex flex-col gap-0.5">
-                    <div class="flex items-center gap-2">
-                        <div class="flex text-secondary text-[12px]">
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                            <i class="ph-fill ph-star"></i>
-                        </div>
-                        <span class="text-[12px] font-black tracking-widest text-white">4.9/5 SCORE</span>
+    <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center flex-1">
+        <div class="space-y-10">
+            <!-- Google Trust Signal -->
+            <div class="reveal reveal-down flex items-center gap-4 bg-white/5 backdrop-blur-md border-l-[6px] pr-6 py-2.5 rounded-r-md w-fit" style="border-color: var(--color-accent);">
+                <i class="ph-fill ph-google-logo text-white/50 text-2xl pl-4"></i>
+                <div class="flex items-center gap-3">
+                    <div class="flex text-secondary text-[14px]">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
                     </div>
-                    <span class="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em]">127 VERIFIEERDE REVIEWS</span>
+                    <span class="text-[14px] font-mono font-black tracking-wider text-white">4.9/5 SCORE</span>
+                    <span class="text-[11px] font-mono font-bold text-white/40 uppercase tracking-widest border-l border-white/10 pl-3">127 VERIFIEERDE REVIEWS</span>
                 </div>
             </div>
 
-            <h1 class="reveal reveal-left delay-200 text-4xl md:text-[5rem] font-black tracking-tighter leading-none">
+            <h1 class="reveal reveal-left text-5xl md:text-[5.5rem] font-black tracking-tighter leading-[0.95] animate-text-reveal">
                 Uw Tactische Partner voor <br/> <span class="text-secondary">Elk Ongedierte</span>
             </h1>
             
-            <p class="reveal reveal-left delay-300 text-lg md:text-[1.5rem] text-slate-300 max-w-xl leading-tight font-medium">
+            <p class="reveal reveal-left delay-100 text-xl md:text-[1.75rem] text-slate-300 max-w-2xl leading-tight font-medium animate-text-reveal">
                 Van ratten tot de <span class="text-white font-bold highlight-tactical text-glow-orange">Aziatische hoornaar</span>; wij bieden gecertificeerde verdelging met 2-uur responsgarantie.
             </p>
             
-            <div class="reveal reveal-up delay-400 flex flex-col sm:flex-row gap-6 items-center pt-2">
-                <a class="btn btn-primary px-12" href="tel:+3200000000">
-                    <i class="ph-bold ph-lightning"></i>
+            <div class="reveal reveal-up flex flex-row gap-4 sm:gap-8 items-center pt-4">
+                <a class="btn btn-primary px-6 sm:px-14 py-4 text-sm sm:text-lg whitespace-nowrap" href="tel:+3200000000">
+                    <i class="ph-bold ph-lightning text-xl"></i>
                     Direct Verdelging
                 </a>
-                <a class="btn btn-ghost border border-white/20 hover:border-white/40 group font-bold px-12" href="#onze-diensten">
+                <a class="btn btn-ghost border-2 border-white/20 hover:border-white/40 group font-bold px-6 sm:px-14 py-4 text-sm sm:text-lg whitespace-nowrap" href="#onze-diensten">
                     Bekijk Diensten
-                    <i class="ph-bold ph-arrow-up-right group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    <i class="ph-bold ph-arrow-up-right text-xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                 </a>
             </div>
         </div>
         
-        <div class="hidden md:block relative ml-0 max-w-lg reveal reveal-right delay-600">
-            <div class="relative bg-white/5 backdrop-blur-3xl p-3 rounded-2xl border border-white/10 shadow-2xl overflow-hidden group">
-                <img alt="Tactical Unit" class="rounded-xl grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=800"/>
+        <div class="hidden md:block relative ml-0 max-w-2xl reveal reveal-right delay-200">
+            <div class="relative bg-white/5 backdrop-blur-3xl p-6 rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden group">
+                <img alt="Tactical Unit" class="rounded-[2rem] grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 w-full shadow-inner" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=1600"/>
                 <div class="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition-colors"></div>
             </div>
         </div>
     </div>
 
-    <!-- Trust Badge Strip (Moved inside Hero at bottom - Now White) -->
-    <div class="relative w-full py-10 mt-12 md:mt-auto bg-white">
-        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-8 md:gap-4">
-            <div class="reveal flex items-center gap-3" style="transition-delay: 700ms">
-                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M229.19,114.21l-15.63-15.64a8,8,0,0,1-2.35-5.65V70.67a16,16,0,0,0-16-16H173a8,8,0,0,1-5.65-2.35L151.7,36.69a16,16,0,0,0-22.63,0L113.43,52.32a8,8,0,0,1-5.65,2.35H85a16,16,0,0,0-16,16V92.92a8,8,0,0,1-2.35,5.65L51.06,114.21a16,16,0,0,0,0,22.63L66.7,152.48a8,8,0,0,1,2.35,5.65v22.25a16,16,0,0,0,16,16H107.8a8,8,0,0,1,5.65,2.35l15.64,15.63a16,16,0,0,0,22.63,0l15.64-15.63a8,8,0,0,1,5.65-2.35h22.25a16,16,0,0,0,16-16V158.13a8,8,0,0,1,2.35-5.65l15.63-15.64A16,16,0,0,0,229.19,114.21ZM172,208H151.78l-15.64,15.64a8,8,0,0,1-11.31,0L109.19,208H88.85l-.18.17v-1.39a16,16,0,0,0-4.67-11.31L68.37,179.83v-30.4l-11.31-11.31a8,8,0,0,1,0-11.31l11.31-11.31V85l30.4-30.4H129.1v-1.39l.17-.18a16,16,0,0,0,11.31,4.67L156.22,69.1l30.4,30.4V129.1l30.4,30.4v30.4l-30.4,30.4V208ZM165.66,101.66a8,8,0,0,1,0,11.31l-40,40a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L120,136.69l34.34-34.35A8,8,0,0,1,165.66,101.66Z"></path></svg>
+    <!-- Tactical Trust Readout (Line Style - LARGE) -->
+    <div class="relative w-full bg-white border-t border-slate-100 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 overflow-x-auto whitespace-nowrap">
+            
+            <!-- Segment 1: Vlaamse Overheid -->
+            <div class="flex items-center gap-5 border-l-4 pl-6 reveal reveal-right min-w-max delay-100" style="border-color: var(--color-accent);">
+                <div class="text-secondary shrink-0 relative">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                 </div>
-                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">VLAAMSE OVERHEID CERTIFIED</span>
-            </div>
-            <div class="reveal flex items-center gap-3" style="transition-delay: 800ms">
-                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A24,24,0,0,0,24,64V192a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm8,152a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8ZM184,88a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,88Zm0,32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,120Zm0,32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H192A8,8,0,0,1,184,152ZM144,120a32,32,0,1,1-32-32A32,32,0,0,1,144,120Zm-16,0a16,16,0,1,0-16,16A16,16,0,0,0,128,120Zm40,56a8,8,0,0,1-8,8H56a8,8,0,0,1,0-16h104A8,8,0,0,1,168,176Z"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-sm font-black uppercase tracking-[0.2em] text-primary leading-tight">Vlaamse Overheid</span>
+                    <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest text-secondary">Certified</span>
                 </div>
-                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">BIOCIDE LICENTIE 241/B</span>
             </div>
-            <div class="reveal flex items-center gap-3" style="transition-delay: 900ms">
-                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M220,111.41V56a16,16,0,0,0-16-16H52A16,16,0,0,0,36,56v55.41c0,72.89,80.46,101.46,87.71,103.82a12.16,12.16,0,0,0,8.58,0C139.54,212.87,220,184.3,220,111.41ZM52,56H120v64H52V56Zm152,55.41c0,57.17-60.84,81.18-72,86.6V136h72Zm0-43.41V120H136V56h68ZM52,136H120v66.08c-11.16-5.42-72-29.43-72-86.6V120Z"></path></svg>
+
+            <div class="hidden lg:block w-px h-12 bg-slate-200"></div>
+
+            <!-- Segment 2: Biocide -->
+            <div class="flex items-center gap-5 reveal reveal-right min-w-max delay-200">
+                <div class="text-secondary shrink-0 relative">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.675.337a6 6 0 01-3.86.517l-2.388-.477a2 2 0 00-1.127.052l-2.017.707A2 2 0 001 18.25V21a2 2 0 002 2h18a2 2 0 002-2v-2.75a2 2 0 00-1.572-1.822l-2.017-.707z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                 </div>
-                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">VERZEKERD & ERKEND</span>
-            </div>
-            <div class="reveal flex items-center gap-3" style="transition-delay: 1000ms">
-                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center border border-secondary/20 text-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M200,32H56A16,16,0,0,0,40,48V208a16,16,0,0,0,16,16h40.42a15.82,15.82,0,0,0,10.63-4.08l16.12-14.73a8,8,0,0,1,10.1,0l16.12,14.73a15.82,15.82,0,0,0,10.63,4.08H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32ZM133.37,205.25a24,24,0,0,0-30.74,0l-14.21,13A8.07,8.07,0,0,1,56,208V48H200V208a8.07,8.07,0,0,1-32.42,10.25ZM176,80a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,80Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,112Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,144Z"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-sm font-black uppercase tracking-[0.2em] text-primary leading-tight">Biocide Licentie</span>
+                    <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest text-secondary">241 / B</span>
                 </div>
-                <span class="font-mono text-xs font-black uppercase tracking-[0.2em] text-primary">BEPEST PROFESSIONAL</span>
             </div>
+
+            <div class="hidden lg:block w-px h-12 bg-slate-200"></div>
+
+            <!-- Segment 3: Verzekerd -->
+            <div class="flex items-center gap-5 reveal reveal-right min-w-max delay-300">
+                <div class="text-secondary shrink-0 relative">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <div class="flex flex-col text-center md:text-left">
+                    <span class="text-sm font-black uppercase tracking-[0.2em] text-primary leading-tight">Verzekerd & Erkend</span>
+                    <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest text-secondary">Interventie Garantie</span>
+                </div>
+            </div>
+
+            <div class="hidden lg:block w-px h-12 bg-slate-200"></div>
+
+            <!-- Segment 4: BePest -->
+            <div class="flex items-center gap-5 reveal reveal-right min-w-max delay-400">
+                <div class="text-secondary shrink-0 relative">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-sm font-black uppercase tracking-[0.2em] text-primary leading-tight">Bepest Professional</span>
+                    <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest text-secondary">Qualified Expert</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </header>
@@ -139,53 +176,7 @@
 <!-- Trust Row Removed (Moved to Hero Bottom) -->
 
 <!-- Social Proof / Testimonials Row -->
-<section class="py-16 bg-surface overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="review-card reveal reveal-up delay-100">
-                <div class="star-rating">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-                </div>
-                <p class="text-slate-600 font-medium italic mb-6">"Binnen 2 uur waren ze ter plaatse voor een wespennest. Professioneel materiaal en zeer duidelijke communicatie."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-surface-offset rounded-full flex items-center justify-center font-bold text-xs">MD</div>
-                    <div>
-                        <div class="text-xs font-black uppercase tracking-tight">Marc D.</div>
-                        <div class="text-[10px] text-slate-400 font-mono">Brasschaat</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card reveal reveal-up delay-200">
-                <div class="star-rating">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-                </div>
-                <p class="text-slate-600 font-medium italic mb-6">"Tactical Guardian heeft ons restaurant gered van een serieuze kakkerlakkenplaag. Hun methode is echt next-level."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-surface-offset rounded-full flex items-center justify-center font-bold text-xs">SV</div>
-                    <div>
-                        <div class="text-xs font-black uppercase tracking-tight">Sarah V.</div>
-                        <div class="text-[10px] text-slate-400 font-mono">Antwerpen Centrum</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card reveal reveal-up delay-300">
-                <div class="star-rating">
-                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-                </div>
-                <p class="text-slate-600 font-medium italic mb-6">"Eindelijk een bedrijf dat weet wat ze doen met de Aziatische hoornaar. Veiligheid stond overal voorop."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-surface-offset rounded-full flex items-center justify-center font-bold text-xs">KL</div>
-                    <div>
-                        <div class="text-xs font-black uppercase tracking-tight">Koen L.</div>
-                        <div class="text-[10px] text-slate-400 font-mono">Edegem</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- Services Section (Bento Grid) -->
-<<!-- Services Section (Bento Grid) -->
 <section class="py-24 bg-surface px-6" id="onze-diensten">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
@@ -217,64 +208,96 @@
             </div>
 
             <!-- Focus: Aziatische Hoornaar (Feature) -->
-            <div class="card bg-primary group p-8 md:p-12 flex flex-col justify-between border-none shadow-2xl shadow-primary/40 relative overflow-hidden reveal reveal-up delay-100">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 -translate-y-16 translate-x-16 rounded-full blur-3xl"></div>
-                <div class="space-y-6 relative z-10">
-                    <div class="w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center text-secondary border border-white/10">
+            <div class="card bg-slate-900 group p-8 md:p-12 flex flex-col justify-between border-none shadow-2xl shadow-slate-900/20 relative overflow-hidden reveal reveal-up">
+                <div class="absolute inset-0 bg-slate-900/70 z-10 transition-colors group-hover:bg-slate-900/60"></div>
+                <img alt="Wespen & Hoornaars" class="absolute inset-0 w-full h-full object-cover" src="wspcloseup.png"/>
+                
+                <div class="space-y-6 relative z-20">
+                    <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center text-white border border-white/20">
                         <i class="ph-bold ph-warning text-4xl"></i>
                     </div>
                     <h3 class="text-3xl font-black text-white uppercase tracking-tighter">Wespen & <br/>Hoornaars</h3>
-                    <p class="text-slate-400 font-medium leading-relaxed">Specifieke focus op de invasieve Aziatische variant. High-reach equipment aanwezig.</p>
+                    <p class="text-white/90 font-medium leading-relaxed drop-shadow-md">Specifieke focus op de invasieve Aziatische variant. High-reach equipment aanwezig.</p>
                 </div>
-                <a href="#" class="text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-8 uppercase tracking-widest text-[10px] relative z-10">
+                <a href="#" class="text-white font-bold flex items-center gap-2 group-hover:gap-4 transition-all mt-8 uppercase tracking-widest text-[10px] relative z-20">
                     Direct Verwijderen <i class="ph-bold ph-arrow-up-right"></i>
                 </a>
             </div>
 
-            <!-- Kakkerlakken - NOW SPANS 2 COLS -->
-            <div class="card bento-col-2 group flex flex-col md:flex-row min-h-[320px] reveal reveal-up delay-200">
-                <div class="md:w-1/2 overflow-hidden relative">
-                    <img alt="Kakkerlakken" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1611773236409-f3ee161007a1?auto=format&fit=crop&q=80&w=800"/>
-                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+            <!-- Kakkerlakken - FULL BLEED STYLE -->
+            <div class="card bento-col-2 group flex flex-col justify-between min-h-[320px] relative overflow-hidden reveal reveal-up p-8 md:p-12">
+                <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10"></div>
+                <img alt="Kakkerlakken" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="karkerlak.jpg"/>
+                
+                <div class="relative z-20 space-y-6">
+                    <h4 class="text-5xl font-black text-white uppercase tracking-tighter leading-none">Kakkerlakken</h4>
+                    <p class="text-white/80 max-w-sm text-lg font-medium">Geavanceerde gel-technologie en feromoonvallen voor totale eliminatie.</p>
                 </div>
-                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center space-y-6 bg-white">
-                    <h4 class="text-3xl font-black text-primary uppercase tracking-tighter">Kakkerlakken</h4>
-                    <p class="text-slate-500 font-medium leading-relaxed">Geavanceerde gel-technologie en feromoonvallen voor totale eliminatie van broedplaatsen.</p>
-                    <a href="#" class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
+                
+                <div class="relative z-20 pt-8">
+                    <a href="#" class="text-white font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
                         Onze Methode <i class="ph-bold ph-arrow-up-right group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform text-secondary"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="card group reveal reveal-up delay-300">
-                <div class="h-48 overflow-hidden relative">
-                    <img alt="Bedwantsen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1727198634627-645ef5356455?auto=format&fit=crop&q=80&w=800"/>
+            <!-- Split Column 3: Spinnen & Bedwantsen -->
+            <div class="flex flex-col gap-6">
+                
+                <!-- Spinnen (Top Half) - FULL BLEED STYLE -->
+                <div class="card group reveal reveal-up flex-1 flex flex-col justify-between min-h-[200px] relative overflow-hidden p-6">
+                    <div class="absolute inset-0 bg-slate-900/50 group-hover:bg-slate-900/30 transition-colors z-10"></div>
+                    <img alt="Spinnen" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="spider_macro.png"/>
+                    
+                    <div class="relative z-20">
+                        <h4 class="text-3xl font-black text-white uppercase tracking-tighter">Spinnen</h4>
+                    </div>
+
+                    <div class="relative z-20 pt-4">
+                        <a href="#" class="text-white font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
+                            Details <i class="ph-bold ph-arrow-up-right text-secondary transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="p-8 space-y-4 bg-white">
-                    <h4 class="text-xl font-bold text-primary uppercase tracking-tight">Bedwantsen</h4>
-                    <p class="text-sm text-slate-500 font-medium">Hittebehandelingen voor direct resultaat.</p>
-                    <a href="#" class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
-                        Details <i class="ph-bold ph-arrow-up-right text-secondary"></i>
-                    </a>
+
+                <!-- Bedwantsen (Bottom Half) - FULL BLEED STYLE -->
+                <div class="card group reveal reveal-up flex-1 flex flex-col justify-between min-h-[200px] relative overflow-hidden p-6">
+                    <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10"></div>
+                    <img alt="Bedwantsen" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="Bedwantsen.png"/>
+                    
+                    <div class="relative z-20">
+                        <h4 class="text-3xl font-black text-white uppercase tracking-tighter">Bedwantsen</h4>
+                        <p class="text-[10px] text-white/70 font-bold uppercase tracking-widest mt-1">Hittebehandeling Expert.</p>
+                    </div>
+
+                    <div class="relative z-20 pt-4">
+                        <a href="#" class="text-white font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
+                            Details <i class="ph-bold ph-arrow-up-right text-secondary transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
-            <!-- ROW 3 -->
-            <div class="card group reveal reveal-up delay-100">
-                <div class="h-48 overflow-hidden relative">
-                    <img alt="Mieren" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1673954871760-8e6a3818ddff?auto=format&fit=crop&q=80&w=800"/>
+            <!-- Mieren - FULL BLEED STYLE -->
+            <div class="card group reveal reveal-up flex flex-col justify-between min-h-[300px] relative overflow-hidden p-8">
+                <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/40 transition-colors z-10"></div>
+                <img alt="Mieren" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="ant_macro.png"/>
+                
+                <div class="relative z-20 space-y-2">
+                    <h4 class="text-3xl font-black text-white uppercase tracking-tighter">Mieren</h4>
+                    <p class="text-sm text-white/70 font-medium">Behandeling van nesten in woningen.</p>
                 </div>
-                <div class="p-8 space-y-4 bg-white">
-                    <h4 class="text-xl font-bold text-primary uppercase tracking-tight">Mieren</h4>
-                    <p class="text-sm text-slate-500 font-medium">Behandeling van nesten in keukens en woningen.</p>
-                    <a href="#" class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
-                        Details <i class="ph-bold ph-arrow-up-right text-secondary"></i>
+
+                <div class="relative z-20 pt-4">
+                    <a href="#" class="text-white font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 group/link">
+                        Details <i class="ph-bold ph-arrow-up-right text-secondary transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
                     </a>
                 </div>
             </div>
 
             <!-- THE COMBINED "MORE" CARD - AS PER SKETCH -->
-            <div class="card bg-primary bento-col-2 relative overflow-hidden reveal reveal-up delay-200 group min-h-[300px] border-none shadow-2xl">
+            <div class="card bg-primary bento-col-2 relative overflow-hidden reveal reveal-up group min-h-[300px] border-none shadow-2xl">
                 <div class="absolute inset-0 flex">
                     <!-- Segment 1: Mol -->
                     <div class="flex-1 relative border-r border-white/10 overflow-hidden">
@@ -324,12 +347,12 @@
                 <div class="text-label text-slate-400">Resultaatgarantie</div>
             </div>
             <div class="hidden md:block v-separator"></div>
-            <div class="flex-1 text-center space-y-2 reveal reveal-up delay-100">
+            <div class="flex-1 text-center space-y-2 reveal reveal-up">
                 <div class="text-display text-secondary uppercase tracking-tighter stats-counter" data-target="2">0u</div>
                 <div class="text-label text-slate-400">Gemiddelde Respons</div>
             </div>
             <div class="hidden md:block v-separator"></div>
-            <div class="flex-1 text-center md:text-right space-y-2 reveal reveal-up delay-200">
+            <div class="flex-1 text-center md:text-right space-y-2 reveal reveal-up">
                 <div class="text-display text-primary uppercase tracking-tighter stats-counter" data-target="10000">0k+</div>
                 <div class="text-label text-slate-400">Interventies</div>
             </div>
@@ -346,21 +369,21 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-0 relative">
-            <div class="process-step reveal reveal-right delay-100">
+            <div class="process-step reveal reveal-right">
                 <div class="process-number">01</div>
                 <div class="process-content">
                     <h4 class="text-xl font-black uppercase tracking-tight mb-4">Grondige Inspectie</h4>
                     <p class="text-slate-500 font-medium leading-relaxed">We analyseren de bron, toegangspunten en de ernst van de plaag met geavanceerde apparatuur.</p>
                 </div>
             </div>
-            <div class="process-step reveal reveal-right delay-200">
+            <div class="process-step reveal reveal-right">
                 <div class="process-number">02</div>
                 <div class="process-content">
                     <h4 class="text-xl font-black uppercase tracking-tight mb-4">Tactische Interventie</h4>
                     <p class="text-slate-500 font-medium leading-relaxed">Directe eliminatie met IPM-gecertificeerde methoden, veilig voor mens en huisdier.</p>
                 </div>
             </div>
-            <div class="process-step reveal reveal-right delay-300">
+            <div class="process-step reveal reveal-right">
                 <div class="process-number">03</div>
                 <div class="process-content">
                     <h4 class="text-xl font-black uppercase tracking-tight mb-4">Resultaatgarantie</h4>
@@ -387,7 +410,7 @@
             </div>
 
             <div class="space-y-8">
-                <div class="flex items-start gap-6 group reveal reveal-up delay-100">
+                <div class="flex items-start gap-6 group reveal reveal-up">
                     <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-secondary border border-white/10 group-hover:bg-secondary group-hover:text-white transition-all">
                         <i class="ph-bold ph-warning text-2xl"></i>
                     </div>
@@ -396,7 +419,7 @@
                         <p class="text-slate-500 text-sm max-w-md">De hoornaar valt in groep aan bij nestverstoring. Doe-het-zelf bestrijding is levensgevaarlijk.</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-6 group reveal reveal-up delay-200">
+                <div class="flex items-start gap-6 group reveal reveal-up">
                     <div class="w-12 h-12 bg-white/5 rounded-lg flex items-center justify-center text-secondary border border-white/10 group-hover:bg-secondary group-hover:text-white transition-all">
                         <i class="ph-bold ph-tree text-2xl"></i>
                     </div>
@@ -434,11 +457,11 @@
                     </h3>
                 </div>
                 
-                <p class="text-xl text-slate-400 leading-relaxed font-medium italic reveal reveal-up delay-100">
+                <p class="text-xl text-slate-400 leading-relaxed font-medium italic reveal reveal-up">
                     "Onze 'Integrated Pest Management' aanpak garandeert dat we niet alleen de symptomen bestrijden, maar de bron permanent neutraliseren."
                 </p>
 
-                <div class="flex flex-wrap gap-4 reveal reveal-up delay-200">
+                <div class="flex flex-wrap gap-4 reveal reveal-up">
                     <span class="method-chip">Doelgerichte Biociden</span>
                     <span class="method-chip">Drone Inspecties</span>
                     <span class="method-chip">High-tech equipment</span>
@@ -448,9 +471,7 @@
             <div class="lg:w-1/2 relative">
                 <div class="aspect-video bg-white/5 rounded-2xl overflow-hidden border border-white/10 group shadow-2xl">
                     <img alt="IPM Methodology" class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700" src="https://images.unsplash.com/photo-1674485127842-7b63ac41db8c?auto=format&fit=crop&q=80&w=1200"/>
-                    <div class="absolute inset-0 flex items-center justify-center p-12">
-                        <div class="text-[12rem] font-black text-white/5 select-none font-mono">01</div>
-                    </div>
+
                 </div>
                 <div class="absolute -bottom-6 -left-6 bg-primary border border-white/10 p-6 rounded-lg font-mono text-[10px] tracking-[0.2em] uppercase text-slate-400">
                     PRECISION PROTOCOL 2.4
@@ -474,28 +495,28 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="pest-id-card group overflow-hidden reveal reveal-up delay-100">
+            <div class="pest-id-card group overflow-hidden reveal reveal-up">
                 <img src="./brown_rat_macro_1775488454904.png?v=2" alt="Bruine Rat" />
                 <div class="pest-id-overlay">
                     <div class="text-secondary font-black text-[8px] uppercase tracking-widest mb-1">Hazard: Medium</div>
                     <div class="text-sm font-black uppercase tracking-tight">Bruine Rat</div>
                 </div>
             </div>
-            <div class="pest-id-card group overflow-hidden reveal reveal-up delay-200">
+            <div class="pest-id-card group overflow-hidden reveal reveal-up">
                 <img src="./german_cockroach_macro_1775488478853.png?v=2" alt="Duitse Kakkerlak" />
                 <div class="pest-id-overlay">
                     <div class="text-red-500 font-black text-[8px] uppercase tracking-widest mb-1">Hazard: High</div>
                     <div class="text-sm font-black uppercase tracking-tight">Duitse Kakkerlak</div>
                 </div>
             </div>
-            <div class="pest-id-card group overflow-hidden reveal reveal-up delay-300">
+            <div class="pest-id-card group overflow-hidden reveal reveal-up">
                 <img src="./common_wasp_macro_1775488500000_1775488504014.png?v=2" alt="Gewone Wesp" />
                 <div class="pest-id-overlay">
                     <div class="text-secondary font-black text-[8px] uppercase tracking-widest mb-1">Hazard: High</div>
                     <div class="text-sm font-black uppercase tracking-tight">Gewone Wesp</div>
                 </div>
             </div>
-            <div class="pest-id-card group overflow-hidden reveal reveal-up delay-400">
+            <div class="pest-id-card group overflow-hidden reveal reveal-up">
                 <img src="./silverfish_macro_1775488510000_1775488528595.png?v=2" alt="Zilvervisje" />
                 <div class="pest-id-overlay">
                     <div class="text-slate-400 font-black text-[8px] uppercase tracking-widest mb-1">Hazard: Low</div>
@@ -655,8 +676,60 @@
     </div>
 </section>
 
-<!-- [NEW] Schedule Intervention / Booking Form -->
-<section class="py-32 bg-surface px-6" id="contact">
+<!-- Testimonials Section -->
+<section class="py-24 bg-surface-offset px-6 border-t border-slate-200" id="testimonials">
+    <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mb-20 reveal reveal-left">
+            <div class="text-secondary font-bold tracking-[0.2em] uppercase text-[10px] mb-4">Wat onze klanten zeggen</div>
+            <h2 class="text-4xl md:text-6xl font-black text-primary tracking-tighter uppercase leading-none">Klanttevredenheid.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="review-card reveal reveal-up delay-100">
+                <div class="star-rating">
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium italic mb-6">"Binnen 2 uur waren ze ter plaatse voor een wespennest. Professioneel materiaal en zeer duidelijke communicatie."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center font-black text-primary text-xs border border-primary/10">MD</div>
+                    <div>
+                        <div class="text-xs font-black uppercase tracking-tight text-primary">Marc D.</div>
+                        <div class="text-[10px] text-slate-400 font-mono">Brasschaat</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card reveal reveal-up delay-200">
+                <div class="star-rating">
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium italic mb-6">"Tactical Guardian heeft ons restaurant gered van een serieuze kakkerlakkenplaag. Hun methode is echt next-level."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center font-black text-primary text-xs border border-primary/10">SV</div>
+                    <div>
+                        <div class="text-xs font-black uppercase tracking-tight text-primary">Sarah V.</div>
+                        <div class="text-[10px] text-slate-400 font-mono">Antwerpen Centrum</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card reveal reveal-up delay-300">
+                <div class="star-rating">
+                    <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium italic mb-6">"Eindelijk een bedrijf dat weet wat ze doen met de Aziatische hoornaar. Veiligheid stond overal voorop."</p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center font-black text-primary text-xs border border-primary/10">KL</div>
+                    <div>
+                        <div class="text-xs font-black uppercase tracking-tight text-primary">Koen L.</div>
+                        <div class="text-[10px] text-slate-400 font-mono">Edegem</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact / Booking Section (Direct Engagement) -->
+<section class="py-32 bg-white relative overflow-hidden" id="contact">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="space-y-12">
