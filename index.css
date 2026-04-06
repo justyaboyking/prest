@@ -1,0 +1,512 @@
+/* Tactical Guardian - Core Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    /* Precise OKLCH Tactical Palette */
+    --color-primary: oklch(0.20 0.05 240);       /* Darker Night Blue */
+    --color-secondary: oklch(0.62 0.25 45);      /* Sharper Tactical Orange */
+    --color-accent: oklch(0.55 0.25 25);        /* Tactical Red */
+    --color-surface: oklch(0.99 0 0);           /* Extreme Clean Plate */
+    --color-surface-offset: oklch(0.97 0 0);    /* Subtle Offset */
+    --color-surface-offset-2: oklch(0.12 0.02 240); /* Dark Contrast Flip */
+    --color-text: oklch(0.20 0 0);              /* High Contrast Text */
+    --color-text-muted: oklch(0.55 0 0);        /* Deep Muted Labels */
+    --color-border: oklch(0.92 0 0);            /* Tactical Hairline */
+    --color-divider: oklch(0.0 0 0 / 0.1);      /* Data Separation */
+    
+    /* Layout Tokens */
+    --radius-full: 9999px;
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 4px;
+    --font-mono: 'JetBrains Mono', monospace;
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: var(--radius-sm);
+}
+
+/* Typography Scale */
+h1, h2, h3, h4 {
+    letter-spacing: -0.03em;
+    font-weight: 900;
+}
+
+.text-display {
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+}
+
+.text-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.label-tactical {
+    font-family: var(--font-mono);
+    border-left: 2px solid var(--color-secondary);
+    padding-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Components */
+
+/* Status Indicator */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: oklch(0.7 0.15 150); /* Tactical Green */
+}
+
+.pulse-active {
+    width: 6px;
+    height: 6px;
+    background-color: oklch(0.7 0.15 150);
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: oklch(0.7 0.15 150);
+    border-radius: 50%;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(3.5); opacity: 0; }
+}
+
+/* CTA Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: white;
+    box-shadow: 0 4px 12px oklch(0.60 0.25 45 / 0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px oklch(0.60 0.25 45 / 0.25);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: white;
+}
+
+.btn-ghost:hover {
+    color: var(--color-secondary);
+}
+
+/* Bento Grid */
+.bento-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bento-col-2 {
+        grid-column: span 2;
+    }
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition-base);
+}
+
+/* Ensure all kids in bento match the radius */
+.card img {
+    border-radius: 0;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Reduced for cleaner look */
+    border-color: var(--color-secondary);
+}
+
+/* Tag Cloud & Chips */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.tag-chip {
+    padding: 6px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    transition: var(--transition-fast);
+    background: transparent;
+    cursor: default;
+}
+
+.tag-active {
+    font-weight: 700;
+    border-color: var(--color-secondary);
+    background: color-mix(in oklch, var(--color-secondary) 5%, transparent);
+}
+
+.tag-chip:hover {
+    border-color: var(--color-secondary);
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* Utils */
+.v-separator {
+    width: 1px;
+    height: 60px;
+    background: var(--color-divider);
+}
+
+.bg-contrast-flip {
+    background-color: var(--color-surface-offset-2);
+    color: white;
+}
+
+.method-chip {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- New Trust Components --- */
+
+/* Review & Social Proof */
+.review-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: var(--transition-base);
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.star-rating {
+    display: flex;
+    gap: 2px;
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+}
+
+/* Process Section */
+.process-step {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+}
+
+.process-number {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    color: oklch(0.85 0 0);
+    margin-bottom: -1.5rem;
+    position: relative;
+    z-index: 0;
+}
+
+.process-content {
+    position: relative;
+    z-index: 10;
+}
+
+@media (min-width: 1024px) {
+    .process-step::after {
+        content: '';
+        position: absolute;
+        top: 2.5rem;
+        left: 60%;
+        width: 80%;
+        height: 1px;
+        background: var(--color-divider);
+        z-index: 1;
+    }
+    .process-step:last-child::after {
+        display: none;
+    }
+}
+
+/* Pest ID Library */
+.pest-id-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-primary);
+    border: 1px solid var(--color-divider);
+}
+
+.pest-id-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: var(--transition-base);
+}
+
+.pest-id-card:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.pest-id-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    color: white;
+}
+
+/* Booking Form */
+.booking-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+}
+
+.input-tactical {
+    width: 100%;
+    background: var(--color-surface-offset);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.input-tactical:focus {
+    border-color: var(--color-secondary);
+    background: white;
+    box-shadow: 0 0 0 4px color-mix(in oklch, var(--color-secondary) 10%, transparent);
+}
+
+/* Sticky Mobile CTA */
+.sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--color-border);
+    padding: 0.75rem 1rem;
+    z-index: 100;
+    display: flex;
+    gap: 0.75rem;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 767px) {
+    .sticky-bar.visible {
+        transform: translateY(0);
+    }
+}
+
+/* Map Placeholder Styling */
+.map-container {
+    background: var(--color-surface-offset);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.map-overlay-tactical {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, color-mix(in oklch, var(--color-secondary) 15%, transparent) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+
+/* Underline Highlight Animation */
+.highlight-tactical {
+    position: relative;
+    white-space: nowrap;
+}
+
+.highlight-tactical::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: drawHighlight 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards 1.2s;
+}
+
+@keyframes drawHighlight {
+    to { transform: scaleX(1); }
+}
+
+
+/* --- Tactical Animation Suite --- */
+
+/* Base Reveal Logic */
+.reveal {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up { transform: translateY(40px); }
+.reveal-down { transform: translateY(-40px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-scale { transform: scale(0.95); }
+
+/* Triggered State */
+.reveal.reveal-active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0) scale(1);
+}
+
+/* Delay Utils */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-1000 { transition-delay: 1000ms; }
+
+/* Micro-interactions */
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px -5px rgba(var(--color-secondary), 0.3);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Card Reveal Enhancements */
+.card {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Underline Highlight Animation */
+.highlight-tactical {
+    position: relative;
+    white-space: nowrap;
+}
+
+.highlight-tactical::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: drawHighlight 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards 1.2s;
+}
+
+@keyframes drawHighlight {
+    to { transform: scaleX(1); }
+}
+
+/* Badge Text Decipher Animation - Helper Classes */
+.animate-text-reveal {
+    font-variant-numeric: tabular-nums;
+}
