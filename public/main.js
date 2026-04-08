@@ -5,25 +5,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('header');
     
     // Navbar Scroll Logic
-    const navLinks = navbar.querySelectorAll('a:not(.bg-secondary)');
+    const mainNav = document.getElementById('main-nav');
     const brandName = document.getElementById('brand-name');
+    const navLinks = mainNav.querySelectorAll('.nav-link');
+    const menuToggle = document.getElementById('mobile-menu-toggle');
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
         if (scrollY > 50) {
-            navbar.classList.add('bg-white/95', 'backdrop-blur-2xl', 'shadow-sm', 'border-b', 'border-slate-100');
-            navbar.classList.remove('bg-transparent');
+            mainNav.classList.add('bg-white/95', 'backdrop-blur-2xl', 'shadow-md', 'border-b', 'border-slate-200');
+            mainNav.classList.remove('bg-transparent', 'py-4');
+            mainNav.classList.add('py-2');
             brandName.classList.remove('text-white');
             brandName.classList.add('text-primary');
+            menuToggle.classList.remove('text-white');
+            menuToggle.classList.add('text-primary');
             navLinks.forEach(link => {
                 link.classList.add('text-primary');
                 link.classList.remove('text-white');
             });
         } else {
-            navbar.classList.remove('bg-white/95', 'backdrop-blur-2xl', 'shadow-sm', 'border-b', 'border-slate-100');
-            navbar.classList.add('bg-transparent');
+            mainNav.classList.remove('bg-white/95', 'backdrop-blur-2xl', 'shadow-md', 'border-b', 'border-slate-200', 'py-2');
+            mainNav.classList.add('bg-transparent', 'py-4');
             brandName.classList.add('text-white');
             brandName.classList.remove('text-primary');
+            menuToggle.classList.add('text-white');
+            menuToggle.classList.remove('text-primary');
             navLinks.forEach(link => {
                 link.classList.remove('text-primary');
                 link.classList.add('text-white');
@@ -33,6 +40,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
+
+    // Mobile Menu Logic
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileMenuContent = document.getElementById('mobile-menu-content');
+    
+    const toggleMobileMenu = (open) => {
+        if (open) {
+            mobileMenu.classList.remove('hidden');
+            // Small timeout to allow the transition to trigger correctly
+            setTimeout(() => {
+                mobileMenu.classList.remove('invisible');
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenuContent.classList.remove('translate-y-10', 'opacity-0');
+                document.body.classList.add('overflow-hidden');
+            }, 10);
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuContent.classList.add('translate-y-10', 'opacity-0');
+            document.body.classList.remove('overflow-hidden');
+            
+            // Wait for transition to finish before hiding it from layout entirely
+            setTimeout(() => {
+                mobileMenu.classList.add('invisible');
+                mobileMenu.classList.add('hidden');
+            }, 500); 
+        }
+    };
+
+    mobileMenuToggle.addEventListener('click', () => toggleMobileMenu(true));
+    mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+    
+    // Close menu when clicking a link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(false));
+    });
 
     // Tactical Text Scramble Effect
     const scrambleText = (el) => {

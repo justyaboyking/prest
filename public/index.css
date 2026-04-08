@@ -34,6 +34,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -41,6 +43,9 @@ body {
     background-color: var(--color-surface);
     color: var(--color-text);
     line-height: 1.5;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
@@ -58,15 +63,15 @@ body {
 
 /* Typography Scale */
 h1, h2, h3, h4 {
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     font-weight: 900;
 }
 
 .text-display {
     font-size: clamp(4rem, 8vw, 7rem);
-    line-height: 0.85;
+    line-height: 1.1;
     font-weight: 900;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
 }
 
 .text-label {
