@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import useReveal from './hooks/useReveal';
 import useStats from './hooks/useStats';
@@ -23,84 +22,32 @@ export default function App() {
 
     return (
         <div className="font-body text-on-surface bg-surface overflow-x-hidden">
-            
             <Navbar />
+            <main className="max-w-full overflow-hidden">
+                <Hero />
+                <PestLibrary />
+                <TrustSignals />
+                <Protocol />
+                <AboutUs />
+                <Expertise />
+                <Methodology />
+                <PestIdLibrary />
+                <ServiceArea />
+                <Testimonials />
+                <PricingFAQ />
+                <ContactForm />
+                <Footer />
 
-
-<main className="max-w-full overflow-hidden">
-{/* Hero Section */}
-
-            <Hero />
-
-
-{/* Services Section (Bento Grid) */}
-
-            <PestLibrary />
-
-
-{/* Trust Signals (Massive Stats) - DARK PANEL */}
-
-            <TrustSignals />
-
-
-{/* "How It Works" Protocol Section */}
-
-            <Protocol />
-
-
-{/* About Us Section (Elite Team & Mission) */}
-
-            <AboutUs />
-
-
-{/* Expertise / Hornet Detail (FULL BLEED DARK) */}
-
-            <Expertise />
-
-
-{/* IPM / Method Section (CONTRAST FLIP / TECH SPEC) */}
-
-            <Methodology />
-
-
-{/* Pest ID Library (Species Identification) */}
-
-            <PestIdLibrary />
-
-
-{/* Location & Service Areas */}
-
-            <ServiceArea />
-
-
-{/* Testimonials Section (Social Proof First) */}
-
-            <Testimonials />
-
-
-{/* Pricing & FAQ (After Social Proof) */}
-
-            <PricingFAQ />
-
-
-{/* Contact / Booking Section (Direct Engagement) */}
-
-            <ContactForm />
-
-
-{/* Footer (Bookend) */}
-
-            <Footer />
-
-            {/* Sticky Mobile CTA */}
-            <div className="sticky-bar z-[150]" id="mobile-cta">
-                <a href="tel:+3233000000" className="flex-1 bg-secondary text-white py-4 rounded-md font-black text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2">
-                    <i className="ph-bold ph-phone text-lg"></i> Direct Bellen
-                </a>
-                <a href="https://wa.me/3233000000" className="flex-1 bg-primary text-white py-4 rounded-md font-black text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2">
-                    <i className="ph-bold ph-whatsapp-logo text-lg"></i> WhatsApp
-                </a>
-            </div>
+                {/* Sticky Mobile CTA */}
+                <div className="sticky-bar z-[150]" id="mobile-cta">
+                    <a href="tel:+3233000000" className="w-full bg-secondary text-white py-4 rounded-xl font-black flex flex-col items-center justify-center gap-1 shadow-lg border-2 border-white/20 animate-pulse-glow">
+                        <div className="flex items-center gap-3 text-sm uppercase tracking-[0.3em]">
+                            <i className="ph-bold ph-phone text-xl"></i>
+                            <span>Bel direct</span>
+                        </div>
+                        <span className="text-xl font-mono tracking-tighter">+32 3 300 00 00</span>
+                    </a>
+                </div>
             </main>
         </div>
     );

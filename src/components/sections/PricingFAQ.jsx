@@ -35,7 +35,7 @@ export default function PricingFAQ() {
                 </ul>
                 
                 <a href="tel:+3233000000" className="btn btn-primary w-full text-sm uppercase tracking-[0.2em] py-5">
-                    Plan Behandeling
+                    Bel Direct
                 </a>
             </div>
         </div>

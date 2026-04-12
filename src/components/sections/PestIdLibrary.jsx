@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PestIdLibrary() {
   return (
-    <section className="py-32 bg-surface px-6 overflow-hidden">
+    <section className="py-32 bg-surface px-6 overflow-hidden border-b border-slate-200">
     <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div className="max-w-2xl reveal reveal-left">

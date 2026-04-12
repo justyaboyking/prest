@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function ContactForm() {
   return (
-    <section className="py-32 bg-white relative overflow-hidden" id="contact">
+    <section className="py-32 bg-white relative overflow-hidden border-t border-slate-200" id="contact">
     <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-12">
                 <div className="space-y-6">
-                    <h3 className="text-5xl md:text-[5.5rem] font-black text-primary tracking-tighter uppercase leading-[0.85]">
+                    <h3 className="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">
                         Direct <br/> <span className="text-secondary">contact.</span>
                     </h3>
                     <p className="text-xl text-slate-500 max-w-md leading-relaxed font-medium">

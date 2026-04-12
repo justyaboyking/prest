@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ServiceArea() {
   return (
-    <section className="py-24 bg-surface px-6" id="lokale-service">
+    <section className="py-32 bg-surface px-6 border-b border-slate-200" id="lokale-service">
     <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             

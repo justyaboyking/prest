@@ -11,13 +11,13 @@ export default function TrustSignals() {
             </div>
             <div className="hidden md:block v-separator"></div>
             <div className="flex-1 text-center space-y-2 reveal reveal-up">
-                <div className="text-display text-secondary uppercase tracking-normal stats-counter" data-target="2">2 uur</div>
+                <div className="text-display text-secondary uppercase tracking-normal stats-counter" data-target="2">2u</div>
                 <div className="text-label text-slate-400">Gemiddelde Respons</div>
             </div>
             <div className="hidden md:block v-separator"></div>
-            <div className="flex-1 text-center md:text-right space-y-2 reveal reveal-up">
-                <div className="text-display text-primary uppercase tracking-normal">Antwerpen</div>
-                <div className="text-label text-slate-400">Actief in Antwerpen</div>
+            <div class="flex-1 text-center md:text-right space-y-2 reveal reveal-up">
+                <div class="text-display text-primary uppercase tracking-normal font-black">Antwerpen</div>
+                <div class="text-label text-slate-400">Actief in de regio</div>
             </div>
         </div>
     </div>

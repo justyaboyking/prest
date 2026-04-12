@@ -2,12 +2,12 @@ import React from 'react';
 
 export default function PestLibrary() {
   return (
-    <section className="py-24 bg-primary overflow-hidden" id="onze-diensten">
+    <section className="py-32 bg-primary overflow-hidden border-b border-white/5" id="onze-diensten">
         <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20 reveal reveal-up">
                 <div className="space-y-4">
                     <h2 className="text-sm font-bold tracking-[0.4em] text-secondary uppercase opacity-80">Onze diensten</h2>
-                    <h3 className="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase leading-[0.85]">
+                    <h3 className="text-4xl md:text-6xl font-black text-white tracking-normal uppercase leading-tight">
                         Overzicht <br/> <span className="text-secondary text-glow-orange">Bestrijding</span>
                     </h3>
                 </div>

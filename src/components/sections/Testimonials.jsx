@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-surface-offset px-6 border-t border-slate-200" id="testimonials">
+    <section className="py-32 bg-surface-offset px-6 border-t border-slate-200" id="testimonials">
     <div className="max-w-7xl mx-auto">
         <div className="max-w-2xl mb-20 reveal reveal-left">
             <div className="text-secondary font-bold tracking-[0.2em] uppercase text-[10px] mb-4">Wat onze klanten zeggen</div>
-            <h2 className="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Klanttevredenheid.</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Klant <br/> <span className="text-secondary">vriendelijkheid.</span></h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

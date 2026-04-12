@@ -5,9 +5,9 @@ export default function Expertise() {
     <section className="bg-primary text-white overflow-hidden relative" id="expertise">
     <div className="flex flex-col lg:flex-row min-h-[600px]">
         {/* Text Content */}
-        <div className="lg:w-1/2 p-8 md:p-24 flex flex-col justify-center space-y-12 relative z-10 reveal reveal-left">
+        <div className="lg:w-1/2 p-8 md:py-32 md:px-24 flex flex-col justify-center space-y-12 relative z-10 reveal reveal-left">
             <div className="space-y-6">
-                <h3 className="text-5xl md:text-8xl font-black tracking-normal uppercase leading-tight">
+                <h3 className="text-4xl md:text-6xl font-black tracking-normal uppercase leading-tight">
                     Aziatische <br/> <span className="text-secondary">Hoornaar</span>
                 </h3>
                 <p className="text-xl text-slate-400 max-w-xl leading-relaxed font-medium">

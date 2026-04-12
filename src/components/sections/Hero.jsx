@@ -8,7 +8,7 @@ export default function Hero() {
     </div>
     <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-transparent"></div>
     
-    <div className="relative max-w-7xl mx-auto px-6 sm:px-8 py-10 sm:py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center flex-1">
+    <div className="relative max-w-7xl mx-auto px-6 sm:px-8 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center flex-1">
         <div className="space-y-6 sm:space-y-8 lg:space-y-10">
             {/* Google Trust Signal */}
             <div className="animate-fade-down flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-md border-l-4 sm:border-l-[6px] pr-4 sm:pr-6 py-2 sm:py-2.5 rounded-r-md w-fit" style={{"borderColor":"var(--color-accent)","animationDelay":"0.2s"}}>
@@ -56,7 +56,7 @@ export default function Hero() {
 
     {/* Tactical Trust Readout (Line Style - LARGE) */}
     <div className="relative w-full bg-white border-y border-slate-100 mt-auto overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-10 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
+        <div className="max-w-7xl mx-auto px-6 py-10 lg:py-8 grid grid-cols-2 lg:flex lg:flex-row items-start lg:items-center justify-between gap-x-6 gap-y-10 lg:gap-8">
             
             {/* Segment 1: Vlaamse Overheid */}
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 lg:border-l-4 lg:pl-6 reveal reveal-right delay-100 w-full lg:w-auto" style={{"borderColor":"var(--color-accent)"}}>
@@ -84,17 +84,6 @@ export default function Hero() {
 
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 reveal reveal-right delay-300 w-full lg:w-auto">
                 <div className="text-secondary shrink-0">
-                    <i className="ph-bold ph-lock-key-open text-4xl lg:text-3xl"></i>
-                </div>
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <span className="text-sm font-black uppercase tracking-[0.25em] text-primary leading-relaxed">Verzekerd & Erkend</span>
-                </div>
-            </div>
-
-            <div className="hidden lg:block w-px h-12 bg-slate-200"></div>
-
-            <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 reveal reveal-right delay-300 w-full lg:w-auto">
-                <div className="text-secondary shrink-0">
                     <i className="ph-bold ph-map-pin text-4xl lg:text-3xl"></i>
                 </div>
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -104,7 +93,7 @@ export default function Hero() {
 
             <div className="hidden lg:block w-px h-12 bg-slate-200"></div>
 
-            {/* Segment 4: BePest */}
+            {/* Segment 4: BePest */ }
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 reveal reveal-right delay-400 w-full lg:w-auto">
                 <div className="text-secondary shrink-0">
                     <i className="ph-bold ph-certificate text-4xl lg:text-3xl"></i>

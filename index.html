@@ -165,7 +165,7 @@
     </div>
     <div class="absolute inset-0 bg-gradient-to-tr from-primary via-primary/90 to-transparent"></div>
     
-    <div class="relative max-w-7xl mx-auto px-6 sm:px-8 py-10 sm:py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center flex-1">
+    <div class="relative max-w-7xl mx-auto px-6 sm:px-8 py-16 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center flex-1">
         <div class="space-y-6 sm:space-y-8 lg:space-y-10">
             <!-- Google Trust Signal -->
             <div class="animate-fade-down flex items-center gap-3 sm:gap-4 bg-white/5 backdrop-blur-md border-l-4 sm:border-l-[6px] pr-4 sm:pr-6 py-2 sm:py-2.5 rounded-r-md w-fit" style="border-color: var(--color-accent); animation-delay: 0.2s;">
@@ -213,7 +213,7 @@
 
     <!-- Tactical Trust Readout (Line Style - LARGE) -->
     <div class="relative w-full bg-white border-y border-slate-100 mt-auto overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-8 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
+        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-8 grid grid-cols-2 lg:flex lg:flex-row items-start lg:items-center justify-between gap-x-6 gap-y-10 lg:gap-8">
             
             <!-- Segment 1: Vlaamse Overheid -->
             <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 lg:border-l-4 lg:pl-6 reveal reveal-right delay-100 w-full lg:w-auto" style="border-color: var(--color-accent);">
@@ -234,17 +234,6 @@
                 </div>
                 <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
                     <span class="text-sm font-black uppercase tracking-[0.22em] text-primary leading-tight">Biocide Licentie 241/B</span>
-                </div>
-            </div>
-
-            <div class="hidden lg:block w-px h-12 bg-slate-200"></div>
-
-            <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-5 reveal reveal-right delay-300 w-full lg:w-auto">
-                <div class="text-secondary shrink-0">
-                    <i class="ph-bold ph-lock-key-open text-4xl lg:text-3xl"></i>
-                </div>
-                <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <span class="text-sm font-black uppercase tracking-[0.25em] text-primary leading-relaxed">Verzekerd & Erkend</span>
                 </div>
             </div>
 
@@ -443,27 +432,27 @@
 <!-- Trust Signals (Massive Stats) - DARK PANEL -->
 <section class="py-32 bg-surface-offset border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-4">
             <div class="flex-1 text-center md:text-left space-y-2 reveal reveal-up">
                 <div class="text-display text-primary uppercase tracking-normal stats-counter" data-target="100">100%</div>
                 <div class="text-label text-slate-400">Resultaatgarantie</div>
             </div>
             <div class="hidden md:block v-separator"></div>
             <div class="flex-1 text-center space-y-2 reveal reveal-up">
-                <div class="text-display text-secondary uppercase tracking-normal stats-counter" data-target="2">2 uur</div>
+                <div class="text-display text-secondary uppercase tracking-normal stats-counter" data-target="2">2u</div>
                 <div class="text-label text-slate-400">Gemiddelde Respons</div>
             </div>
             <div class="hidden md:block v-separator"></div>
             <div class="flex-1 text-center md:text-right space-y-2 reveal reveal-up">
-                <div class="text-display text-primary uppercase tracking-normal">Antwerpen</div>
+                <div class="text-display text-primary uppercase tracking-normal font-black">Antwerpen</div>
                 <div class="text-label text-slate-400">Actief in de regio</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- "How It Works" Protocol Section -->
-<section class="py-32 bg-surface overflow-hidden border-b border-slate-200">
+<!-- "Services" Grid Section -->
+<section class="py-32 bg-primary overflow-hidden border-b border-white/5" id="onze-diensten">
     <div class="max-w-7xl mx-auto px-6 text-center">
         <div class="mb-20">
             <h3 class="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Onze werkwijze</h3>
@@ -496,14 +485,15 @@
 </section>
 
 <!-- About Us Section (Elite Team & Mission) -->
-<section class="py-32 bg-white overflow-hidden relative" id="over-ons">
+<section class="py-32 bg-white overflow-hidden relative border-b border-slate-200" id="over-ons">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             
             <!-- Content -->
             <div class="space-y-10 reveal reveal-left">
                 <div class="space-y-6">
-                    <h3 class="text-5xl md:text-7xl font-black text-primary tracking-tighter uppercase leading-[0.85]">
+                    <h2 class="text-sm font-bold tracking-[0.4em] text-secondary uppercase">Wie Wij Zijn</h2>
+                    <h3 class="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">
                         Over ons
                     </h3>
                 </div>
@@ -517,7 +507,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 pt-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
                     <div class="space-y-2">
                         <div class="text-3xl font-black text-primary uppercase">Specialisten</div>
                         <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">Erkende Specialisten</div>
@@ -531,8 +521,8 @@
 
             <!-- Visual Component -->
             <div class="relative reveal reveal-right">
-                <div class="aspect-[4/5] bg-primary rounded-3xl overflow-hidden shadow-2xl relative group">
-                    <img alt="Tactical Specialist" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" src="https://images.unsplash.com/photo-1579443140134-e40733611384?auto=format&fit=crop&q=80&w=1000"/>
+                <div class="aspect-[4/5] bg-primary rounded-3xl overflow-hidden shadow-2xl relative group" style="isolation: isolate; transform: translateZ(0);">
+                    <img alt="Tactical Specialist" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" src="/tactical_specialist_professional_1776027273240.png"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
                     
                     <!-- Tactical Detail Card Pinned -->
@@ -559,10 +549,10 @@
 <section class="bg-primary text-white overflow-hidden relative" id="expertise">
     <div class="flex flex-col lg:flex-row min-h-[600px]">
         <!-- Text Content -->
-        <div class="lg:w-1/2 p-8 md:p-24 flex flex-col justify-center space-y-12 relative z-10 reveal reveal-left">
+        <div class="lg:w-1/2 p-8 md:py-32 md:px-24 flex flex-col justify-center space-y-12 relative z-10 reveal reveal-left">
             <div class="space-y-6">
-                <h3 class="text-5xl md:text-8xl font-black tracking-normal uppercase leading-tight">
-                    Aziatische <br/> <span class="text-secondary">Hoornaar</span>
+                <h3 class="text-4xl md:text-6xl font-black tracking-normal uppercase leading-tight">
+                    Aziatische <br> <span class="text-secondary">Hoornaar</span>
                 </h3>
                 <p class="text-xl text-slate-400 max-w-xl leading-relaxed font-medium">
                     De Aziatische hoornaar vraagt om een gerichte en veilige aanpak. Wij beschikken over geschikt materiaal voor bestrijding op moeilijk bereikbare hoogtes.
@@ -638,7 +628,7 @@
 </section>
 
 <!-- Pest ID Library (Species Identification) -->
-<section class="py-32 bg-surface px-6 overflow-hidden">
+<section class="py-32 bg-surface px-6 overflow-hidden border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div class="max-w-2xl">
@@ -679,7 +669,7 @@
 </section>
 
 <!-- Location & Service Areas -->
-<section class="py-24 bg-surface px-6" id="lokale-service">
+<section class="py-32 bg-surface px-6 border-b border-slate-200" id="lokale-service">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
@@ -878,11 +868,11 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-24 bg-surface-offset px-6 border-t border-slate-200" id="testimonials">
+<section class="py-32 bg-surface-offset px-6 border-t border-slate-200" id="testimonials">
     <div class="max-w-7xl mx-auto">
         <div class="max-w-2xl mb-20 reveal reveal-left">
             <div class="text-secondary font-bold tracking-[0.2em] uppercase text-[10px] mb-4">Wat onze klanten zeggen</div>
-            <h2 class="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Klanttevredenheid.</h2>
+            <h2 class="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Klant <br> <span class="text-secondary">vriendelijkheid.</span></h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -930,13 +920,13 @@
 </section>
 
 <!-- Contact / Booking Section (Direct Engagement) -->
-<section class="py-32 bg-white relative overflow-hidden" id="contact">
+<section class="py-32 bg-white relative overflow-hidden border-t border-slate-200" id="contact">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="space-y-12">
                 <div class="space-y-6">
-                    <h3 class="text-5xl md:text-[5.5rem] font-black text-primary tracking-tighter uppercase leading-[0.85]">
-                        Direct <br/> <span class="text-secondary">contact</span>
+                    <h3 class="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">
+                        Direct <br> <span class="text-secondary">contact.</span>
                     </h3>
                     <p class="text-xl text-slate-500 max-w-md leading-relaxed font-medium">
                         Geen tijd te verliezen? Vul het formulier in en een specialist neemt binnen 15 minuten contact met u op.
@@ -1065,14 +1055,13 @@
 </footer>
 
 <!-- Sticky Mobile Bar -->
-<div class="sticky-bar" id="mobile-cta">
-    <a href="tel:+3233000000" class="btn btn-primary flex-1 py-3 text-[10px] uppercase tracking-widest">
-        <i class="ph-bold ph-phone"></i>
-        Bel direct
-    </a>
-    <a href="#contact" class="btn btn-primary flex-1 py-3 text-[10px] uppercase tracking-widest border border-white/20">
-        <i class="ph-bold ph-calendar"></i>
-        Plan Behandeling
+<div class="sticky-bar z-[150]" id="mobile-cta">
+    <a href="tel:+3233000000" class="w-full bg-secondary text-white py-4 rounded-xl font-black flex flex-col items-center justify-center gap-1 shadow-lg border-2 border-white/20 animate-pulse-glow">
+        <div class="flex items-center gap-3 text-sm uppercase tracking-[0.3em]">
+            <i class="ph-bold ph-phone text-xl"></i>
+            <span>Bel direct</span>
+        </div>
+        <span class="text-xl font-mono tracking-tighter">+32 3 300 00 00</span>
     </a>
 </div>
 
