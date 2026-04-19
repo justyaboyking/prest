@@ -62,11 +62,11 @@ const detailedServices = [
   {
     title: 'Wespen',
     id: 'wespen',
-    desc: 'Directe neutralisatie van wespennesten in één interventie.',
+    desc: 'Directe neutralisatie of wespennesten in één interventie.',
     deepIntel: {
       recognition: [
-        { t: 'Invliegopening', d: 'Een constante stroom van wespen die via een specifieke opening naar binnen vliegen.', img: '/wspcloseup.png' },
-        { t: 'Nestgeluid', d: 'Een luid zoemend of ritselend geluid achter wanden of in plafonds.', img: '/wspcloseup.png' },
+        { t: 'Invliegopening', d: 'Een constante stroom van wespen die via een specifieke opening naar binnen vliegen.', img: '/wespen_hero.png' },
+        { t: 'Nestgeluid', d: 'Een luid zoemend of ritselend geluid achter wanden of in plafonds.', img: '/wespen_hero.png' },
         { t: 'Visueel Nest', d: 'Een zichtbaar grijs, papierachtig nest in schuren, op zolders of onder dakranden.' }
       ],
       risks: [
@@ -88,8 +88,8 @@ const detailedServices = [
     garantie: '100% Succesgarantie — Mocht het nest na 48u nog actief zijn, komen wij gratis terug.',
     price: 'Standaard €75',
     icon: Zap,
-    image: '/wspcloseup.png',
-    heroImage: 'https://images.unsplash.com/photo-1605809795641-69811baeb734?auto=format&fit=crop&q=80&w=1200'
+    image: '/wespen_hero.png',
+    heroImage: '/wespen_hero.png'
   },
   {
     title: 'Kakkerlakken',
@@ -97,8 +97,8 @@ const detailedServices = [
     desc: 'Roei de volledige kolonie van binnenuit uit met onze geavanceerde en onopvallende gel-technologie.',
     deepIntel: {
       recognition: [
-        { t: 'Nachtactiviteit', d: 'Kakkerlakken zijn lichtschuw. Ziet u ze overdag? Dan is de plaag al gevorderd.', img: '/karkerlak.jpg' },
-        { t: 'Spoorvorming', d: 'Kleine zwarte puntjes (uitwerpselen) in de buurt van scharnieren en kieren.', img: '/karkerlak.jpg' },
+        { t: 'Nachtactiviteit', d: 'Kakkerlakken zijn lichtschuw. Ziet u ze overdag? Dan is de plaag al gevorderd.', img: '/kakkerlakken_hero.png' },
+        { t: 'Spoorvorming', d: 'Kleine zwarte puntjes (uitwerpselen) in de buurt van scharnieren en kieren.', img: '/kakkerlakken_hero.png' },
         { t: 'Eicapsules', d: 'Lege bruine coconnetjes in warme, vochtige hoeken zoals achter koelkasten.' }
       ],
       risks: [
@@ -119,8 +119,8 @@ const detailedServices = [
     approach: 'Wij werken met onopvallende gel-behandelingen die de gehele kolonie tot in de kern vernietigen, zonder dat u uw woning hoeft te ontruimen.',
     price: 'Prijs op aanvraag',
     icon: Bug,
-    image: '/karkerlak.jpg',
-    heroImage: 'https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200'
+    image: '/kakkerlakken_hero.png',
+    heroImage: '/kakkerlakken_hero.png'
   },
   {
     title: 'Houtworm & Boktor',
@@ -128,8 +128,8 @@ const detailedServices = [
     desc: 'Jarenlange bescherming van uw houtwerk door middel van professionele diepte-injecties en oppervlakte-impregnatie.',
     deepIntel: {
       recognition: [
-        { t: 'Gaatjes in hout', d: 'Kleine ronde of ovale openingen in het houtoppervlak.', img: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800' },
-        { t: 'Boormeel', d: 'Fijn zaagsel onder de gaatjes duidt op actieve larven die zich een weg banen.', img: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800' },
+        { t: 'Gaatjes in hout', d: 'Kleine ronde of ovale openingen in het houtoppervlak.', img: '/houtworm_hero.png' },
+        { t: 'Boormeel', d: 'Fijn zaagsel onder de gaatjes duidt op actieve larven die zich een weg banen.', img: '/houtworm_hero.png' },
         { t: 'Knaaggeluid', d: 'Een zacht ritselend geluid uit balken op stille momenten (vaak bij Boktor).' }
       ],
       risks: [
@@ -150,8 +150,8 @@ const detailedServices = [
     approach: 'Wij pakken het probleem bij de wortel aan door biociden tot diep in de kern van het hout te injecteren. Dit doodt larven direct en beschermt jarenlang.',
     price: 'Vanaf €250',
     icon: ShieldCheck,
-    image: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800',
-    heroImage: 'https://images.unsplash.com/photo-1541888941259-792739460273?auto=format&fit=crop&q=80&w=1200'
+    image: '/houtworm_hero.png',
+    heroImage: '/houtworm_hero.png'
   },
   {
     title: 'Bedwantsen',
@@ -159,8 +159,8 @@ const detailedServices = [
     desc: 'Een 100% schone slaapkamer dankzij doeltreffende hittebehandelingen en veilige residuele biociden.',
     deepIntel: {
       recognition: [
-        { t: 'Huidreactie', d: 'Kleine rode bultjes in een rijtje op de huid, vaak hevig jeukend.', img: '/Bedwantsen.png' },
-        { t: 'Bloedsporen', d: 'Kleine roestbruine vlekjes op de lakens of in de naden van de matras.', img: '/Bedwantsen.png' },
+        { t: 'Huidreactie', d: 'Kleine rode bultjes in een rijtje op de huid, vaak hevig jeukend.', img: '/bedwantsen_hero.png' },
+        { t: 'Bloedsporen', d: 'Kleine roestbruine vlekjes op de lakens of in de naden van de matras.', img: '/bedwantsen_hero.png' },
         { t: 'Vervellingshuidjes', d: 'Doorschijnende huidjes in de kieren van het bedframe.' }
       ],
       risks: [
@@ -181,8 +181,8 @@ const detailedServices = [
     approach: 'Wij hanteren een meervoudige aanpak van hitte en residuele middelen. Discreet en effectief, zodat u snel weer zult kunnen slapen.',
     price: 'Vanaf €300',
     icon: ShieldAlert,
-    image: '/Bedwantsen.png',
-    heroImage: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=1200'
+    image: '/bedwantsen_hero.png',
+    heroImage: '/bedwantsen_hero.png'
   },
   {
     title: 'Mieren & Kruipend',
@@ -190,8 +190,8 @@ const detailedServices = [
     desc: 'Absolute vernietiging van het nest en de koningin voor een permanent en ongediertevrij resultaat.',
     deepIntel: {
       recognition: [
-        { t: 'Mierensporen', d: 'Duidelijke looproutes tussen toegangspunten en voedselbronnen.', img: '/ant_macro.png' },
-        { t: 'Zandhoopjes', d: 'Kleine hoopjes tussen tegels of langs plinten duiden op nestactiviteit.', img: '/ant_macro.png' },
+        { t: 'Mierensporen', d: 'Duidelijke looproutes tussen toegangspunten en voedselbronnen.', img: '/mieren_hero.png' },
+        { t: 'Zandhoopjes', d: 'Kleine hoopjes tussen tegels of langs plinten duiden op nestactiviteit.', img: '/mieren_hero.png' },
         { t: 'Zwevende Mieren', d: 'Verschijning van gevleugelde mieren (bruidsvlucht) binnenshuis.' }
       ],
       risks: [
@@ -212,8 +212,8 @@ const detailedServices = [
     approach: 'Onze aanpak richt zich op het nest. De mieren brengen het bestrijdingsmiddel zelf naar hun koningin, wat zorgt voor een definitieve oplossing.',
     price: 'Vanaf €95',
     icon: ShieldCheck,
-    image: '/ant_macro.png',
-    heroImage: 'https://images.unsplash.com/photo-1541888941259-792739460273?auto=format&fit=crop&q=80&w=1200'
+    image: '/mieren_hero.png',
+    heroImage: '/mieren_hero.png'
   }
 ];
 
