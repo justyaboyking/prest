@@ -249,7 +249,7 @@ export default function ServicesPage() {
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
               /* Mobile: Rat anchors even higher above the bottom. Desktop: Rat moves to the right */
-              ? 'bg-[position:center_bottom_6rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] opacity-70 md:opacity-100' 
+              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] opacity-70 md:opacity-100' 
               : 'bg-center bg-cover'
           }`}
           style={activeService?.heroImage ? {
