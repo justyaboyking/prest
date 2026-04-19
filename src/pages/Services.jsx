@@ -239,17 +239,26 @@ export default function ServicesPage() {
       <div className="grain-overlay" />
       {/* CINEMATIC HEADER */}
       <header className={`relative flex flex-col items-center justify-center bg-primary text-white overflow-hidden text-center transition-all duration-700 ${activeService?.heroImage ? 'min-h-[auto] aspect-[3/2] sm:aspect-auto sm:min-h-[75vh] pt-20 sm:pt-48' : 'min-h-[75vh] pt-48 pb-32'}`}>
-        <div className="absolute inset-0 z-0 flex items-center justify-center">
-          <img
-            src={activeService?.heroImage || "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"}
-            alt="Expert Ongediertebestrijding"
-            className={`transition-all duration-1000 ${
-              activeService?.heroImage 
-                ? 'w-1/2 h-1/2 object-contain opacity-100 grayscale-0' 
-                : 'w-full h-full object-cover opacity-[0.08] grayscale'
-            }`}
-          />
-          <div className={`absolute inset-0 bg-gradient-to-b transition-colors duration-1000 ${activeService?.heroImage ? 'from-transparent via-transparent to-primary/80' : 'from-primary/95 via-primary to-primary'}`} />
+        <div 
+          className={`absolute inset-0 z-0 transition-all duration-1000 ${activeService?.heroImage ? 'opacity-100' : 'opacity-100'}`}
+          style={activeService?.heroImage ? {
+            backgroundImage: `radial-gradient(circle, transparent 20%, var(--color-primary) 70%), url(${activeService.heroImage})`,
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '50% auto', // making it "2x smaller" as requested earlier
+            backgroundColor: 'var(--color-primary)'
+          } : {}}
+        >
+          {!activeService?.heroImage && (
+            <>
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
+                alt="Expert Ongediertebestrijding"
+                className="w-full h-full object-cover opacity-[0.08] grayscale"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary" />
+            </>
+          )}
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-12">
