@@ -13,9 +13,9 @@ import Footer from '../components/layout/Footer';
 export default function Home() {
   const [bgIndex, setBgIndex] = useState(0);
   const bgImages = [
-    "/hero_main.png",
-    "/wespen_hero.png",
-    "/kakkerlakken_hero.png"
+    "https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200",
+    "https://images.unsplash.com/photo-1581270023016-1b7ea9be8fad?auto=format&fit=crop&q=80&w=1200",
+    "https://images.unsplash.com/photo-1600366776060-2f7acc36760e?auto=format&fit=crop&q=80&w=1200"
   ];
 
   useEffect(() => {
@@ -142,7 +142,7 @@ export default function Home() {
 
             {/* Muizen & Ratten — row 1, col 1–2 */}
             <div className="min-h-[320px] md:col-span-2 lg:col-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Muizen en ratten" src="/ratimgbackhgroud.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Muizen en ratten" src="https://images.unsplash.com/photo-1581270023016-1b7ea9be8fad?auto=format&fit=crop&q=80&w=1200" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between">
                 <span className="tag-elite !bg-white/10 !text-white !border-white/20 self-start backdrop-blur-md">Veelvoorkomend</span>
@@ -159,7 +159,7 @@ export default function Home() {
 
             {/* Wespen — row 1, col 3 */}
             <div className="min-h-[320px] lg:col-span-1 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Wespen" src="/wespen_hero.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Wespen" src="wspcloseup.png" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-3xl font-black text-white uppercase leading-none">Wespen</h3>
@@ -173,7 +173,7 @@ export default function Home() {
 
             {/* Kakkerlakken — row 1, col 4 */}
             <div className="min-h-[320px] lg:col-span-1 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Kakkerlakken" src="/kakkerlakken_hero.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Kakkerlakken" src="karkerlak.jpg" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-xl md:text-2xl font-black text-white uppercase leading-none">Kakkerlakken</h3>
@@ -187,7 +187,7 @@ export default function Home() {
 
             {/* Houtworm & Boktor — row 2, col 1 */}
             <div className="min-h-[320px] lg:col-span-1 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Houtworm" src="/houtworm_hero.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Houtworm" src="https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight">Houtworm &amp;<br />Boktor</h3>
@@ -201,7 +201,7 @@ export default function Home() {
 
             {/* Bedwantsen — row 2, col 2–3 */}
             <div className="min-h-[320px] md:col-span-2 lg:col-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Bedwantsen" src="/bedwantsen_hero.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Bedwantsen" src="Bedwantsen.png" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-3xl md:text-4xl font-black text-white uppercase leading-none">Bedwantsen</h3>
@@ -215,7 +215,7 @@ export default function Home() {
 
             {/* Mieren & Kruipend — row 2, col 4 */}
             <div className="min-h-[320px] lg:col-span-1 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Mieren" src="/mieren_hero.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Mieren" src="ant_macro.png" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-2xl md:text-3xl font-black text-white uppercase leading-tight">Mieren &amp;<br />Kruipend</h3>
@@ -230,10 +230,10 @@ export default function Home() {
             {/* CTA — row 3, full width */}
             <div className="min-h-[180px] md:col-span-2 lg:col-span-4 relative rounded-[3rem] overflow-hidden group bg-primary shadow-premium cursor-pointer mt-12">
               <div className="absolute inset-0 flex transition-opacity duration-1000 group-hover:opacity-70 bg-primary-offset">
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/wespen_hero.png" /></div>
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/kakkerlakken_hero.png" /></div>
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/houtworm_hero.png" /></div>
-                <div className="flex-1 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/mieren_hero.png" /></div>
+                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/brown_rat_macro_1775488454904.png?v=2" /></div>
+                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="karkerlak.jpg" /></div>
+                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/common_wasp_macro_1775488500000_1775488504014.png?v=2" /></div>
+                <div className="flex-1 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="ant_macro.png" /></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center z-20">
                 <Link to="/diensten" className="bg-white text-primary px-16 py-6 rounded-xl font-black text-xs tracking-[0.25em] uppercase shadow-premium hover:bg-secondary hover:text-white transition-all duration-500">Volledig Portfolio Inzien</Link>
