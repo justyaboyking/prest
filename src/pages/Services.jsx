@@ -244,24 +244,25 @@ export default function ServicesPage() {
           : 'min-h-[75vh] pt-48 pb-32 text-center items-center'
       }`}>
         
-        {/* BACKGROUND IMAGE (THE RAT) */}
+        {/* BACKGROUND IMAGE (THE BLENDED GRAPHIC) */}
         <div 
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
-              /* Mobile: Rat anchors high. Filters: Tactical Grayscale + Contrast */
-              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] grayscale brightness-50 contrast-125 opacity-60 md:opacity-100' 
+              ? (activeService.id === 'muizen-ratten'
+                  ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto]' 
+                  : 'bg-center bg-contain md:bg-[position:right_10%_center] md:bg-[size:45%_auto]')
               : 'bg-center bg-cover'
-          }`}
+          } ${activeService?.heroImage ? 'opacity-70 md:opacity-100' : ''}`}
           style={activeService?.heroImage ? {
-            backgroundImage: `url(${activeService.heroImage})`
+            backgroundImage: `radial-gradient(circle, transparent 20%, var(--color-primary) 85%), url(${activeService.heroImage})`
           } : {}}
         />
 
-        {/* GRADIENT OVERLAYS (Fixes readability without hiding the rat) */}
+        {/* GRADIENT OVERLAYS (Fixes readability and depth) */}
         {activeService?.heroImage && (
           <>
-            {/* Desktop: Circular fade */}
-            <div className="hidden md:block absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_50%,_transparent_20%,_var(--color-primary)_85%)]" />
+            {/* Desktop: Stronger side-fade for text legibility */}
+            <div className="hidden md:block absolute inset-0 z-[1] bg-gradient-to-r from-primary via-primary/40 to-transparent" />
             
             {/* Mobile: Dark at the top for text, fades to transparent at bottom for the rat */}
             <div className="md:hidden absolute inset-0 z-[1] bg-gradient-to-b from-primary via-primary/90 to-transparent" />
@@ -322,8 +323,8 @@ export default function ServicesPage() {
             )}
           </p>
 
-          {/* BUTTONS (Pushed down slightly on mobile so they don't block the rat) */}
-          <div className="mt-auto md:mt-0 flex flex-col sm:flex-row w-full md:w-auto gap-3 pt-6 md:pt-10 z-20 pb-4">
+          {/* BUTTONS (Lifting them higher so they aren't 'trapped in the fog' at the bottom) */}
+          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row w-full md:w-auto gap-4 z-20 pb-12 md:pb-0">
             <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
               <Phone size={18} className="text-white mr-2" />
               Bel voor een afspraak
