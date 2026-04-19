@@ -19,13 +19,13 @@ const detailedServices = [
       recognition: [
         { t: 'Knaagschade', d: 'Aan hout, kabels of plastic.', img: '/knaagschade_specimen.png' },
         { t: 'Keutels', d: 'Kleine zwarte keutels in kasten of langs muren.', img: '/keutels_specimen.png' },
-        { t: 'Geluiden', d: 'Krab- of loopgeluiden â€™s nachts.', img: '/geluiden_specimen.png' },
+        { t: 'Geluiden', d: 'Krab- of loopgeluiden ’s nachts.', img: '/geluiden_specimen.png' },
         { t: 'Geur', d: 'Sterke, onaangename geur.', img: '/geur_specimen.png' }
       ],
       risks: [
         {
           t: 'Snelheid',
-          d: 'EÃ©n muis of rat betekent vaak een hele kolonie. Uit Ã©Ã©n koppel groeit in enkele weken een grote groep.',
+          d: 'Eén muis of rat betekent vaak een hele kolonie. Uit één koppel groeit in enkele weken een grote groep.',
           img: '/colony_risk_specimen.png',
           icon: <Activity size={24} />
         },
@@ -36,7 +36,7 @@ const detailedServices = [
           icon: <Zap size={24} />
         },
         {
-          t: 'HygiÃ«ne',
+          t: 'Hygiëne',
           d: 'Ze verspreiden ziektes via uitwerpselen en urine. Dat kan al zonder dat u ze zelfs maar ziet.',
           img: '/biohazard_specimen.png',
           icon: <Droplets size={24} />
@@ -44,17 +44,17 @@ const detailedServices = [
       ],
       expandedProtocol: [
         { t: '1. Analyse', d: 'Onze technieker inspecteert uw woning van binnen en buiten. We zoeken naar sporen, gaten en plekken waar ze zich ophouden. Zo weten we precies wat er aan de hand is.' },
-        { t: '2. Interventie', d: 'Op basis van wat we zien kiezen we de juiste aanpak. We werken met professionele middelen in veilige, afgesloten lokdozen â€” niet bereikbaar voor kinderen of huisdieren.' },
+        { t: '2. Interventie', d: 'Op basis van what we zien kiezen we de juiste aanpak. We werken met professionele middelen in veilige, afgesloten lokdozen — niet bereikbaar voor kinderen of huisdieren.' },
         { t: '3. Wering', d: 'Na de behandeling sluiten we de gaten waar ze binnenkwamen. Zo verkleinen we de kans dat het probleem zich herhaalt.' }
       ],
       preparation: [
-        { t: 'Maak ruimte vrij', d: 'Zorg dat we overal bij kunnen â€” zolder, kelder, meterkast. Hoe meer we zien, hoe beter we kunnen helpen.' },
+        { t: 'Maak ruimte vrij', d: 'Zorg dat we overal bij kunnen — zolder, kelder, meterkast. Hoe meer we zien, hoe beter we kunnen helpen.' },
         { t: 'Berg eten op', d: 'Stop open voedsel in stevige bakken met een deksel. Karton en plastic zakjes houden muizen niet tegen.' },
         { t: 'Haal dierenvoer weg', d: 'Zet het voer en drinkbakje van uw huisdier even opzij. Zo eten de muizen sneller van ons lokaas.' }
       ]
     },
-    approach: 'Winkelproducten vangen soms een muis, maar lossen het echte probleem niet op. De rest blijft gewoon zitten. Wij zoeken waar ze zich verschuilen, waar ze binnenkomen en wat hen aantrekt. Pas dan pakken we het aan â€” zodat ze niet terugkomen.',
-    price: 'Vanaf â‚¬150 (incl. inspectie)',
+    approach: 'Winkelproducten vangen soms een muis, maar lossen het echte probleem niet op. De rest blijft gewoon zitten. Wij zoeken waar ze zich verschuilen, waar ze binnenkomen en wat hen aantrekt. Pas dan pakken we het aan — zodat ze niet terugkomen.',
+    price: 'Vanaf €150 (incl. inspectie)',
     icon: Target,
     image: 'https://images.unsplash.com/photo-1624116518496-993146f67f4a?q=80&w=3500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     heroImage: '/ratimgbackhgroud.png'
@@ -62,7 +62,7 @@ const detailedServices = [
   {
     title: 'Wespen',
     id: 'wespen',
-    desc: 'Directe neutralisatie van wespennesten in Ã©Ã©n interventie.',
+    desc: 'Directe neutralisatie van wespennesten in één interventie.',
     deepIntel: {
       recognition: [
         { t: 'Invliegopening', d: 'Een constante stroom van wespen die via een specifieke opening naar binnen vliegen.', img: '/wspcloseup.png' },
@@ -85,8 +85,8 @@ const detailedServices = [
       ]
     },
     approach: 'Met gespecialiseerde poederspuiten onder hoge druk schakelen we nesten direct en veilig uit. Zelfs op grote hoogtes of in spouwmuren.',
-    garantie: '100% Succesgarantie â€” Mocht het nest na 48u nog actief zijn, komen wij gratis terug.',
-    price: 'Standaard â‚¬75',
+    garantie: '100% Succesgarantie — Mocht het nest na 48u nog actief zijn, komen wij gratis terug.',
+    price: 'Standaard €75',
     icon: Zap,
     image: '/wspcloseup.png',
     heroImage: '/waspimg.png'
@@ -108,10 +108,10 @@ const detailedServices = [
       expandedProtocol: [
         { t: '1. Monitoring', d: 'Plaatsing van detectieboxen om de exacte haarden in kaart te brengen.' },
         { t: '2. Gel-Interventie', d: 'Toepassing van hoog-attractieve lokaasgel die een domino-effect veroorzaakt.' },
-        { t: '3. BarriÃ¨re', d: 'Behandeling van leidingdoorvoeren om verspreiding naar buren te stoppen.' }
+        { t: '3. Barrière', d: 'Behandeling van leidingdoorvoeren om verspreiding naar buren te stoppen.' }
       ],
       preparation: [
-        { t: 'HygiÃ«ne Vooraf', d: 'Maak kasten en vloeren grondig vetvrij zodat de gel optimaal aantrekkelijk is.' },
+        { t: 'Hygiëne Vooraf', d: 'Maak kasten en vloeren grondig vetvrij zodat de gel optimaal aantrekkelijk is.' },
         { t: 'Geen Gifgebruik', d: 'Gebruik absoluut geen spuitbussen; dit verjaagt ze naar plekken waar wij niet bij kunnen.' },
         { t: 'Lekkages dichten', d: 'Repareer lekkende kranen; kakkerlakken overleven uitsluitend bij voldoende vocht.' }
       ]
@@ -148,7 +148,7 @@ const detailedServices = [
       ]
     },
     approach: 'Wij pakken het probleem bij de wortel aan door biociden tot diep in de kern van het hout te injecteren. Dit doodt larven direct en beschermt jarenlang.',
-    price: 'Vanaf â‚¬250',
+    price: 'Vanaf €250',
     icon: ShieldCheck,
     image: 'https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800',
     heroImage: 'https://images.unsplash.com/photo-1541888941259-792739460273?auto=format&fit=crop&q=80&w=1200'
@@ -169,17 +169,17 @@ const detailedServices = [
       ],
       expandedProtocol: [
         { t: '1. Inspectie', d: 'Gedetailleerde controle van alle naden, plinten en elektronica.' },
-        { t: '2. Stoombehandeling', d: 'Hittebehandeling (>120Â°C) om eitjes en wantsen direct te neutraliseren.' },
-        { t: '3. Residuele BarriÃ¨re', d: 'Plaatsen van veilige barriÃ¨res die wekenlang actief blijven tegen uitkomende eitjes.' }
+        { t: '2. Stoombehandeling', d: 'Hittebehandeling (>120°C) om eitjes en wantsen direct te neutraliseren.' },
+        { t: '3. Residuele Barrière', d: 'Plaatsen van veilige barrières die wekenlang actief blijven tegen uitkomende eitjes.' }
       ],
       preparation: [
-        { t: 'Wasprotocol', d: 'Was alle textiel op minimaal 60Â°C en droog deze heet (min. 30 min).' },
+        { t: 'Wasprotocol', d: 'Was alle textiel op minimaal 60°C en droog deze heet (min. 30 min).' },
         { t: 'Kamer Vrijmaken', d: 'Haal het bedframe uit elkaar en plaats alle meubels 50cm van de wand.' },
         { t: 'Gesealde Zakken', d: 'Berg behandelde kleding direct op in gesealde zakken tot de interventie klaar is.' }
       ]
     },
     approach: 'Wij hanteren een meervoudige aanpak van hitte en residuele middelen. Discreet en effectief, zodat u snel weer zult kunnen slapen.',
-    price: 'Vanaf â‚¬300',
+    price: 'Vanaf €300',
     icon: ShieldAlert,
     image: '/Bedwantsen.png',
     heroImage: '/Bedwantsen.png'
@@ -195,7 +195,7 @@ const detailedServices = [
         { t: 'Zwevende Mieren', d: 'Verschijning van gevleugelde mieren (bruidsvlucht) binnenshuis.' }
       ],
       risks: [
-        { t: 'HygiÃ«ne', d: 'Mieren kunnen bacteriÃ«n van buiten naar uw onafgedekte voedsel brengen.', icon: <Droplets size={24} /> },
+        { t: 'Hygiëne', d: 'Mieren kunnen bacteriën van buiten naar uw onafgedekte voedsel brengen.', icon: <Droplets size={24} /> },
         { t: 'Schade', d: 'Sommige soorten kunnen schade toebrengen aan isolatiemateriaal of houtwerk.', icon: <ShieldCheck size={24} /> }
       ],
       expandedProtocol: [
@@ -210,7 +210,7 @@ const detailedServices = [
       ]
     },
     approach: 'Onze aanpak richt zich op het nest. De mieren brengen het bestrijdingsmiddel zelf naar hun koningin, wat zorgt voor een definitieve oplossing.',
-    price: 'Vanaf â‚¬95',
+    price: 'Vanaf €95',
     icon: ShieldCheck,
     image: '/ant_macro.png',
     heroImage: '/antimg.png'
@@ -238,46 +238,69 @@ export default function ServicesPage() {
     >
       <div className="grain-overlay" />
       {/* CINEMATIC HEADER */}
-      <header className={`relative flex flex-col justify-center bg-primary text-white overflow-hidden transition-all duration-700 ${activeService?.heroImage ? 'min-h-[auto] aspect-[3/2] sm:aspect-auto sm:min-h-[75vh] pt-20 sm:pt-48' : 'min-h-[75vh] pt-48 pb-32 text-center items-center'}`}>
+      <header className={`relative flex flex-col justify-start md:justify-center bg-primary text-white overflow-hidden transition-all duration-700 ${
+        activeService?.heroImage 
+          ? 'min-h-[100svh] md:min-h-[85vh] pt-28 pb-4 md:pt-48 md:pb-0' 
+          : 'min-h-[75vh] pt-48 pb-32 text-center items-center'
+      }`}>
+        
+        {/* BACKGROUND IMAGE (THE RAT) */}
         <div 
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
-              ? 'bg-center md:bg-[position:right_10%_center] bg-[size:contain] md:bg-[size:55%_auto]' 
+              /* Mobile: Rat anchors higher above the bottom. Desktop: Rat moves to the right */
+              ? 'bg-[position:center_bottom_4rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] opacity-70 md:opacity-100' 
               : 'bg-center bg-cover'
           }`}
           style={activeService?.heroImage ? {
-            backgroundImage: `radial-gradient(circle at 50% 50%, transparent 20%, var(--color-primary) 85%), url(${activeService.heroImage})`,
-            backgroundColor: 'var(--color-primary)'
+            backgroundImage: `url(${activeService.heroImage})`
           } : {}}
-        >
-          {!activeService?.heroImage && (
-            <>
-              <img
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
-                alt="Expert Ongediertebestrijding"
-                className="w-full h-full object-cover opacity-[0.08] grayscale"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary" />
-            </>
-          )}
-        </div>
+        />
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-12 w-full ${activeService?.heroImage ? 'text-center md:text-left flex flex-col items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' : 'flex flex-col items-center'}`}>
+        {/* GRADIENT OVERLAYS (Fixes readability without hiding the rat) */}
+        {activeService?.heroImage && (
+          <>
+            {/* Desktop: Circular fade */}
+            <div className="hidden md:block absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_50%,_transparent_20%,_var(--color-primary)_85%)]" />
+            
+            {/* Mobile: Dark at the top for text, fades to transparent at bottom for the rat */}
+            <div className="md:hidden absolute inset-0 z-[1] bg-gradient-to-b from-primary via-primary/90 to-transparent" />
+            
+            {/* Mobile: Tiny dark fade at the absolute bottom so the rat doesn't cut off harshly */}
+            <div className="md:hidden absolute bottom-0 left-0 w-full h-16 z-[1] bg-gradient-to-t from-primary to-transparent" />
+          </>
+        )}
+
+        <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col ${
+          activeService?.heroImage 
+            ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
+            : 'items-center justify-center'
+        }`}>
+          
+          {/* THE TAG (Cleaned up, no broken borders) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-4 mb-2"
+            className="flex items-center justify-center md:justify-start gap-4 mb-2 mt-4 md:mt-0"
           >
-            <div className="w-16 h-[1px] bg-secondary/30" />
-            <span className="font-sans text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
-              <span className="tag-elite !text-secondary !bg-secondary/5 !border-secondary/20">Snel. Grondig. Discreet.</span>
+            <div className="w-16 h-[1px] bg-secondary/30 hidden md:block" />
+            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.5em] text-secondary border border-secondary/20 bg-secondary/10 px-4 py-2 rounded-full backdrop-blur-sm">
+              Snel. Grondig. Discreet.
             </span>
-            <div className="w-16 h-[1px] bg-secondary/30 md:hidden" />
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase leading-[0.85]">
+          {/* TYPOGRAPHY (Structured and legible) */}
+          <h1 className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4">
             {activeService ? (
-              <>{activeService.title} <br /><span className="text-secondary italic">Wij komen langs <br className="hidden md:block" /> en lossen het op.</span></>
+              <>
+                <span className="text-5xl sm:text-6xl md:text-8xl text-white leading-[0.9]">
+                  {activeService.title}
+                </span>
+                <span className="text-secondary text-4xl sm:text-5xl md:text-7xl italic leading-[0.9]">
+                  Wij komen langs<br className="hidden md:block" />
+                  <span className="md:hidden"> </span>en lossen het op.
+                </span>
+              </>
             ) : (
               <>
                 Onze <br />
@@ -286,27 +309,34 @@ export default function ServicesPage() {
             )}
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight">
-            {activeService
-              ? <>We zoeken waar ze vandaan komen en <span className="text-secondary italic">sluiten dat af</span>.<br /> <span className="text-white/40 text-sm block mt-6 font-bold uppercase tracking-widest">Stap voor stap — tot het probleem weg is.</span></>
-              : 'Ongediertebestrijding in Antwerpen — Snel, grondig en discreet.'
-            }
+          <p className="text-base md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight">
+            {activeService ? (
+              <>
+                We zoeken waar ze vandaan komen en <span className="text-secondary italic">sluiten dat af</span>.
+                <span className="text-white/40 text-[10px] md:text-sm block mt-4 md:mt-6 font-bold uppercase tracking-widest">
+                  Stap voor stap — tot het probleem weg is.
+                </span>
+              </>
+            ) : (
+              'Ongediertebestrijding in Antwerpen — Snel, grondig en discreet.'
+            )}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 pt-10">
-            <a href="tel:+3233000000" className="btn-elite group !py-4 !px-10 text-base rounded-full">
-              <Phone size={20} className="text-white" />
+          {/* BUTTONS (Pushed down slightly on mobile so they don't block the rat) */}
+          <div className="mt-auto md:mt-0 flex flex-col sm:flex-row w-full md:w-auto gap-3 pt-6 md:pt-10 z-20 pb-4">
+            <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+              <Phone size={18} className="text-white mr-2" />
               Bel voor een afspraak
             </a>
-            <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-10 text-base rounded-full">
-              <MessageSquare size={20} />
+            <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+              <MessageSquare size={18} className="mr-2" />
               WhatsApp Foto → Advies
             </a>
           </div>
         </div>
 
         {/* Floating tactical elements */}
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent z-10" />
       </header>
 
       {/* TECHNICAL SERVICE PORTFOLIO */}
@@ -383,7 +413,7 @@ export default function ServicesPage() {
                       <div className="pt-8 border-t border-white/10 mt-8">
                         <div className="flex items-start gap-4">
                           <p className="text-xs font-medium text-white/40 leading-relaxed uppercase tracking-widest">
-                            Ongedierte-Snel.be â€” Uw lokale partner in Antwerpen
+                            Ongedierte-Snel.be — Uw lokale partner in Antwerpen
                           </p>
                         </div>
                       </div>
@@ -573,7 +603,7 @@ export default function ServicesPage() {
               { q: 'Hoe snel kunnen jullie komen?', a: 'Wij proberen altijd zo snel mogelijk bij u te zijn. We begrijpen dat ongedierte niet kan wachten.' },
               { q: 'Is de bestrijding veilig voor mijn huisdieren?', a: 'Ja. We maken gebruik van professionele lokdozen die stevig zijn afgesloten en veilig worden geplaatst buiten het bereik van honden, katten en kinderen.' },
               { q: 'Hoeveel behandelingen zijn er nodig?', a: 'Dat hangt af van de situatie. Meestal zijn er twee behandelingen nodig. Onze technieker legt dit na de inspectie aan u uit.' },
-              { q: 'Wat kost een gemiddelde behandeling?', a: 'Transparantie is belangrijk. Onze tarieven starten vanaf â‚¬150 voor knaagdieren en â‚¬75 voor wespen, inclusief een grondige inspectie en professioneel advies.' }
+              { q: 'Wat kost een gemiddelde behandeling?', a: 'Transparantie is belangrijk. Onze tarieven starten vanaf €150 voor knaagdieren en €75 voor wespen, inclusief een grondige inspectie en professioneel advies.' }
             ].map((faq, i) => (
               <div key={i} className="bg-white p-8 rounded-[2rem] border border-black/5 shadow-sm hover:shadow-md transition-all duration-300 group">
                 <h4 className="text-lg font-black uppercase tracking-tight text-primary mb-3 flex items-center gap-4">
@@ -597,7 +627,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-6 text-center space-y-12 relative z-10">
           <div className="space-y-4">
             <p className="text-secondary font-black text-xs uppercase tracking-widest bg-white/5 w-fit mx-auto px-4 py-1 rounded-full border border-white/10">
-              Actief in regio Antwerpen â€“ Wij proberen u zo spoedig mogelijk te helpen
+              Actief in regio Antwerpen – Wij proberen u zo spoedig mogelijk te helpen
             </p>
             <h2 className="text-5xl md:text-7xl font-display font-black uppercase tracking-tight text-white leading-none">
               Last van muizen <br /> <span className="text-secondary italic">of ratten?</span>
