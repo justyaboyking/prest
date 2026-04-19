@@ -120,7 +120,7 @@ const detailedServices = [
     price: 'Prijs op aanvraag',
     icon: Bug,
     image: '/karkerlak.jpg',
-    heroImage: 'https://images.unsplash.com/photo-1662886444247-3a3c54303239?auto=format&fit=crop&q=80&w=1200'
+    heroImage: '/Kakkerlakken.png'
   },
   {
     title: 'Houtworm & Boktor',
@@ -182,7 +182,7 @@ const detailedServices = [
     price: 'Vanaf €300',
     icon: ShieldAlert,
     image: '/Bedwantsen.png',
-    heroImage: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=1200'
+    heroImage: '/Bedwantsen.png'
   },
   {
     title: 'Mieren & Kruipend',
