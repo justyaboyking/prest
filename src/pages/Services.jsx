@@ -303,21 +303,6 @@ export default function ServicesPage() {
               WhatsApp Foto → Advies
             </a>
           </div>
-          {selectedId && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="pt-8"
-            >
-              <button
-                onClick={() => setSearchParams({})}
-                className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 flex items-center gap-3 mx-auto"
-              >
-                <LayoutGrid size={18} />
-                Toon Alle Specificaties
-              </button>
-            </motion.div>
-          )}
         </div>
 
         {/* Floating tactical elements */}
