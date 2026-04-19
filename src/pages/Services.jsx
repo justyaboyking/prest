@@ -272,7 +272,7 @@ export default function ServicesPage() {
           </>
         )}
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col ${
+        <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex flex-col ${
           activeService?.heroImage 
             ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
             : 'items-center justify-center'
@@ -289,7 +289,7 @@ export default function ServicesPage() {
               Snel. Grondig. Discreet.
             </span>
           </motion.div>
-
+ 
           {/* TYPOGRAPHY (Structured and legible) */}
           <h1 className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4">
             {activeService ? (
@@ -309,7 +309,7 @@ export default function ServicesPage() {
               </>
             )}
           </h1>
-
+ 
           <p className="text-base md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight">
             {activeService ? (
               <>
@@ -322,9 +322,9 @@ export default function ServicesPage() {
               'Ongediertebestrijding in Antwerpen — Snel, grondig en discreet.'
             )}
           </p>
-
+ 
           {/* BUTTONS (Lifting them higher so they aren't 'trapped in the fog' at the bottom) */}
-          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row w-full md:w-auto gap-4 z-20 pb-12 md:pb-0">
+          <div className="flex flex-col sm:flex-row w-full md:w-auto gap-4 z-20 pb-16 md:pb-0">
             <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
               <Phone size={18} className="text-white mr-2" />
               Bel voor een afspraak
@@ -335,9 +335,9 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
-
-        {/* Floating tactical elements */}
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent z-10" />
+ 
+        {/* Subtle tactical blend (The 'Fog' blocker) */}
+        {!activeService?.heroImage && <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent z-10" />}
       </header>
 
       {/* TECHNICAL SERVICE PORTFOLIO */}
