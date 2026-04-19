@@ -244,12 +244,12 @@ export default function ServicesPage() {
           : 'min-h-[75vh] pt-48 pb-32 text-center items-center'
       }`}>
         
-        {/* BACKGROUND IMAGE (THE RAT / ANT / ETC) */}
+        {/* BACKGROUND IMAGE (THE RAT) */}
         <div 
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
-              /* Mobile: Illustration anchors higher above the bottom. Desktop: Illustration stays on the right half */
-              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_center] md:bg-[size:50%_auto] opacity-70 md:opacity-100' 
+              /* Mobile: Rat anchors even higher above the bottom. Desktop: Rat moves to the right */
+              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] opacity-70 md:opacity-100' 
               : 'bg-center bg-cover'
           }`}
           style={activeService?.heroImage ? {
@@ -257,23 +257,20 @@ export default function ServicesPage() {
           } : {}}
         />
 
-        {/* GRADIENT OVERLAYS (Fixes readability without hiding the rat) */}
-        {activeService?.heroImage && (
-          <>
-            {/* Desktop: Circular fade */}
-            <div className="hidden md:block absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_50%,_transparent_20%,_var(--color-primary)_85%)]" />
-            
-            {/* Mobile: Dark at the top for text, fades to transparent at bottom for the rat */}
-            <div className="md:hidden absolute inset-0 z-[1] bg-gradient-to-b from-primary via-primary/90 to-transparent" />
-            
-            {/* Mobile: Tiny dark fade at the absolute bottom so the rat doesn't cut off harshly */}
-            <div className="md:hidden absolute bottom-0 left-0 w-full h-16 z-[1] bg-gradient-to-t from-primary to-transparent" />
-          </>
-        )}
+        {/* CINEMATIC OVERLAYS & FILTERS */}
+        <div className="absolute inset-0 z-[1] pointer-events-none">
+          {/* Base Gradients for Text Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary via-primary/40 to-transparent md:hidden" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent hidden md:block" />
+          
+          {/* The "Filter Thing" (Tactical Grain & Radial Spotlight) */}
+          <div className="absolute inset-0 mix-blend-overlay opacity-[0.15] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(0,0,0,0.6)_100%)] md:bg-[radial-gradient(circle_at_80%_50%,transparent_20%,rgba(0,0,0,0.8)_100%)]" />
+        </div>
 
         <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col ${
           activeService?.heroImage 
-            ? 'text-center md:text-left items-center md:items-start md:max-w-[45%] md:mx-0 md:pl-24' 
+            ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
             : 'items-center justify-center'
         }`}>
           
@@ -560,7 +557,7 @@ export default function ServicesPage() {
                         <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white">Muizen & ratten <span className="text-secondary italic">hoe gaan we te werk</span></h3>
                         <p className="text-base text-white/40 max-w-xl mx-auto font-medium tracking-wide">Hoe wij te werk gaan.</p>
                       </div>
-
+                      
                       <div className="relative space-y-24">
                         <div className="absolute left-[31px] top-8 bottom-8 w-1 bg-gradient-to-b from-secondary via-secondary/20 to-transparent hidden md:block" />
 
