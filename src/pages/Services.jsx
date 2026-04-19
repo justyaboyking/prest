@@ -213,7 +213,7 @@ const detailedServices = [
     price: 'Vanaf €95',
     icon: ShieldCheck,
     image: '/ant_macro.png',
-    heroImage: '/antimg.jpg'
+    heroImage: '/antimg.png'
   }
 ];
 
