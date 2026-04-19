@@ -1,54 +1,45 @@
-import React, { useEffect } from 'react';
-import useReveal from './hooks/useReveal';
-import useStats from './hooks/useStats';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ShieldCheck, X } from 'lucide-react';
 import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import PestLibrary from './components/sections/PestLibrary';
-import TrustSignals from './components/sections/TrustSignals';
-import Protocol from './components/sections/Protocol';
-import AboutUs from './components/sections/AboutUs';
-import Expertise from './components/sections/Expertise';
-import Methodology from './components/sections/Methodology';
-import PestIdLibrary from './components/sections/PestIdLibrary';
-import ServiceArea from './components/sections/ServiceArea';
-import PricingFAQ from './components/sections/PricingFAQ';
-import Testimonials from './components/sections/Testimonials';
-import ContactForm from './components/sections/ContactForm';
-import Footer from './components/layout/Footer';
+import Home from './pages/Home';
+import ServicesPage from './pages/Services';
+import Werkwijze from './pages/Werkwijze';
+import OverOns from './pages/OverOns';
+import Contact from './pages/Contact';
+
 
 export default function App() {
-    useReveal();
-    useStats();
+  return (
+    <Router>
+      <div className="min-h-screen bg-surface text-on-surface selection:bg-secondary/30">
+        <Navbar />
+        
+        <main>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/diensten" element={<ServicesPage />} />
+              <Route path="/werkwijze" element={<Werkwijze />} />
+              <Route path="/over-ons" element={<OverOns />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </AnimatePresence>
+        </main>
 
-    return (
-        <div className="font-body text-on-surface bg-surface overflow-x-hidden">
-            <Navbar />
-            <main className="max-w-full overflow-hidden">
-                <Hero />
-                <PestLibrary />
-                <TrustSignals />
-                <Protocol />
-                <AboutUs />
-                <Expertise />
-                <Methodology />
-                <PestIdLibrary />
-                <ServiceArea />
-                <Testimonials />
-                <PricingFAQ />
-                <ContactForm />
-                <Footer />
 
-                {/* Sticky Mobile CTA */}
-                <div className="sticky-bar z-[150]" id="mobile-cta">
-                    <a href="tel:+3233000000" className="w-full bg-secondary text-white py-4 rounded-xl font-black flex flex-col items-center justify-center gap-1 shadow-lg border-2 border-white/20 animate-pulse-glow">
-                        <div className="flex items-center gap-3 text-sm uppercase tracking-[0.3em]">
-                            <i className="ph-bold ph-phone text-xl"></i>
-                            <span>Bel direct</span>
-                        </div>
-                        <span className="text-xl font-mono tracking-tighter">+32 3 300 00 00</span>
-                    </a>
-                </div>
-            </main>
+        {/* Global Brand Overlays */}
+        <div className="fixed inset-0 pointer-events-none z-[200] opacity-[0.05]">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
         </div>
-    );
+        
+        <div className="fixed inset-0 pointer-events-none z-[190] opacity-[0.2]" 
+             style={{ background: 'radial-gradient(circle at 1px 1px, #ffffff11 1px, transparent 0)', backgroundSize: '100px 100px' }} />
+      </div>
+    </Router>
+  );
 }
+
+
+

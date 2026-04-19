@@ -1,0 +1,1 @@
+﻿           <img src="/tactical_pest_specialist.png" className="absolute inset-0 w-full h-full object-cover grayscale opacity-60" />

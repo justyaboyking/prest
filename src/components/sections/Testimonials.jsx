@@ -27,7 +27,7 @@ export default function Testimonials() {
                 <div className="star-rating">
                     <i className="ph-fill ph-star"></i><i className="ph-fill ph-star"></i><i className="ph-fill ph-star"></i><i className="ph-fill ph-star"></i><i className="ph-fill ph-star"></i>
                 </div>
-                <p className="text-slate-600 font-medium italic mb-6">"Tactical Guardian heeft ons restaurant gered van een serieuze kakkerlakkenplaag. Hun methode is echt next-level."</p>
+                <p className="text-slate-600 font-medium italic mb-6">"Ongedierte-Snel.be heeft ons restaurant gered van een serieuze kakkerlakkenplaag. Hun methode is echt next-level."</p>
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center font-black text-primary text-xs border border-primary/10">SV</div>
                     <div>
@@ -54,3 +54,6 @@ export default function Testimonials() {
 </section>
   );
 }
+
+
+
