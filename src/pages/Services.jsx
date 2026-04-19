@@ -237,6 +237,7 @@ export default function ServicesPage() {
       className="bg-surface text-on-surface relative"
     >
       <div className="grain-overlay" />
+
       {/* CINEMATIC HEADER */}
       <header className={`relative flex flex-col justify-start md:justify-center bg-primary text-white overflow-hidden transition-all duration-700 ${
         activeService?.heroImage 
@@ -254,7 +255,9 @@ export default function ServicesPage() {
               : 'bg-center bg-cover'
           } ${activeService?.heroImage ? 'opacity-70 md:opacity-100' : ''}`}
           style={activeService?.heroImage ? {
-            backgroundImage: `radial-gradient(circle, transparent 20%, var(--color-primary) 85%), url(${activeService.heroImage})`
+            backgroundImage: `radial-gradient(circle, transparent 20%, var(--color-primary) 98%), url(${activeService.heroImage})`,
+            maskImage: 'radial-gradient(circle, black 50%, transparent 95%)',
+            WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)'
           } : {}}
         />
 
@@ -272,11 +275,13 @@ export default function ServicesPage() {
           </>
         )}
 
-        <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex flex-col ${
-          activeService?.heroImage 
-            ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
-            : 'items-center justify-center'
-        }`}>
+        <div 
+          className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col ${
+            activeService?.heroImage 
+              ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
+              : 'items-center justify-center'
+          }`}
+        >
           
           {/* THE TAG (Cleaned up, no broken borders) */}
           <motion.div
@@ -289,9 +294,15 @@ export default function ServicesPage() {
               Snel. Grondig. Discreet.
             </span>
           </motion.div>
- 
+
           {/* TYPOGRAPHY (Structured and legible) */}
-          <h1 className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4">
+          {/* TYPOGRAPHY (Premium Reveal) */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4"
+          >
             {activeService ? (
               <>
                 <span className="text-5xl sm:text-6xl md:text-8xl text-white leading-[0.9]">
@@ -308,9 +319,14 @@ export default function ServicesPage() {
                 <span className="text-secondary italic">Expertise</span>
               </>
             )}
-          </h1>
- 
-          <p className="text-base md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight">
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-base md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight"
+          >
             {activeService ? (
               <>
                 We zoeken waar ze vandaan komen en <span className="text-secondary italic">sluiten dat af</span>.
@@ -321,10 +337,10 @@ export default function ServicesPage() {
             ) : (
               'Ongediertebestrijding in Antwerpen — Snel, grondig en discreet.'
             )}
-          </p>
- 
-          {/* BUTTONS (Lifting them higher so they aren't 'trapped in the fog' at the bottom) */}
-          <div className="flex flex-col sm:flex-row w-full md:w-auto gap-4 z-20 pb-16 md:pb-0">
+          </motion.p>
+
+          {/* BUTTONS (Pushed down slightly on mobile so they don't block the rat) */}
+          <div className="mt-auto md:mt-0 flex flex-col sm:flex-row w-full md:w-auto gap-3 pt-6 md:pt-10 z-20 pb-4">
             <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
               <Phone size={18} className="text-white mr-2" />
               Bel voor een afspraak
@@ -335,9 +351,9 @@ export default function ServicesPage() {
             </a>
           </div>
         </div>
- 
-        {/* Subtle tactical blend (The 'Fog' blocker) */}
-        {!activeService?.heroImage && <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent z-10" />}
+
+        {/* Floating tactical elements */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-surface to-transparent z-10" />
       </header>
 
       {/* TECHNICAL SERVICE PORTFOLIO */}
