@@ -244,12 +244,12 @@ export default function ServicesPage() {
           : 'min-h-[75vh] pt-48 pb-32 text-center items-center'
       }`}>
         
-        {/* BACKGROUND IMAGE (THE RAT) */}
+        {/* BACKGROUND IMAGE (THE RAT / ANT / ETC) */}
         <div 
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
-              /* Mobile: Rat anchors even higher above the bottom. Desktop: Rat moves to the right */
-              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_10%_center] md:bg-[size:55%_auto] opacity-70 md:opacity-100' 
+              /* Mobile: Illustration anchors higher above the bottom. Desktop: Illustration stays on the right half */
+              ? 'bg-[position:center_bottom_8rem] bg-[size:110%_auto] md:bg-[position:right_center] md:bg-[size:50%_auto] opacity-70 md:opacity-100' 
               : 'bg-center bg-cover'
           }`}
           style={activeService?.heroImage ? {
@@ -273,7 +273,7 @@ export default function ServicesPage() {
 
         <div className={`relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col ${
           activeService?.heroImage 
-            ? 'text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24' 
+            ? 'text-center md:text-left items-center md:items-start md:max-w-[45%] md:mx-0 md:pl-24' 
             : 'items-center justify-center'
         }`}>
           
