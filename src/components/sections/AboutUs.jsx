@@ -17,7 +17,7 @@ export default function AboutUs() {
 
                 <div className="space-y-6 text-lg text-slate-600 font-medium leading-relaxed">
                     <p>
-                        Ongedierte-Snel.be is een erkend bestrijdingsbedrijf voor Antwerpen en omgeving. Wij zijn een team van erkende specialisten dat snel, veilig en doeltreffend ongedierte bestrijdt.
+                        Ongediertevrij.be is een erkend bestrijdingsbedrijf voor Antwerpen en omgeving. Wij zijn een team van erkende specialisten dat snel, veilig en doeltreffend ongedierte bestrijdt.
                     </p>
                     <p>
                         Ons doel is simpel: het probleem bij de bron aanpakken en herhaling helpen voorkomen. Met jarenlange expertise en professioneel materiaal leveren wij resultaat waar anderen opgeven.

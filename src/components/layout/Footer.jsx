@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-8 bg-secondary rounded-full" />
             <div className="flex flex-col">
-              <span className="font-display font-black text-2xl tracking-tighter uppercase leading-none text-white">Ongedierte-Snel.be</span>
+              <span className="font-display font-black text-2xl tracking-tighter uppercase leading-none text-white">Ongediertevrij.be</span>
               <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-secondary font-bold">Wij helpen u direct.</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="font-mono text-[10px] text-white/20 uppercase tracking-widest">
-          © 2026 Ongedierte-Snel.be. Alle rechten voorbehouden.
+          © 2026 Ongediertevrij.be. Alle rechten voorbehouden.
         </p>
         <div className="flex gap-8">
           <a href="#" className="text-[10px] font-mono font-bold uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy Policy</a>

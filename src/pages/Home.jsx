@@ -34,7 +34,7 @@ export default function Home() {
     >
       <div className="grain-overlay" />
       {/* HERO SECTION */}
-      <header className="relative min-h-[95vh] pt-48 pb-32 flex flex-col bg-primary text-white overflow-hidden">
+      <header className="relative min-h-[95vh] pt-48 pb-0 flex flex-col bg-primary text-white overflow-hidden">
         <div className="absolute inset-0 mix-blend-overlay pointer-events-none overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.img 
@@ -74,7 +74,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.0, duration: 0.8 }}
-              className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.85] uppercase"
+              className="text-6xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter leading-none uppercase"
             >
               Ongedierte gemeld. <br />
               <span className="text-secondary italic">Snel ter plaatse.</span> <br />
@@ -129,7 +129,7 @@ export default function Home() {
       </header>
 
       {/* SERVICES (BENTO GRID) */}
-      <section className="py-48 bg-white px-6" id="onze-diensten">
+      <section className="pb-48 bg-white px-6" id="onze-diensten">
         <div className="max-w-7xl mx-auto">
 
           <div className="mb-24 md:mb-32 text-center md:text-left">
@@ -308,7 +308,7 @@ export default function Home() {
                  <h2 className="text-4xl md:text-6xl font-black text-primary uppercase leading-tight">Lokale Expertise, <br /> <span className="text-secondary">Extreme Snelheid</span></h2>
                </div>
                <div className="space-y-6 text-xl text-slate-500 font-medium leading-relaxed italic border-l-4 border-slate-100 pl-10">
-                  <p>Ongedierte-Snel.be is dé erkende bestrijdingspartner voor Antwerpen en de wijde omgeving. Waar grote, logge bedrijven u dagenlang laten wachten, staan wij voor een bliksemsnelle aanpak.</p>
+                  <p>Ongediertevrij.be is dé erkende bestrijdingspartner voor Antwerpen en de wijde omgeving. Waar grote, logge bedrijven u dagenlang laten wachten, staan wij voor een bliksemsnelle aanpak.</p>
                   <p>Wij zijn een team van door de Vlaamse Overheid (BE-09) erkende specialisten dat snel, veilig en discreet ongedierte bestrijdt. Ons doel is simpel: u direct uw gemoedsrust teruggeven met professioneel materiaal en een werkwijze waar anderen afhaken.</p>
                </div>
                <div className="grid grid-cols-2 gap-8 pt-8">
@@ -588,7 +588,7 @@ export default function Home() {
                       name: "Sarah V.",
                       loc: "Antwerpen Centrum",
                       initials: "SV",
-                      quote: "Om 22:00 uur een rat in de keuken van ons restaurant. Ongedierte-Snel.be was er binnen het uur. Extreem professioneel, discreet en de plaag is volledig verdwenen. Ze hebben letterlijk onze zaak gered."
+                      quote: "Om 22:00 uur een rat in de keuken van ons restaurant. Ongediertevrij.be was er binnen het uur. Extreem professioneel, discreet en de plaag is volledig verdwenen. Ze hebben letterlijk onze zaak gered."
                     },
                     {
                       name: "Koen L.",

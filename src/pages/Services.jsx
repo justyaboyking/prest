@@ -57,7 +57,7 @@ const detailedServices = [
     price: 'Vanaf €150 (incl. inspectie)',
     icon: Target,
     image: 'https://images.unsplash.com/photo-1624116518496-993146f67f4a?q=80&w=3500&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    heroImage: '/ratimgbackhgroud.png'
+    heroImage: '/rat_nobg.png'
   },
   {
     title: 'Wespen',
@@ -89,7 +89,7 @@ const detailedServices = [
     price: 'Standaard €75',
     icon: Zap,
     image: '/wspcloseup.png',
-    heroImage: '/waspimg.png'
+    heroImage: '/wasp_nobg.png'
   },
   {
     title: 'Kakkerlakken',
@@ -120,7 +120,7 @@ const detailedServices = [
     price: 'Prijs op aanvraag',
     icon: Bug,
     image: '/karkerlak.jpg',
-    heroImage: '/Kakkerlakken.png'
+    heroImage: '/cockroach_nobg.png'
   },
   {
     title: 'Houtworm & Boktor',
@@ -182,7 +182,7 @@ const detailedServices = [
     price: 'Vanaf €300',
     icon: ShieldAlert,
     image: '/Bedwantsen.png',
-    heroImage: '/Bedwantsen.png'
+    heroImage: '/bedbug_nobg.png'
   },
   {
     title: 'Mieren & Kruipend',
@@ -213,7 +213,7 @@ const detailedServices = [
     price: 'Vanaf €95',
     icon: ShieldCheck,
     image: '/ant_macro.png',
-    heroImage: '/antimg.png'
+    heroImage: '/ant_nobg.png'
   }
 ];
 
@@ -245,7 +245,7 @@ export default function ServicesPage() {
           : 'min-h-[75vh] pt-48 pb-32 text-center items-center'
       }`}>
         
-        {/* BACKGROUND IMAGE (THE BLENDED GRAPHIC) */}
+        {/* BACKGROUND IMAGE (THE TRANSPARENT GRAPHIC) */}
         <div 
           className={`absolute inset-0 z-0 transition-all duration-1000 bg-no-repeat ${
             activeService?.heroImage 
@@ -255,9 +255,7 @@ export default function ServicesPage() {
               : 'bg-center bg-cover'
           } ${activeService?.heroImage ? 'opacity-70 md:opacity-100' : ''}`}
           style={activeService?.heroImage ? {
-            backgroundImage: `radial-gradient(circle, transparent 20%, var(--color-primary) 98%), url(${activeService.heroImage})`,
-            maskImage: 'radial-gradient(circle, black 50%, transparent 95%)',
-            WebkitMaskImage: 'radial-gradient(circle, black 50%, transparent 95%)'
+            backgroundImage: `url(${activeService.heroImage})`
           } : {}}
         />
 
@@ -269,9 +267,6 @@ export default function ServicesPage() {
             
             {/* Mobile: Dark at the top for text, fades to transparent at bottom for the rat */}
             <div className="md:hidden absolute inset-0 z-[1] bg-gradient-to-b from-primary via-primary/90 to-transparent" />
-            
-            {/* Mobile: Tiny dark fade at the absolute bottom so the rat doesn't cut off harshly */}
-            <div className="md:hidden absolute bottom-0 left-0 w-full h-16 z-[1] bg-gradient-to-t from-primary to-transparent" />
           </>
         )}
 
@@ -321,7 +316,7 @@ export default function ServicesPage() {
             )}
           </motion.h1>
 
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -337,19 +332,19 @@ export default function ServicesPage() {
             ) : (
               'Ongediertebestrijding in Antwerpen — Snel, grondig en discreet.'
             )}
-          </motion.p>
 
-          {/* BUTTONS (Pushed down slightly on mobile so they don't block the rat) */}
-          <div className="mt-auto md:mt-0 flex flex-col sm:flex-row w-full md:w-auto gap-3 pt-6 md:pt-10 z-20 pb-4">
-            <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
-              <Phone size={18} className="text-white mr-2" />
-              Bel voor een afspraak
-            </a>
-            <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
-              <MessageSquare size={18} className="mr-2" />
-              WhatsApp Foto → Advies
-            </a>
-          </div>
+            {/* BUTTONS (Pushed down slightly on mobile so they don't block the rat) */}
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row w-full md:w-auto gap-3 z-20">
+              <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+                <Phone size={18} className="text-white mr-2" />
+                Bel voor een afspraak
+              </a>
+              <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+                <MessageSquare size={18} className="mr-2" />
+                WhatsApp Foto → Advies
+              </a>
+            </div>
+          </motion.div>
         </div>
 
         {/* Floating tactical elements */}
@@ -430,7 +425,7 @@ export default function ServicesPage() {
                       <div className="pt-8 border-t border-white/10 mt-8">
                         <div className="flex items-start gap-4">
                           <p className="text-xs font-medium text-white/40 leading-relaxed uppercase tracking-widest">
-                            Ongedierte-Snel.be — Uw lokale partner in Antwerpen
+                            Ongediertevrij.be — Uw lokale partner in Antwerpen
                           </p>
                         </div>
                       </div>

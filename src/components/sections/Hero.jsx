@@ -41,7 +41,7 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="text-2xl text-on-surface/50 max-w-2xl font-medium leading-relaxed italic"
             >
-              Ongedierte-Snel.be levert geen standaard bestrijding. Wij garanderen een <span className="text-primary font-bold">onmiddellijke respons</span> en biologische precisie voor de meest kritieke omgevingen.
+              Ongediertevrij.be levert geen standaard bestrijding. Wij garanderen een <span className="text-primary font-bold">onmiddellijke respons</span> en biologische precisie voor de meest kritieke omgevingen.
             </motion.p>
 
             <motion.div 

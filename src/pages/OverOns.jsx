@@ -33,7 +33,7 @@ export default function OverOns() {
             Uw Lokale, <span className="text-secondary italic">Erkende</span> <br /> Ongediertebestrijders
           </h1>
           <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-medium leading-relaxed italic">
-            Ongedierte-Snel.be is ontstaan vanuit de behoefte aan snellere, eerlijkere en modernere ongediertebestrijding in Antwerpen & Omgeving. Wij vullen het gat in de markt met een bliksemsnelle, doelgerichte en lokaal verankerde aanpak.
+            Ongediertevrij.be is ontstaan vanuit de behoefte aan snellere, eerlijkere en modernere ongediertebestrijding in Antwerpen & Omgeving. Wij vullen het gat in de markt met een bliksemsnelle, doelgerichte en lokaal verankerde aanpak.
           </p>
         </div>
       </header>
@@ -53,7 +53,7 @@ export default function OverOns() {
             </p>
           </div>
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border border-black/5 shadow-3xl">
-            <img src="/specialist_pro.png" alt="Ongedierte-Snel.be Specialist" className="w-full h-full object-cover grayscale opacity-90" />
+            <img src="/specialist_pro.png" alt="Ongediertevrij.be Specialist" className="w-full h-full object-cover grayscale opacity-90" />
           </div>
         </div>
       </section>

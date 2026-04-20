@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: 'Werken jullie volgens de IPM-standaard?',
-    a: 'Ja, Ongedierte-Snel.be werkt strikt volgens de Integrated Pest Management (IPM) richtlijnen. Dit betekent dat we focusen op wering en monitoring om het gebruik van biociden tot een minimum te beperken.'
+    a: 'Ja, Ongediertevrij.be werkt strikt volgens de Integrated Pest Management (IPM) richtlijnen. Dit betekent dat we focusen op wering en monitoring om het gebruik van biociden tot een minimum te beperken.'
   },
   {
     q: 'Zijn de behandelingen veilig voor personeel of gezin?',

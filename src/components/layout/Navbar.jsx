@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-6 group">
           <div className="w-1.5 h-10 bg-secondary rounded-full group-hover:h-12 transition-all duration-700" />
           <div className="flex flex-col">
-            <span className={`text-2xl font-black font-display tracking-tighter uppercase transition-all duration-700 ${isScrolled ? 'text-primary' : 'text-white'}`}>Ongedierte-Snel<span className="text-secondary italic">.be</span></span>
+            <span className={`text-2xl font-black font-display tracking-tighter uppercase transition-all duration-700 ${isScrolled ? 'text-primary' : 'text-white'}`}>Ongediertevrij<span className="text-secondary italic">.be</span></span>
             <span className={`text-[9px] font-sans font-black uppercase tracking-[0.5em] transform -translate-y-1 transition-colors duration-700 ${isScrolled ? 'text-primary/20' : 'text-white/20'}`}>Ongediertebestrijding in Antwerpen — Snel. Grondig. Discreet.</span>
           </div>
         </Link>
