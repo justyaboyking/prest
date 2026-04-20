@@ -565,31 +565,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    {/* Authorized Execution Protocol */}
-                    <div className="bg-primary -mx-6 md:-mx-24 p-12 md:p-32 rounded-[3.5rem] text-white relative overflow-hidden">
-                      {/* Glow Effect */}
-                      <div className="absolute inset-0 opacity-5 pointer-events-none">
-                        <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[100px]"></div>
-                      </div>
 
-                      <div className="max-w-5xl mx-auto space-y-20 relative z-10">
-                        <div className="text-center space-y-6">
-                          <h3 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight text-white">Operationeel <span className="text-secondary italic">Protocol</span></h3>
-                          <p className="text-white/40 max-w-xl mx-auto">Onze gecertificeerde werkwijze voor {activeService.title}.</p>
-                        </div>
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-                          {activeService.deepIntel.expandedProtocol.map((p, idx) => (
-                            <div key={idx} className="space-y-8 relative group">
-                              <div className="text-8xl font-black text-white/5 absolute -top-12 -left-8 select-none transition-all duration-500 group-hover:text-secondary/10 group-hover:-translate-y-2">0{idx + 1}</div>
-                              <div className="space-y-4 relative z-10">
-                                <h4 className="text-2xl font-black uppercase text-secondary group-hover:text-white transition-colors duration-500">{p.t}</h4>
-                                <p className="text-white/60 leading-relaxed font-body transition-colors duration-500 group-hover:text-white/80">{p.d}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 )}
               </motion.div>
