@@ -1,34 +1,34 @@
 import { motion } from 'framer-motion';
-import { Search, Zap, ShieldCheck, CheckCircle2, Phone, MessageSquare, ClipboardCheck, ArrowRight } from 'lucide-react';
+import { Search, Zap, ShieldCheck, CheckCircle2, Phone, MessageSquare, ClipboardCheck, ArrowRight, Target, ShieldAlert, BadgeCheck } from 'lucide-react';
 import Footer from '../components/layout/Footer';
 
 export default function Werkwijze() {
   const steps = [
     {
       id: '01',
-      title: 'Technisch Advies & Analyse',
-      subtitle: 'Diagnose & Triage',
-      desc: 'Zodra u contact opneemt, start onze analyse. Geen callcenters, maar direct contact met een expert. Via WhatsApp Foto Service beoordelen we direct de ernst en sturen we indien nodig binnen 2 uur een team aan.',
+      title: 'Technisch Advies & Triage',
+      subtitle: 'Intelligence Gathering',
+      desc: 'Zodra u contact opneemt, start onze analyse. Geen callcenters, maar direct contact met een expert. Via onze WhatsApp Foto Service beoordelen we direct de ernst en sturen we indien nodig binnen 2 uur een team aan.',
       icon: MessageSquare
     },
     {
       id: '02',
-      title: 'Professionele Inspectie',
-      subtitle: 'Diepgaande Analyse',
+      title: 'Tactische Inspectie',
+      subtitle: 'Field Analysis',
       desc: 'Wij arriveren discreet in anonieme voertuigen. Ter plaatse voeren we een volledige inspectie uit met UV-detectie en thermische scans om de exacte bron en alle toegangswegen van de plaag te lokaliseren.',
       icon: Search
     },
     {
       id: '03',
-      title: 'Doelgerichte Bestrijding',
-      subtitle: 'Eliminate & Secure',
+      title: 'Gecertificeerde Bestrijding',
+      subtitle: 'Elimination Protocol',
       desc: 'Met BE-09 gecertificeerde precisie voeren we de bestrijding uit. We maken gebruik van geavanceerde, veilige biociden en IPM-technieken die de plaag effectief en permanent bij de bron aanpakken.',
       icon: Zap
     },
     {
       id: '04',
-      title: 'Certificering & Preventie',
-      subtitle: 'Garantie & Rapport',
+      title: 'Monitoring & Preventie',
+      subtitle: 'Reputation Shield',
       desc: 'Elke interventie eindigt met een digitaal Servicerapport. We dichten alle toegangswegen structureel af en monitoren de resultaten. U ontvangt een officieel hygiëne-certificaat zodra 100% succes is bereikt.',
       icon: ClipboardCheck
     }
@@ -39,109 +39,129 @@ export default function Werkwijze() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      className="bg-surface text-on-surface relative overflow-x-hidden"
     >
       <div className="grain-overlay" />
 
-      {/* HERO SECTION */}
-      <header className="relative min-h-[60vh] pt-48 pb-32 flex flex-col items-center justify-center bg-primary text-white overflow-hidden text-center">
-        <div className="absolute inset-0 z-0">
+      {/* OPERATIONAL PROTOCOL HEADER */}
+      <header className="relative min-h-[70vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-24 md:pt-48 pb-32">
+        <div className="absolute inset-0 z-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
-            alt="Werkwijze Background"
-            className="w-full h-full object-cover opacity-10 grayscale"
+            alt="Operational Protocol"
+            className="w-full h-full object-cover grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary to-primary" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary to-primary" />
         </div>
-        
-        <div className="max-w-7xl mx-auto px-6 space-y-8 relative z-10">
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="tag-elite !text-white !bg-white/10 !border-white/20 mx-auto"
+            className="flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-2 rounded-full w-fit mx-auto"
           >
-            Wetenschappelijke Aanpak (IPM)
+            <div className="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse shadow-impact shadow-secondary/50" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/80">Protocol: Wetenschappelijke Methodiek (IPM)</span>
           </motion.div>
-          <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase leading-[0.85]">
-            Onze <span className="text-secondary italic">Werkwijze</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-medium leading-relaxed italic">
-            Ongedierte bestrijden is een wetenschap. Wij werken volgens de strikte principes van Integrated Pest Management (IPM). Geen lapmiddelen, maar een structurele oplossing voor de lange termijn.
-          </p>
+
+          <div className="space-y-6">
+            <h1 className="text-6xl md:text-[8rem] font-display font-black tracking-tighter uppercase leading-[0.85]">
+              Ons <span className="text-secondary italic">Protocol.</span> <br />
+              <span className="text-white/40">IPM Gecertificeerd.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic">
+              Ongedierte bestrijden is een exacte wetenschap. Wij werken volgens de strikte principes van Integrated Pest Management. Geen lapmiddelen, maar structurele resultaten.
+            </p>
+          </div>
         </div>
       </header>
 
-      {/* STEPS TIMELINE */}
-      <section className="py-40 max-w-7xl mx-auto px-6 relative">
-        {/* Connection Line (Desktop) */}
-        <div className="hidden lg:block absolute top-[280px] left-10 right-10 h-0.5 bg-primary/5 z-0">
-           <motion.div 
-             initial={{ width: 0 }}
-             whileInView={{ width: '100%' }}
-             transition={{ duration: 2, ease: "easeInOut" }}
-             className="h-full bg-gradient-to-r from-secondary/0 via-secondary to-secondary/0"
-           />
+      {/* TECHNICAL TIMELINE */}
+      <section className="py-40 bg-surface relative -mt-32 z-20">
+        <div className="max-w-7xl mx-auto px-6 space-y-32">
+          <div className="text-center space-y-4">
+             <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs">Operationele Fase</span>
+             <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight text-primary">Beveiliging in <span className="text-secondary italic">4 Stappen</span></h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {steps.map((step, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-surface-offset p-10 md:p-16 rounded-[3.5rem] border border-black/5 hover:border-secondary/20 transition-all group relative overflow-hidden flex flex-col justify-between min-h-[400px]"
+              >
+                {/* Step Marker */}
+                <div className="absolute top-10 right-10">
+                   <div className="text-8xl font-black text-primary/[0.03] group-hover:text-secondary/10 transition-colors">{step.id}</div>
+                </div>
+
+                <div className="space-y-12 relative z-10">
+                  <div className="w-16 h-16 rounded-[1.5rem] bg-primary text-white flex items-center justify-center shadow-impact group-hover:bg-secondary group-hover:text-primary transition-all duration-500">
+                    <step.icon size={32} />
+                  </div>
+                  <div className="space-y-4">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-secondary">{step.subtitle}</span>
+                      <h3 className="text-3xl font-display font-black uppercase tracking-tight text-primary">{step.title}</h3>
+                    </div>
+                    <p className="text-lg text-on-surface/40 leading-relaxed font-medium italic">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OPERATIONAL STANDARDS SECTION */}
+      <section className="py-40 bg-primary text-white relative overflow-hidden">
+        {/* Glow Effect */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[100px]"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
-          {steps.map((step, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2, duration: 0.8 }}
-              className="space-y-10 group"
-            >
-              <div className="relative">
-                {/* Step Circle */}
-                <div className="w-16 h-16 rounded-2xl bg-white shadow-2xl border border-black/5 flex items-center justify-center text-primary group-hover:bg-secondary group-hover:text-white transition-all duration-500 relative z-10">
-                   <step.icon size={28} />
-                </div>
-                {/* Step ID shadow */}
-                <span className="absolute -top-6 -left-4 text-7xl font-display font-black text-primary/[0.03] group-hover:text-secondary/5 transition-colors">
-                  {step.id}
-                </span>
-                {/* Mobile Connection Line */}
-                <div className="lg:hidden absolute top-16 left-8 w-0.5 h-12 bg-primary/5" />
-              </div>
+        <div className="max-w-5xl mx-auto px-6 text-center space-y-16 relative z-10">
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight">Onze <span className="text-secondary italic">Standards</span></h2>
+            <p className="text-xl text-white/40 max-w-2xl mx-auto">Elke technicus is uitgerust met de hoogste graad van certificering en apparatuur.</p>
+          </div>
 
-              <div className="space-y-6">
-                <div className="space-y-1">
-                   <span className="text-[10px] font-black uppercase tracking-widest text-secondary">{step.subtitle}</span>
-                   <h2 className="text-2xl font-display font-black uppercase tracking-tight text-primary leading-none group-hover:text-secondary transition-colors">
-                     {step.title}
-                   </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              { t: 'IPM Gecertificeerd', d: 'Geïntegreerde beheersing gericht op preventie.', icon: ShieldCheck },
+              { t: 'Biocide 241/B', icon: BadgeCheck, d: 'Hoogste licentie voor professionele middelen.' },
+              { t: '24/7 Deployment', icon: Zap, d: 'Directe inzetbaarheid in heel Vlaanderen.' }
+            ].map((item, i) => (
+              <div key={i} className="space-y-6 p-8 bg-white/5 rounded-[2.5rem] border border-white/5 group hover:bg-white/10 transition-all">
+                <div className="w-12 h-12 bg-secondary text-primary rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                  <item.icon size={24} />
                 </div>
-                <p className="text-sm text-on-surface/50 leading-relaxed font-medium">
-                  {step.desc}
-                </p>
+                <h4 className="text-xl font-black uppercase tracking-tight text-secondary group-hover:text-white transition-colors">{item.t}</h4>
+                <p className="text-white/40 text-sm leading-relaxed">{item.d}</p>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-32 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200')] opacity-5 mix-blend-overlay grayscale" />
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="text-left space-y-6">
-            <h2 className="text-4xl md:text-6xl font-display font-black uppercase tracking-tight text-white leading-tight">
-              Directe <span className="text-secondary italic">Eliminatie</span> Nodig?
+      <section className="py-40 bg-surface border-t border-black/5">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
+          <div className="space-y-6">
+            <h2 className="text-6xl md:text-8xl font-display font-black text-primary uppercase tracking-tighter leading-none">
+              Direct <br /> <span className="text-secondary italic">Gemoedsrust.</span>
             </h2>
-            <p className="text-xl text-white/40 max-w-xl">Wacht niet tot het probleem escaleert. Onze experts staan 24/7 klaar om uw pand weer ongediertevrij te maken.</p>
+            <p className="text-xl md:text-2xl text-on-surface/40 font-medium">Neem geen risico met uw gezondheid of pand. Neem direct contact op.</p>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-8 w-full lg:w-auto">
-            <a href="tel:+3233000000" className="btn-elite !py-8 !px-12 flex-1">
-              <Phone size={24} />
-              Bel de 24/7 Spoedlijn
-            </a>
-            <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-8 !px-12 flex-1">
-              <MessageSquare size={24} />
-              WhatsApp Foto Service
-            </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
+            <a href="tel:+3233000000" className="btn-elite py-8 px-16 text-xl rounded-full shadow-impact">Bel Spoedlijn</a>
+            <a href="/contact" className="btn-ghost-elite py-8 px-16 text-xl rounded-full border-black/10 text-primary">Stuur Rapport</a>
           </div>
         </div>
       </section>
@@ -150,6 +170,7 @@ export default function Werkwijze() {
     </motion.main>
   );
 }
+
 
 
 

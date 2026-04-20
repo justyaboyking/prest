@@ -34,97 +34,89 @@ export default function Home() {
     >
       <div className="grain-overlay" />
       {/* HERO SECTION */}
-      <header className="relative min-h-[95vh] pt-48 pb-0 flex flex-col bg-primary text-white overflow-hidden">
-        <div className="absolute inset-0 mix-blend-overlay pointer-events-none overflow-hidden">
+      <header className="relative min-h-[90vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-24 md:pt-48">
+        {/* Cinematic Backdrop with Subtle Rotation */}
+        <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.img 
               key={bgIndex}
               src={bgImages[bgIndex]}
               alt="Pest Control Background" 
-              initial={{ x: "20%", opacity: 0, filter: "blur(10px)" }}
-              animate={{ x: 0, opacity: 0.7, filter: "blur(0px)" }}
-              exit={{ x: "-20%", opacity: 0, filter: "blur(10px)" }}
-              transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 0.15, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full object-cover grayscale"
             />
           </AnimatePresence>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary to-primary" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/80 via-primary/40 to-transparent pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 items-center z-10">
-          <div className="lg:col-span-8 space-y-10 relative z-20 text-left">
-            {/* Google Trust Signal */}
-            <motion.div 
-               initial={{ opacity: 0, y: -20 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ delay: 0.8, duration: 0.8 }}
-               className="flex items-center gap-6 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-2xl w-fit"
-            >
-              <div className="flex text-secondary text-sm gap-0.5">
-                {[1,2,3,4,5].map(i => <Star key={i} size={12} fill="currentColor" stroke="none" />)}
-              </div>
-              <div className="flex items-center gap-4 border-l border-white/10 pl-4">
-                 <span className="text-[10px] font-sans font-black tracking-[0.2em] text-white uppercase opacity-90">4.9/5 Klanttevredenheid</span>
-                 <div className="w-1 h-1 bg-white/20 rounded-full" />
-                 <span className="hidden sm:inline-block text-[10px] font-sans font-bold text-white/50 uppercase tracking-[0.1em]">Geverifieerd op Google</span>
-              </div>
-            </motion.div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-12">
+          {/* Status Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-2 rounded-full w-fit mx-auto"
+          >
+            <div className="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse shadow-impact shadow-secondary/50" />
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/80">Specialistische Inzet — Heel Vlaanderen</span>
+          </motion.div>
 
+          <div className="space-y-6">
             <motion.h1 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.0, duration: 0.8 }}
-              className="text-4xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter leading-none uppercase"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-6xl md:text-8xl lg:text-[7.5rem] font-display font-black tracking-tighter leading-[0.85] uppercase"
             >
-              Ongedierte vrij. <br />
-              <span className="text-secondary italic">Snel ter plaatse.</span> <br />
-              <span className="text-secondary">Directe aanpak.</span>
+              Ongedierte <span className="text-secondary italic">vrij.</span> <br />
+              <span className="text-white/40">Snel & Discreet.</span>
             </motion.h1>
-
+            
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed font-medium"
+              transition={{ delay: 0.4 }}
+              className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic"
             >
-              Strategische ongediertebeheersing met bliksemsnelle dekking door heel Vlaanderen. Gecertificeerde precisie voor een gegarandeerd resultaat.
+              Strategische ongediertebeheersing met bliksemsnelle dekking. <br className="hidden md:block" /> Gecertificeerde precisie voor een gegarandeerd resultaat.
             </motion.p>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.4, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-6 pt-6"
-            >
-              <a href="tel:+3233000000" className="btn-elite group rounded-full !py-4 !px-10">
-                <Zap size={20} className="text-white" />
-                <span>Bel Direct (+32 3 300 00 00)</span>
-              </a>
-              <a href="#onze-diensten" className="btn-ghost-elite !border-white/10 !text-white hover:!bg-white/5 rounded-full !py-4 !px-10">
-                Onze Diensten
-              </a>
-            </motion.div>
           </div>
 
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-8 justify-center pt-8"
+          >
+            <a href="tel:+3233000000" className="btn-elite px-16 py-8 rounded-[2rem] text-xl shadow-impact">
+              <Zap size={24} />
+              <span>Bel Direct: +32 3 300 00 00</span>
+            </a>
+            <a href="#onze-diensten" className="btn-ghost-elite !text-white !border-white/10 hover:!bg-white/5 px-16 py-8 rounded-[2rem] text-xl">
+              Bekijk Diensten
+            </a>
+          </motion.div>
         </div>
 
-        {/* Tactical Trust Row */}
-        <div className="relative w-full bg-white border-b border-slate-100 mt-20">
-           <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center justify-between gap-10">
-              {[
-              { t: 'Vlaamse Overheid Erkend (BE-09)', icon: ShieldCheck },
-              { t: 'Biocide Licentie 241/B', icon: TestTube },
-              { t: '100% Discretie Gegarandeerd', icon: Zap },
-              { t: 'Snel Ter Plaatse', icon: Clock }
-              ].map((badge, i) => (
-                <div key={i} className="flex flex-col lg:flex-row items-center gap-4 lg:pl-6 lg:border-l first:border-l-0 border-slate-200">
-                   <badge.icon size={28} className="text-secondary" />
-                   <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary text-center lg:text-left leading-tight max-w-[120px]">
-                      {badge.t}
-                   </span>
-                </div>
-              ))}
-           </div>
+        {/* Tactical Trust Signal Row */}
+        <div className="absolute bottom-12 left-0 w-full px-6">
+          <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:items-center gap-10 md:gap-20 opacity-40 hover:opacity-100 transition-opacity duration-700">
+            {[
+              { t: 'Overheid Erkend (BE-09)', icon: ShieldCheck },
+              { t: 'Biocide 241/B Expert', icon: BadgeCheck },
+              { t: '100% Discretie Protocol', icon: ShieldAlert },
+              { t: '7/7 Spoedservice', icon: Clock }
+            ].map((badge, i) => (
+              <div key={i} className="flex items-center gap-3">
+                 <badge.icon size={20} className="text-secondary" />
+                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                    {badge.t}
+                 </span>
+              </div>
+            ))}
+          </div>
         </div>
       </header>
 
@@ -132,10 +124,10 @@ export default function Home() {
       <section className="pb-48 bg-white px-6" id="onze-diensten">
         <div className="max-w-7xl mx-auto">
 
-          <div className="mb-24 md:mb-32 text-center md:text-left">
-             <div className="tag-elite mb-6">Dienstenoverzicht</div>
-             <h2 className="text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter leading-none">Vakkundige <br className="hidden md:block" /> Inspectie & <span className="text-secondary italic">Bestrijding</span></h2>
-             <p className="text-on-surface/50 mt-10 text-xl md:text-2xl max-w-4xl font-medium leading-relaxed md:mx-0 mx-auto">Snel, veilig en discreet. Wij lossen uw ongedierteprobleem vakkundig op met jarenlange expertise.</p>
+          <div className="mb-24 md:mb-32 text-center">
+             <div className="tag-elite mb-6 mx-auto">Tactical Portfolio</div>
+             <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase tracking-tight">Onze <span className="text-secondary">Specialisaties</span></h2>
+             <p className="text-on-surface/40 mt-6 text-lg max-w-2xl mx-auto font-medium leading-relaxed italic">Snel, veilig en discreet. Uw pand weer ongediertevrij door middel van gecertificeerde precisie.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:[grid-template-rows:450px_450px_180px] gap-8 md:gap-12">
@@ -228,15 +220,14 @@ export default function Home() {
             </div>
 
             {/* CTA — row 3, full width */}
-            <div className="min-h-[180px] md:col-span-2 lg:col-span-4 relative rounded-[3rem] overflow-hidden group bg-primary shadow-premium cursor-pointer mt-12">
-              <div className="absolute inset-0 flex transition-opacity duration-1000 group-hover:opacity-70 bg-primary-offset">
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/brown_rat_macro_1775488454904.png?v=2" /></div>
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="karkerlak.jpg" /></div>
-                <div className="flex-1 border-r border-white/5 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="/common_wasp_macro_1775488500000_1775488504014.png?v=2" /></div>
-                <div className="flex-1 opacity-10 grayscale group-hover:grayscale-0 transition-all"><img className="w-full h-full object-cover" alt="" src="ant_macro.png" /></div>
+            <div className="min-h-[220px] md:col-span-2 lg:col-span-4 relative rounded-[3rem] overflow-hidden group bg-primary shadow-premium mt-12">
+              <div className="absolute inset-0 opacity-10 flex grayscale group-hover:grayscale-0 transition-all duration-1000">
+                <img className="flex-1 object-cover" alt="" src="/brown_rat_macro_1775488454904.png?v=2" />
+                <img className="flex-1 object-cover" alt="" src="karkerlak.jpg" />
+                <img className="flex-1 object-cover" alt="" src="/common_wasp_macro_1775488500000_1775488504014.png?v=2" />
               </div>
               <div className="absolute inset-0 flex items-center justify-center z-20">
-                <Link to="/diensten" className="bg-white text-primary px-16 py-6 rounded-xl font-black text-xs tracking-[0.25em] uppercase shadow-premium hover:bg-secondary hover:text-white transition-all duration-500">Volledig Portfolio Inzien</Link>
+                <Link to="/diensten" className="btn-elite px-16 py-8 rounded-[2rem] text-xl shadow-impact">Volledig Portfolio Inzien</Link>
               </div>
             </div>
 
@@ -278,21 +269,27 @@ export default function Home() {
          </div>
       </section>
 
-      {/* WERKWIJZE */}
-      <section className="py-32 bg-primary text-white" id="onze-werkwijze">
-         <div className="max-w-7xl mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight mb-24">Operationeel Protocol in <span className="text-secondary">3 Stappen</span></h2>
+      {/* WERKWIJZE (PROTOCOL) */}
+      <section className="py-40 bg-primary text-white relative overflow-hidden" id="onze-werkwijze">
+         <div className="absolute inset-0 opacity-5 pointer-events-none">
+            <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[100px]"></div>
+         </div>
+
+         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div className="tag-elite !text-secondary !bg-secondary/5 !border-secondary/20 mb-8 mx-auto">Operationeel Protocol</div>
+            <h2 className="text-4xl md:text-5xl font-display font-black uppercase tracking-tight mb-24">In <span className="text-secondary italic">3 Stappen</span> Resultaat</h2>
+            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
                {[
-                 { i: '01', t: 'Grondige Inspectie & Vaste Prijs', d: 'We starten nooit blind. We brengen de oorzaak, de toegangspunten en de ernst van de plaag zorgvuldig in kaart. U krijgt direct vooraf een heldere prijs, zonder verborgen kosten.' },
-                 { i: '02', t: 'Directe & Veilige Bestrijding', d: 'Onze experts voeren de bestrijding onmiddellijk uit met IPM-gecertificeerde (Integrated Pest Management) methoden. Krachtig tegen ongedierte, maar 100% veilig voor uw gezin, medewerkers en huisdieren.' },
-                 { i: '03', t: 'Resultaatgarantie & Preventie', d: 'We lossen het niet alleen vandaag op, we zorgen dat ze wegblijven. U krijgt concreet nazorg- en preventieadvies om toekomstige plagen permanent buiten te houden.' }
+                 { i: '01', t: 'Strategische Analyse', d: 'We starten met een grondige inspectie en triage. We brengen de oorzaak, toegangspunten en ernst in kaart voor een vakkundige aanpak.' },
+                 { i: '02', t: 'Tactische Eliminatie', d: 'Onze gecertificeerde experts zetten professionele biociden en IPM-methodieken in. Veilig voor u en uw omgeving, genadeloos voor de plaag.' },
+                 { i: '03', t: 'Structurele Preventie', d: 'We lossen het niet alleen vandaag op. U ontvangt concreet preventieadvies en we dichten alle toegangswegen permanent af.' }
                ].map((step, i) => (
-                 <div key={i} className="space-y-8 group">
-                    <div className="text-7xl font-black text-white/5 group-hover:text-secondary/20 transition-colors uppercase leading-none">{step.i}</div>
-                    <div className="space-y-4">
-                       <h4 className="text-xl font-black uppercase tracking-tight">{step.t}</h4>
-                       <p className="text-white/70 max-w-xs mx-auto text-sm leading-relaxed">{step.d}</p>
+                 <div key={i} className="space-y-8 group relative">
+                    <div className="text-8xl font-black text-white/5 absolute -top-12 -left-8 select-none transition-all duration-500 group-hover:text-secondary/10 group-hover:-translate-y-2">0{i + 1}</div>
+                    <div className="space-y-4 relative z-10">
+                       <h4 className="text-2xl font-black uppercase text-secondary group-hover:text-white transition-colors duration-500">{step.t}</h4>
+                       <p className="text-white/40 leading-relaxed font-body transition-colors duration-500 group-hover:text-white/60">{step.d}</p>
                     </div>
                  </div>
                ))}
@@ -300,12 +297,13 @@ export default function Home() {
          </div>
       </section>
 
-      {/* OVER ONS */}
-      <section className="py-32 bg-white relative overflow-hidden" id="over-ons">
+      {/* EXPERTISE SUMMARY */}
+      <section className="py-40 bg-surface relative overflow-hidden" id="over-ons">
          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-10 group">
+            <div className="space-y-12">
                <div className="space-y-6">
-                 <h2 className="text-4xl md:text-6xl font-black text-primary uppercase leading-tight">Landelijke Expertise, <br /> <span className="text-secondary">Extreme Snelheid</span></h2>
+                 <div className="tag-elite !bg-primary/5 !text-primary !border-primary/10">Landelijke Expertise</div>
+                 <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase leading-tight">Extreme <span className="text-secondary">Snelheid</span> & Discreet Protocol</h2>
                </div>
                <div className="space-y-6 text-xl text-slate-500 font-medium leading-relaxed italic border-l-4 border-slate-100 pl-10">
                   <p>Ongediertevrij.be is dé erkende bestrijdingspartner voor heel Vlaanderen. Waar grote, logge bedrijven u dagenlang laten wachten, staan wij voor een bliksemsnelle aanpak.</p>
@@ -385,12 +383,12 @@ export default function Home() {
       </section>
 
       {/* IPM METHODOLOGY */}
-      <section className="py-24 md:py-32 bg-white border-y border-slate-100">
+      <section className="py-40 bg-surface border-y border-black/5">
          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
             <div className="space-y-12">
                <div className="space-y-6">
-                  <span className="text-xs font-bold tracking-[0.4em] text-secondary uppercase">Onze Methodiek</span>
-                  <h3 className="text-4xl md:text-5xl font-black uppercase leading-tight text-primary">IPM: <span className="bg-secondary text-white px-2">Geïntegreerde</span> <br /> Plaagdierbeheersing</h3>
+                  <span className="text-xs font-black tracking-[0.4em] text-secondary uppercase">Wetenschappelijke Methodiek</span>
+                  <h3 className="text-4xl md:text-5xl font-display font-black uppercase leading-tight text-primary">IPM: <span className="text-secondary italic">Geïntegreerde</span> <br /> Beheersing</h3>
                </div>
                <p className="text-xl text-slate-400 font-medium italic border-l-4 border-slate-50 pl-10">
                  "Onze IPM-aanpak helpt ons niet alleen het ongedierte te bestrijden, maar ook de oorzaak aan te pakken en nieuwe overlast te helpen voorkomen."
@@ -417,10 +415,11 @@ export default function Home() {
          </div>
       </section>
 
-      {/* SERVICE AREA: TACTICAL DEPLOYMENT MATRIX */}
-      <section className="py-32 bg-primary relative overflow-hidden" id="lokale-service">
-         {/* Background Decor */}
-         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/[0.02] -translate-y-1/2 translate-x-1/2 rounded-full pointer-events-none" />
+      {/* SERVICE AREA (TACTICAL DEPLOYMENT) */}
+      <section className="py-40 bg-primary relative overflow-hidden" id="lokale-service">
+         <div className="absolute inset-0 opacity-5 pointer-events-none">
+            <div className="absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[100px]"></div>
+         </div>
          
          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 relative z-10">
             {/* Left: Tactical Command Card */}
@@ -518,36 +517,36 @@ export default function Home() {
       </section>
 
       {/* PRICING & FAQ */}
-      <section className="py-24 md:py-32 bg-white border-t border-slate-100">
+      <section className="py-40 bg-surface border-t border-black/5">
          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-start">
-            <div className="lg:col-span-5 bg-white p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-slate-200 shadow-2xl relative overflow-hidden group">
+            <div className="lg:col-span-5 bg-white p-8 md:p-12 rounded-[3rem] border border-black/5 shadow-premium relative overflow-hidden group">
                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-all duration-700" />
-               <span className="text-[10px] font-black text-secondary uppercase tracking-widest font-sans">Transparant Tarief</span>
+               <span className="text-[10px] font-black text-secondary uppercase tracking-widest font-sans">Vast & Transparant Tarief</span>
                <div className="mt-8 mb-12">
-                  <span className="text-xs font-black uppercase text-slate-300">Vanaf</span>
+                  <span className="text-xs font-black uppercase text-on-surface/20 tracking-widest">Spoedinterventie vanaf</span>
                   <div className="flex items-baseline gap-2">
-                     <span className="text-7xl font-black text-primary tracking-tighter">€75</span>
-                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">/ Wespen</span>
+                     <span className="text-7xl font-black text-primary tracking-tighter">€150</span>
+                     <span className="text-[10px] font-black text-primary/40 uppercase tracking-widest">/ Knaagdieren</span>
                   </div>
-                  <div className="text-xs font-bold text-slate-400 mt-1">Knaagdieren vanaf €150</div>
+                  <div className="text-xs font-bold text-secondary mt-1 italic">Wespen vanaf €75 (incl. garantie)</div>
                </div>
                <ul className="space-y-6 mb-12">
                   {[
-                    'Verplaatsingskosten in de regio', 
-                    'Grondige Inspectie', 
-                    'Professionele Bestrijding met BE-09 Biociden', 
-                    'Preventie Advies & 100% Resultaatgarantie'
+                    'Volledige Technische Inspectie', 
+                    'Directe Bestrijding (Licentie 241/B)', 
+                    'Professioneel Wering- & Preventieadvies', 
+                    '100% Resultaatgarantie'
                   ].map((item, i) => (
-                    <li key={i} className="flex gap-4 items-center text-sm font-bold text-slate-600 uppercase tracking-tight">
+                    <li key={i} className="flex gap-4 items-center text-sm font-bold text-primary/60 uppercase tracking-tight">
                        <CheckCircle2 size={16} className="text-secondary" /> {item}
                     </li>
                   ))}
                </ul>
-               <a href="tel:+3233000000" className="btn-elite w-full py-6">Vraag Direct Spoedhulp Aan</a>
+               <a href="tel:+3233000000" className="btn-elite w-full py-8 !rounded-[2.5rem] shadow-impact">Bel Direct Voor Spoedhulp</a>
             </div>
 
             <div className="lg:col-span-7 space-y-12">
-               <h3 className="text-4xl md:text-5xl font-black uppercase text-primary tracking-tight">Transparante Tarieven, <br /> Geen Verrassingen</h3>
+               <h2 className="text-4xl md:text-5xl font-display font-black uppercase text-primary tracking-tight">Veelgestelde <span className="text-secondary italic">Vragen</span></h2>
                 <div className="space-y-4">
                   {[
                     { q: 'Hoe snel kan iemand langskomen?', a: 'Wij proberen zo snel mogelijk bij u te zijn door heel Vlaanderen. We begrijpen dat ongedierte niet kan wachten.' },
