@@ -28,13 +28,13 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="tag-elite !text-white !bg-white/10 !border-white/20 mx-auto"
           >
-            24/7 Bereikbaar — Regio Antwerpen
+            24/7 Bereikbaar — Heel Vlaanderen
           </motion.div>
           <h1 className="text-6xl md:text-8xl font-display font-black tracking-tighter uppercase leading-[0.85]">
             Bel Nu. Wij Zijn Er <br /> <span className="text-secondary">Binnen 2 Uur.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto font-medium leading-relaxed italic">
-            Ongedierte wacht niet. Bescherm uw gezin, uw pand en uw reputatie door direct in te grijpen. Wij zijn 24/7 bereikbaar voor alle noodgevallen in regio Antwerpen.
+            Ongedierte wacht niet. Bescherm uw gezin, uw pand en uw reputatie door direct in te grijpen. Wij zijn 24/7 bereikbaar voor alle noodgevallen door heel Vlaanderen.
           </p>
         </div>
       </header>
@@ -69,7 +69,7 @@ export default function Contact() {
                   </div>
                   <div className="flex gap-4 items-center">
                      <MapPin size={20} className="text-on-surface/30" />
-                     <span className="text-primary font-bold">Antwerpen, België</span>
+                     <span className="text-primary font-bold">Vlaanderen, België</span>
                   </div>
                   <div className="pt-6 border-t border-black/5 flex flex-col gap-2">
                      <span className="text-[10px] font-mono font-black uppercase tracking-widest text-on-surface/20 leading-none">BTW: BE 0123.456.789</span>

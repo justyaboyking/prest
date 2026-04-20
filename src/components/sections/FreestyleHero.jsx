@@ -74,7 +74,7 @@ export default function FreestyleHero() {
             <Scan size={32} className="animate-pulse" />
             <Target size={32} className="animate-pulse duration-1000" />
             <div className="w-20 h-[1px] bg-white/20" />
-            <span className="font-mono text-[9px] uppercase tracking-widest">Antwerpen Sector</span>
+            <span className="font-mono text-[9px] uppercase tracking-widest">Vlaanderen Sector</span>
           </div>
         </div>
       </div>

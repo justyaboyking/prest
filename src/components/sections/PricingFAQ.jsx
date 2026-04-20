@@ -67,7 +67,7 @@ export default function PricingFAQ() {
                         </div>
                     </summary>
                     <div className="px-6 pb-6 text-slate-500 leading-relaxed font-medium text-sm">
-                        In de regio Groot-Antwerpen hanteren wij een strikte responsgarantie van 2 uur voor spoedgevallen. Onze specialisten zijn 24/7 bereikbaar.
+                        In heel Vlaanderen hanteren wij een strikte responsgarantie van 2 uur voor spoedgevallen. Onze specialisten zijn 24/7 bereikbaar.
                     </div>
                 </details>
 

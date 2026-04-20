@@ -16,7 +16,7 @@ export default function TrustSignals() {
             </div>
             <div className="hidden md:block v-separator"></div>
             <div class="flex-1 text-center md:text-right space-y-2 reveal reveal-up">
-                <div class="text-display text-primary uppercase tracking-normal font-black">Antwerpen</div>
+                <div class="text-display text-primary uppercase tracking-normal font-black">Vlaanderen</div>
                 <div class="text-label text-slate-400">Actief in de regio</div>
             </div>
         </div>

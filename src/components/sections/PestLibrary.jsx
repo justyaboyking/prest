@@ -12,7 +12,7 @@ export default function PestLibrary() {
                     </h3>
                 </div>
                 <div className="text-slate-400 text-lg max-w-sm font-medium leading-relaxed border-l-2 border-white/10 pl-8">
-                    Gecertificeerde ongediertebestrijding voor de regio Antwerpen. 2 uur responsgarantie voor spoedgevallen.
+                    Gecertificeerde ongediertebestrijding door heel Vlaanderen. 2 uur responsgarantie voor spoedgevallen.
                 </div>
             </div>
 

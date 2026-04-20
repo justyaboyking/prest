@@ -8,6 +8,7 @@ import ServicesPage from './pages/Services';
 import Werkwijze from './pages/Werkwijze';
 import OverOns from './pages/OverOns';
 import Contact from './pages/Contact';
+import StickyCallButton from './components/ui/StickyCallButton';
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           </AnimatePresence>
         </main>
 
+        <StickyCallButton />
 
         {/* Global Brand Overlays */}
         <div className="fixed inset-0 pointer-events-none z-[200] opacity-[0.05]">

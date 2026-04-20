@@ -5,7 +5,7 @@ import { Plus, Minus, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     q: 'Wat is de gemiddelde responstijd?',
-    a: 'Voor dringende gevallen garanderen wij een inzet binnen 2 uur in de regio Antwerpen. Onze eenheden zijn strategisch gepositioneerd voor maximale dekking.'
+    a: 'Voor dringende gevallen garanderen wij een inzet binnen 2 uur door heel Vlaanderen. Onze eenheden zijn strategisch gepositioneerd voor maximale dekking.'
   },
   {
     q: 'Werken jullie volgens de IPM-standaard?',

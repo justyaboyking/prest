@@ -34,7 +34,7 @@ export default function ContactForm() {
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/70">Email</span>
-                <span className="text-xl font-bold font-display">info@tacticalguardian.be</span>
+                <span className="text-xl font-bold font-display">info@ongediertevrij.be</span>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ export default function ContactForm() {
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-white/70">Basis</span>
-                <span className="text-xl font-bold font-display">Regio Antwerpen</span>
+                <span className="text-xl font-bold font-display">Regio Vlaanderen</span>
               </div>
             </div>
           </div>

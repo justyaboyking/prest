@@ -74,9 +74,9 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.0, duration: 0.8 }}
-              className="text-6xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter leading-none uppercase"
+              className="text-4xl md:text-8xl lg:text-[7.5rem] font-black tracking-tighter leading-none uppercase"
             >
-              Ongedierte gemeld. <br />
+              Ongedierte vrij. <br />
               <span className="text-secondary italic">Snel ter plaatse.</span> <br />
               <span className="text-secondary">Directe aanpak.</span>
             </motion.h1>
@@ -87,7 +87,7 @@ export default function Home() {
               transition={{ delay: 1.2, duration: 0.8 }}
               className="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed font-medium"
             >
-              Gecertificeerd (BE-09). Veilig voor kinderen en huisdieren. Geen verrassingen op de factuur.
+              Strategische ongediertebeheersing met bliksemsnelle dekking door heel Vlaanderen. Gecertificeerde precisie voor een gegarandeerd resultaat.
             </motion.p>
 
             <motion.div 
@@ -201,7 +201,7 @@ export default function Home() {
 
             {/* Bedwantsen — row 2, col 2–3 */}
             <div className="min-h-[320px] md:col-span-2 lg:col-span-2 relative rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-xl hover:shadow-2xl transition-shadow">
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Bedwantsen" src="Bedwantsen.png" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]" alt="Bedwantsen" src="/bed-bug-stains-on-mattress.jpg" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent group-hover:via-primary/30 transition-all duration-1000"></div>
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end">
                 <h3 className="text-3xl md:text-4xl font-black text-white uppercase leading-none">Bedwantsen</h3>
@@ -245,8 +245,8 @@ export default function Home() {
       </section>
 
       {/* STATS & PERFORMANCE METRICS */}
-      <section className="py-48 bg-surface-offset border-y border-primary/5">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-24 text-center md:text-left">
+      <section className="py-24 md:py-48 bg-surface-offset border-y border-primary/5">
+         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 text-center md:text-left">
             <div className="space-y-4">
                <div className="text-8xl font-black text-primary tracking-tighter leading-none">100%</div>
                <div className="text-[10px] font-black uppercase tracking-[0.4em] text-on-surface/30">Resultaatgarantie <br /> per Interventie</div>
@@ -261,7 +261,7 @@ export default function Home() {
             </div>
          </div>
 
-         <div className="mt-24 p-12 glass-card rounded-[3.5rem] flex flex-col md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto">
+         <div className="mt-16 md:mt-24 p-8 md:p-12 glass-card rounded-[2.5rem] md:rounded-[3.5rem] flex flex-col md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto">
             <div className="flex items-center gap-10">
                <div className="w-20 h-20 bg-primary text-white rounded-[2rem] flex items-center justify-center shrink-0 shadow-premium">
                   <ShieldAlert size={36} />
@@ -305,27 +305,27 @@ export default function Home() {
          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-10 group">
                <div className="space-y-6">
-                 <h2 className="text-4xl md:text-6xl font-black text-primary uppercase leading-tight">Lokale Expertise, <br /> <span className="text-secondary">Extreme Snelheid</span></h2>
+                 <h2 className="text-4xl md:text-6xl font-black text-primary uppercase leading-tight">Landelijke Expertise, <br /> <span className="text-secondary">Extreme Snelheid</span></h2>
                </div>
                <div className="space-y-6 text-xl text-slate-500 font-medium leading-relaxed italic border-l-4 border-slate-100 pl-10">
-                  <p>Ongediertevrij.be is dé erkende bestrijdingspartner voor Antwerpen en de wijde omgeving. Waar grote, logge bedrijven u dagenlang laten wachten, staan wij voor een bliksemsnelle aanpak.</p>
+                  <p>Ongediertevrij.be is dé erkende bestrijdingspartner voor heel Vlaanderen. Waar grote, logge bedrijven u dagenlang laten wachten, staan wij voor een bliksemsnelle aanpak.</p>
                   <p>Wij zijn een team van door de Vlaamse Overheid (BE-09) erkende specialisten dat snel, veilig en discreet ongedierte bestrijdt. Ons doel is simpel: u direct uw gemoedsrust teruggeven met professioneel materiaal en een werkwijze waar anderen afhaken.</p>
                </div>
-               <div className="grid grid-cols-2 gap-8 pt-8">
+                <div className="flex flex-col gap-10 pt-10">
                   <div>
-                    <div className="text-3xl font-black text-primary uppercase">Specialisten</div>
-                    <div className="text-[9px] font-black uppercase tracking-widest text-slate-300">Erkende Experts</div>
+                    <div className="text-4xl font-black text-primary uppercase leading-tight">Specialisten</div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 mt-2">Erkende Experts</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-black text-secondary uppercase">Professioneel</div>
-                    <div className="text-[9px] font-black uppercase tracking-widest text-slate-300">Gecertificeerd</div>
+                    <div className="text-4xl font-black text-secondary uppercase leading-tight">Professioneel</div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 mt-2">Gecertificeerd</div>
                   </div>
                </div>
             </div>
             
             <div className="relative">
                <div className="aspect-[4/5] bg-primary rounded-[3rem] overflow-hidden shadow-3xl relative group">
-                  <img src="/professional_pest_technician_1776547360623.png" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" />
+                  <img src="/tactical_pest_specialist.png" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" />
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors" />
                   <div className="absolute bottom-10 left-10 right-10 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl flex items-center gap-4">
                      <BadgeCheck size={32} className="text-secondary" />
@@ -341,10 +341,10 @@ export default function Home() {
 
       {/* HORNET DETAIL */}
       <section className="bg-primary text-white flex flex-col lg:flex-row min-h-[600px] overflow-hidden">
-         <div className="lg:w-1/2 p-12 lg:p-32 flex flex-col justify-center space-y-12">
+         <div className="lg:w-1/2 p-10 md:p-16 lg:p-32 flex flex-col justify-center space-y-12">
             <div className="space-y-6">
                <div className="text-secondary font-black tracking-[0.2em] uppercase text-[10px] mb-4">Vlaamse Overheid Erkend Specialist</div>
-               <h3 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+               <h3 className="text-3xl md:text-5xl font-black uppercase leading-tight">
                   Snelle en Veilige <br /> <span className="text-secondary">Spoedbestrijding</span>
                </h3>
                <p className="text-xl text-white/70 max-w-xl italic leading-relaxed">
@@ -376,7 +376,7 @@ export default function Home() {
             </div>
          </div>
          <div className="lg:w-1/2 relative min-h-[400px]">
-           <img src="/tactical_pest_equipment_1776547376455.png" className="absolute inset-0 w-full h-full object-cover" />
+            <img src="/hero_tactical.png" className="absolute inset-0 w-full h-full object-cover" />
            <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/30 to-transparent" />
            <div className="absolute bottom-12 right-12 bg-secondary px-6 py-4 rounded-lg font-black text-[10px] tracking-widest uppercase flex items-center gap-4">
               <BadgeCheck size={20} /> BE-09 / 241-B Gecertificeerd
@@ -385,8 +385,8 @@ export default function Home() {
       </section>
 
       {/* IPM METHODOLOGY */}
-      <section className="py-32 bg-white border-y border-slate-100">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+      <section className="py-24 md:py-32 bg-white border-y border-slate-100">
+         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 items-center">
             <div className="space-y-12">
                <div className="space-y-6">
                   <span className="text-xs font-bold tracking-[0.4em] text-secondary uppercase">Onze Methodiek</span>
@@ -429,7 +429,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="bg-white text-primary p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden border border-primary/5"
+                  className="bg-white text-primary p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden border border-primary/5"
                >
                   <div className="absolute top-0 right-0 p-4 opacity-[0.05]">
                     <MapPin size={120} />
@@ -443,11 +443,11 @@ export default function Home() {
                      
                      <div className="space-y-4">
                         <h3 className="text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter">
-                          Lokaal Verankerd in <br /> 
-                          <span className="text-secondary">Regio Antwerpen</span>
+                          Operationeel in <br /> 
+                          <span className="text-secondary">Heel Vlaanderen</span>
                         </h3>
                         <p className="text-primary/60 text-sm font-medium leading-relaxed italic border-l-2 border-primary/10 pl-6">
-                           Wij staan 24/7 voor u klaar in Antwerpen en de omliggende gemeenten. Omdat we lokaal opereren, garanderen wij de snelste responstijd van de provincie.
+                           Wij staan 24/7 voor u klaar in heel Vlaanderen. Dankzij onze strategische spreiding garanderen wij de snelste responstijd in elke provincie.
                         </p>
                      </div>
 
@@ -465,7 +465,7 @@ export default function Home() {
             <div className="lg:col-span-8">
                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                   {[
-                    'Antwerpen', 'Mechelen', 'Sint-Niklaas', 'Turnhout', 'Lier', 'Brasschaat', 'Schoten', 'Kapellen', 'Mortsel', 'Beveren', 'Wijnegem', 'Aartselaar', 'Wilrijk', 'Edegem', 'Kontich', 'Boom'
+                    'Antwerpen', 'Gent', 'Brugge', 'Leuven', 'Mechelen', 'Aalst', 'Hasselt', 'Kortrijk', 'Sint-Niklaas', 'Oostende', 'Genk', 'Roeselare', 'Turnhout', 'Dendermonde', 'Beringen', 'Lier'
                   ].map((loc, i) => (
                     <motion.div 
                       key={loc}
@@ -518,9 +518,9 @@ export default function Home() {
       </section>
 
       {/* PRICING & FAQ */}
-      <section className="py-32 bg-white border-t border-slate-100">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
-            <div className="lg:col-span-5 bg-white p-12 rounded-[3rem] border border-slate-200 shadow-2xl relative overflow-hidden group">
+      <section className="py-24 md:py-32 bg-white border-t border-slate-100">
+         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-20 items-start">
+            <div className="lg:col-span-5 bg-white p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-slate-200 shadow-2xl relative overflow-hidden group">
                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-all duration-700" />
                <span className="text-[10px] font-black text-secondary uppercase tracking-widest font-sans">Transparant Tarief</span>
                <div className="mt-8 mb-12">
@@ -550,7 +550,7 @@ export default function Home() {
                <h3 className="text-4xl md:text-5xl font-black uppercase text-primary tracking-tight">Transparante Tarieven, <br /> Geen Verrassingen</h3>
                 <div className="space-y-4">
                   {[
-                    { q: 'Hoe snel kan iemand langskomen?', a: 'Wij proberen zo snel mogelijk bij u te zijn in de regio Antwerpen. We begrijpen dat ongedierte niet kan wachten.' },
+                    { q: 'Hoe snel kan iemand langskomen?', a: 'Wij proberen zo snel mogelijk bij u te zijn door heel Vlaanderen. We begrijpen dat ongedierte niet kan wachten.' },
                     { q: 'Werken jullie ook \'s avonds of in het weekend?', a: 'Ja. Wespen en ratten houden geen kantooruren. Onze spoedlijn is 7/7 bereikbaar.' },
                     { q: 'Is de bestrijding veilig voor mijn kat of hond?', a: 'Ja. Wij werken volgens de strengste IPM-normen en gebruiken lokaas uitsluitend in afgesloten, fraudebestendige veiligheidsdozen die onmogelijk te openen zijn door huisdieren of kinderen.' },
                     { q: 'Wat houdt de Licentie 241/B precies in?', a: 'Dit is de hoogste professionele erkenning. Het betekent dat onze technici bevoegd zijn om met hoogwaardige biociden te werken die niet beschikbaar zijn voor consumenten, wat zorgt voor een 100% resultaat waar doe-het-zelf middelen falen.' },
@@ -570,7 +570,7 @@ export default function Home() {
       </section>
 
       {/* INSTITUTIONAL CASE STUDIES (TESTIMONIALS) */}
-      <section className="py-48 bg-primary px-6 relative overflow-hidden" id="testimonials">
+      <section className="py-24 md:py-48 bg-primary px-6 relative overflow-hidden" id="testimonials">
          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200')] opacity-[0.03] mix-blend-overlay grayscale" />
          
           <div className="max-w-7xl mx-auto relative z-10">
@@ -586,7 +586,7 @@ export default function Home() {
                   {[
                     {
                       name: "Sarah V.",
-                      loc: "Antwerpen Centrum",
+                      loc: "Regio Vlaanderen",
                       initials: "SV",
                       quote: "Om 22:00 uur een rat in de keuken van ons restaurant. Ongediertevrij.be was er binnen het uur. Extreem professioneel, discreet en de plaag is volledig verdwenen. Ze hebben letterlijk onze zaak gered."
                     },
@@ -603,7 +603,7 @@ export default function Home() {
                       quote: "Zeer duidelijke communicatie vooraf over de prijs. Geen onverwachte kosten. Snel, vriendelijk en we waren direct van de plaag af."
                     }
                   ].map((rev, i) => (
-                    <div key={i} className="glass-card p-12 rounded-[3.5rem] hover:translate-y-[-10px] transition-all duration-700">
+                    <div key={i} className="glass-card p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] hover:translate-y-[-10px] transition-all duration-700">
                         <div className="flex text-secondary gap-1.5 mb-8">
                             {[1,2,3,4,5].map(s => <Star key={s} size={12} fill="currentColor" stroke="none" />)}
                         </div>
@@ -624,8 +624,8 @@ export default function Home() {
       </section>
 
       {/* TECHNICAL CONSULTATION & DEPLOYMENT REQUEST */}
-      <section className="py-48 bg-white" id="contact">
-         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
+      <section className="py-24 md:py-48 bg-white" id="contact">
+         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-40 items-center">
             <div className="space-y-16">
                <div className="space-y-8">
                  <div className="tag-elite">Deskundig Advies</div>
@@ -648,13 +648,13 @@ export default function Home() {
                      </div>
                      <div className="flex flex-col">
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] text-on-surface/30 mb-1">Regional Office</span>
-                        <span className="text-2xl font-bold text-primary italic">Antwerpen, België</span>
+                        <span className="text-2xl font-bold text-primary italic">Vlaanderen, België</span>
                      </div>
                   </div>
                </div>
             </div>
             
-            <div className="bg-primary p-16 md:p-20 rounded-[4.5rem] text-white space-y-16 shadow-premium relative overflow-hidden">
+            <div className="bg-primary p-8 md:p-20 rounded-[2.5rem] md:rounded-[4.5rem] text-white space-y-12 md:space-y-16 shadow-premium relative overflow-hidden">
                <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] pointer-events-none" />
                <div className="space-y-4">
                   <h3 className="text-4xl font-black uppercase tracking-tight leading-none">Aanvraag</h3>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-white/70 text-sm leading-relaxed max-w-xs">
-            Ongediertebestrijding in Antwerpen & Omgeving. Snel, grondig en discreet bij u thuis of op kantoor.
+            Ongediertebestrijding door heel Vlaanderen. Snel, grondig en discreet bij u thuis of op kantoor.
           </p>
         </div>
 
@@ -21,15 +21,15 @@ export default function Footer() {
           <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-white/50">Navigatie</h4>
           <ul className="space-y-4">
             {[
-              { n: 'Diensten', p: '#onze-diensten' },
-              { n: 'Over Ons', p: '#over-ons' },
-              { n: 'Werkwijze', p: '#onze-werkwijze' },
-              { n: 'Contact', p: '#contact' }
+              { n: 'Diensten', p: '/diensten' },
+              { n: 'Over Ons', p: '/over-ons' },
+              { n: 'Werkwijze', p: '/werkwijze' },
+              { n: 'Contact', p: '/contact' }
             ].map(item => (
               <li key={item.n}>
-                <a href={item.p} className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
+                <Link to={item.p} className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
                   {item.n}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

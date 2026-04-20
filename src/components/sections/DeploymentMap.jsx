@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Activity, Shield } from 'lucide-react';
 
 const deployments = [
-  { id: 1, x: '20%', y: '30%', status: 'Active', label: 'Antwerpen Haven' },
+  { id: 1, x: '20%', y: '30%', status: 'Active', label: 'Vlaamse Sector' },
   { id: 2, x: '45%', y: '50%', status: 'Active', label: 'Centrum' },
   { id: 3, x: '70%', y: '20%', status: 'Standby', label: 'Brasschaat' },
   { id: 4, x: '30%', y: '70%', status: 'Active', label: 'Zwijndrecht' },
@@ -29,7 +29,7 @@ export default function DeploymentMap() {
           </div>
 
           <p className="text-xl text-white/70 leading-relaxed font-medium italic border-l-2 border-white/10 pl-10">
-            Real-time visualisatie van actieve eenheden en beveiligde sectoren in de regio Antwerpen.
+            Real-time visualisatie van actieve eenheden en beveiligde sectoren door heel Vlaanderen.
           </p>
 
           <div className="grid grid-cols-2 gap-8 pt-10 border-t border-white/5">

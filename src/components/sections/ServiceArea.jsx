@@ -10,10 +10,10 @@ export default function ServiceArea() {
             <div className="lg:col-span-5 space-y-8 reveal reveal-left">
                 <div className="space-y-4">
                     <h2 className="text-sm font-bold tracking-[0.4em] text-secondary uppercase">Werkgebied</h2>
-                    <h3 className="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Regio Antwerpen</h3>
+                    <h3 className="text-4xl md:text-6xl font-black text-primary tracking-normal uppercase leading-tight">Heel Vlaanderen</h3>
                 </div>
                 <p className="text-slate-500 text-lg leading-relaxed font-medium">
-                    Wij staan snel voor u klaar in Antwerpen en de omliggende regio. Wij garanderen een snelle respons voor alle districten.
+                    Wij staan snel voor u klaar door heel Vlaanderen. Dankzij onze strategische spreiding garanderen wij een snelle respons in elke provincie.
                 </p>
                 
                 <div className="bg-primary/5 border-l-4 border-secondary p-6 rounded-r-xl space-y-2">
@@ -26,7 +26,7 @@ export default function ServiceArea() {
                 {/* Municipality Item */}
                 <div className="bg-white border border-slate-100 p-4 rounded-xl flex items-center gap-3 hover:border-secondary/30 transition-colors group">
                     <i className="ph-bold ph-map-pin text-secondary opacity-40 group-hover:opacity-100 transition-opacity"></i>
-                    <span className="text-[11px] font-black uppercase tracking-wider text-primary">Antwerpen Centrum</span>
+                    <span className="text-[11px] font-black uppercase tracking-wider text-primary">Vlaanderen Select</span>
                 </div>
                 <div className="bg-white border border-slate-100 p-4 rounded-xl flex items-center gap-3 hover:border-secondary/30 transition-colors group">
                     <i className="ph-bold ph-map-pin text-secondary opacity-40 group-hover:opacity-100 transition-opacity"></i>

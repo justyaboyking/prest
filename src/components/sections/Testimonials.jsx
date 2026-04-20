@@ -32,7 +32,7 @@ export default function Testimonials() {
                     <div className="w-10 h-10 bg-primary/5 rounded-lg flex items-center justify-center font-black text-primary text-xs border border-primary/10">SV</div>
                     <div>
                         <div className="text-xs font-black uppercase tracking-tight text-primary">Sarah V.</div>
-                        <div className="text-[10px] text-slate-400 font-mono">Antwerpen Centrum</div>
+                        <div className="text-[10px] text-slate-400 font-mono">Regio Vlaanderen</div>
                     </div>
                 </div>
             </div>

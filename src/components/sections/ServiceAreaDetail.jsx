@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const regions = [
-  'Antwerpen Stad', 'Brasschaat', 'Schoten', 'Edegem', 'Wilrijk', 'Kapellen',
+  'Gent Stad', 'Antwerpen Stad', 'Brugge', 'Leuven', 'Hasselt', 'Mechelen', 'Aalst', 'Kortrijk',
   'Kontich', 'Mortsel', 'Zwijndrecht', 'Berchem', 'Deurne', 'Merksem',
   'Hoboken', 'Ekeren', 'Aartselaar', 'Boechout'
 ];
@@ -20,7 +20,7 @@ export default function ServiceAreaDetail() {
                <h2 className="text-display text-primary leading-tight">Regionale <br/> <span className="text-on-surface/30 italic">Dekking</span></h2>
             </div>
             <p className="text-xl text-on-surface/50 font-medium leading-relaxed italic border-l-2 border-secondary/20 pl-10">
-               Directe inzetbaarheid in alle districten van Antwerpen en de omliggende gemeenten. 24/7 responsgarantie.
+               Directe inzetbaarheid in alle provincies van Vlaanderen en de omliggende gemeenten. 24/7 responsgarantie.
             </p>
             <div className="pt-6">
                <a href="tel:+3233000000" className="btn-elite w-full md:w-auto">

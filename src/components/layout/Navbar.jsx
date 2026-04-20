@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight, MessageSquare } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,9 +16,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Diensten', path: '/diensten' },
-    { name: 'Over Ons', path: '/#over-ons' },
-    { name: 'Werkwijze', path: '/#onze-werkwijze' },
-    { name: 'Contact', path: '/#contact' }
+    { name: 'Over Ons', path: '/over-ons' },
+    { name: 'Werkwijze', path: '/werkwijze' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Navbar() {
           <div className="w-1.5 h-10 bg-secondary rounded-full group-hover:h-12 transition-all duration-700" />
           <div className="flex flex-col">
             <span className={`text-2xl font-black font-display tracking-tighter uppercase transition-all duration-700 ${isScrolled ? 'text-primary' : 'text-white'}`}>Ongediertevrij<span className="text-secondary italic">.be</span></span>
-            <span className={`text-[9px] font-sans font-black uppercase tracking-[0.5em] transform -translate-y-1 transition-colors duration-700 ${isScrolled ? 'text-primary/20' : 'text-white/20'}`}>Ongediertebestrijding in Antwerpen — Snel. Grondig. Discreet.</span>
+            <span className={`text-[9px] font-sans font-black uppercase tracking-[0.5em] transform -translate-y-1 transition-colors duration-700 ${isScrolled ? 'text-primary/20' : 'text-white/20'}`}>Ongediertebestrijding in Vlaanderen</span>
           </div>
         </Link>
 
@@ -70,31 +70,58 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-white z-[110] flex flex-col items-center justify-center gap-10 lg:hidden p-10"
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed inset-0 bg-primary/95 backdrop-blur-xl z-[250] flex flex-col p-8 lg:hidden overflow-y-auto"
           >
-            <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-10 right-10 p-4 bg-primary text-white rounded-xl">
-              <X size={24} />
-            </button>
-            <div className="flex flex-col items-center gap-8">
-               <span className="tag-elite mb-6">Navigatie</span>
-               {navLinks.map((link) => (
-                 <Link 
-                   key={link.name} 
-                   to={link.path}
-                   onClick={() => setIsMobileMenuOpen(false)}
-                   className="text-5xl font-display font-black text-primary hover:text-secondary tracking-tighter uppercase text-center"
-                 >
-                   {link.name}
-                 </Link>
-               ))}
+            {/* TOP BAR IN MENU */}
+            <div className="flex justify-between items-center mb-16 px-2">
+              <span className="text-secondary font-black uppercase tracking-[0.3em] text-[10px] border border-secondary/20 px-3 py-1 rounded-full">
+                Menu
+              </span>
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-3 bg-secondary text-primary rounded-xl shadow-lg shadow-secondary/20 active:scale-90 transition-transform"
+              >
+                <X size={24} strokeWidth={3} />
+              </button>
             </div>
-            <a href="tel:+3233000000" className="btn-elite w-full mt-10">
-              <Phone size={24} />
-              Nu Bellen
-            </a>
+
+            {/* NAV LINKS */}
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link, idx) => (
+                <Link 
+                  key={idx}
+                  to={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-5xl font-display font-black text-white hover:text-secondary tracking-tighter uppercase flex items-center group transition-all"
+                >
+                  <span className="text-secondary/20 group-hover:text-secondary mr-4 text-2xl font-sans italic">0{idx + 1}</span>
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* BOTTOM ACTION AREA */}
+            <div className="mt-auto pt-12 space-y-4">
+              <div className="w-full h-[1px] bg-white/10 mb-8" />
+              
+              <p className="text-white/40 uppercase font-black tracking-widest text-[10px] text-center mb-6">
+                Direct hulp nodig in Vlaanderen?
+              </p>
+              
+              <a href="tel:+3233000000" className="btn-elite w-full py-6 flex justify-center items-center gap-3 rounded-2xl text-lg shadow-impact">
+                <Phone size={24} fill="currentColor" />
+                Nu Bellen
+              </a>
+
+              <a href="https://wa.me/3233000000" className="w-full py-4 flex justify-center items-center gap-2 text-white/60 font-bold uppercase tracking-tight text-sm hover:text-secondary transition-colors">
+                <MessageSquare size={18} />
+                WhatsApp Bericht
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

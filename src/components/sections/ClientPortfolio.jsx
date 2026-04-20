@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Building2, Factory, Ship, UtensilsCrossed } from 'lucide-react';
 
 const sectors = [
-  { icon: Ship, title: 'Logistiek & Haven', id: 'SEC_LOG_01', desc: 'Grootschalige inspecties in de haven van Antwerpen.' },
+  { icon: Ship, title: 'Logistiek & Haven', id: 'SEC_LOG_01', desc: 'Grootschalige inspecties in de grootste Vlaamse havens.' },
   { icon: Factory, title: 'Industrie & Productie', id: 'SEC_IND_01', desc: 'Continu-monitoring voor voedselveiligheid en farma.' },
   { icon: UtensilsCrossed, title: 'Horeca & Retail', id: 'SEC_HOR_01', desc: 'Discreet management voor high-end ondernemingen.' },
   { icon: Building2, title: 'Vastgoedbeheer', id: 'SEC_RES_01', desc: 'Structurele oplossingen voor syndici en ontwikkelaars.' }
