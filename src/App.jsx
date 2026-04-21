@@ -1,15 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
-import { ShieldCheck, X } from 'lucide-react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import ServicesPage from './pages/Services';
 import Werkwijze from './pages/Werkwijze';
 import OverOns from './pages/OverOns';
 import Contact from './pages/Contact';
-import StickyCallButton from './components/ui/StickyCallButton';
 
+function AnimatedRoutes() {
+  const location = useLocation();
+  
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/diensten" element={<ServicesPage />} />
+        <Route path="/werkwijze" element={<Werkwijze />} />
+        <Route path="/over-ons" element={<OverOns />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
 export default function App() {
   return (
@@ -18,18 +31,8 @@ export default function App() {
         <Navbar />
         
         <main>
-          <AnimatePresence mode="wait">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/diensten" element={<ServicesPage />} />
-              <Route path="/werkwijze" element={<Werkwijze />} />
-              <Route path="/over-ons" element={<OverOns />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </AnimatePresence>
+          <AnimatedRoutes />
         </main>
-
-        <StickyCallButton />
 
         {/* Global Brand Overlays */}
         <div className="fixed inset-0 pointer-events-none z-[200] opacity-[0.05]">
@@ -42,6 +45,3 @@ export default function App() {
     </Router>
   );
 }
-
-
-

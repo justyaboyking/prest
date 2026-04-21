@@ -44,7 +44,7 @@ export default function Werkwijze() {
       <div className="grain-overlay" />
 
       {/* OPERATIONAL PROTOCOL HEADER */}
-      <header className="relative min-h-[70vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-24 md:pt-48 pb-32">
+      <header className="relative min-h-[85vh] md:min-h-[85vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-28 pb-16 md:pt-48 md:pb-32">
         <div className="absolute inset-0 z-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
@@ -54,22 +54,21 @@ export default function Werkwijze() {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary to-primary" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-8 md:space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-2 rounded-full w-fit mx-auto"
           >
             <div className="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse shadow-impact shadow-secondary/50" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/80">Protocol: Wetenschappelijke Methodiek (IPM)</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/80">Protocol: IPM Gecertificeerd</span>
           </motion.div>
 
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-[8rem] font-display font-black tracking-tighter uppercase leading-[0.85]">
-              Ons <span className="text-secondary italic">Protocol.</span> <br />
-              <span className="text-white/40">IPM Gecertificeerd.</span>
+            <h1 className="text-5xl md:text-7xl lg:text-[8rem] font-display font-black tracking-tighter uppercase leading-[0.85]">
+              Ons <span className="text-secondary italic">Protocol.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic">
+            <p className="text-lg md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic">
               Ongedierte bestrijden is een exacte wetenschap. Wij werken volgens de strikte principes van Integrated Pest Management. Geen lapmiddelen, maar structurele resultaten.
             </p>
           </div>
@@ -77,7 +76,7 @@ export default function Werkwijze() {
       </header>
 
       {/* TECHNICAL TIMELINE */}
-      <section className="py-40 bg-surface relative -mt-32 z-20">
+      <section className="py-20 md:py-40 bg-surface relative -mt-16 md:-mt-32 z-20">
         <div className="max-w-7xl mx-auto px-6 space-y-32">
           <div className="text-center space-y-4">
              <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs">Operationele Fase</span>
@@ -120,7 +119,7 @@ export default function Werkwijze() {
       </section>
 
       {/* OPERATIONAL STANDARDS SECTION */}
-      <section className="py-40 bg-primary text-white relative overflow-hidden">
+      <section className="py-20 md:py-40 bg-primary text-white relative overflow-hidden">
         {/* Glow Effect */}
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute right-0 top-0 translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white rounded-full blur-[100px]"></div>
@@ -151,17 +150,17 @@ export default function Werkwijze() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-40 bg-surface border-t border-black/5">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
+      <section className="py-20 md:py-40 bg-surface border-t border-black/5">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-12 md:space-y-16">
           <div className="space-y-6">
-            <h2 className="text-6xl md:text-8xl font-display font-black text-primary uppercase tracking-tighter leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-primary uppercase tracking-tighter leading-none">
               Direct <br /> <span className="text-secondary italic">Gemoedsrust.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-on-surface/40 font-medium">Neem geen risico met uw gezondheid of pand. Neem direct contact op.</p>
+            <p className="text-lg md:text-2xl text-on-surface/40 font-medium">Neem geen risico met uw gezondheid of pand. Neem direct contact op.</p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
-            <a href="tel:+3233000000" className="btn-elite py-8 px-16 text-xl rounded-full shadow-impact">Bel Spoedlijn</a>
-            <a href="/contact" className="btn-ghost-elite py-8 px-16 text-xl rounded-full border-black/10 text-primary">Stuur Rapport</a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">
+            <a href="tel:+3233000000" className="btn-elite py-6 px-12 md:px-16 text-lg md:text-xl rounded-full shadow-impact w-full sm:w-auto">Bel Spoedlijn</a>
+            <a href="/contact" className="btn-ghost-elite py-6 px-12 md:px-16 text-lg md:text-xl rounded-full border-black/10 text-primary w-full sm:w-auto">Stuur Rapport</a>
           </div>
         </div>
       </section>

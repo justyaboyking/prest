@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="grain-overlay" />
 
       {/* TACTICAL COMMAND HEADER */}
-      <header className="relative min-h-[70vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-24 md:pt-48 pb-32">
+      <header className="relative min-h-[85vh] md:min-h-[85vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden pt-28 pb-16 md:pt-48 md:pb-32">
         <div className="absolute inset-0 z-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200"
@@ -24,7 +24,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/50 via-primary to-primary" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center space-y-8 md:space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,11 +35,10 @@ export default function Contact() {
           </motion.div>
 
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-[8rem] font-display font-black tracking-tighter uppercase leading-[0.85]">
-              Direct <span className="text-secondary italic">Inzetbaar.</span> <br />
-              <span className="text-white/40">24/7 Support.</span>
+            <h1 className="text-5xl md:text-7xl lg:text-[8rem] font-display font-black tracking-tighter uppercase leading-[0.85]">
+              Direct <span className="text-secondary italic">Inzetbaar.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic">
+            <p className="text-lg md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed italic">
               Ongedierte wacht niet. Bescherm uw pand en uw reputatie door direct in te grijpen. Wij zijn binnen 2 uur ter plaatse door heel Vlaanderen.
             </p>
           </div>
@@ -47,7 +46,7 @@ export default function Contact() {
       </header>
 
       {/* INCIDENT REPORT & CONTACT HUB */}
-      <section className="py-40 bg-surface relative -mt-32 z-20">
+      <section className="py-20 md:py-40 bg-surface relative -mt-16 md:-mt-32 z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
             

@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="py-20 px-6 border-t border-white/5 bg-primary overflow-hidden relative">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
-        <div className="col-span-1 md:col-span-1 space-y-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 relative z-10">
+        <div className="col-span-2 md:col-span-1 space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-8 bg-secondary rounded-full" />
             <div className="flex flex-col">
-              <span className="font-display font-black text-2xl tracking-tighter uppercase leading-none text-white">Ongediertevrij.be</span>
+              <span className="font-display font-black text-2xl tracking-tighter uppercase leading-none text-white">Ongediertevrij<span className="text-secondary italic">.be</span></span>
               <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-secondary font-bold">Wij helpen u direct.</span>
             </div>
           </div>
@@ -21,15 +22,15 @@ export default function Footer() {
           <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-white/50">Navigatie</h4>
           <ul className="space-y-4">
             {[
-              { n: 'Diensten', p: '#onze-diensten' },
-              { n: 'Over Ons', p: '#over-ons' },
-              { n: 'Werkwijze', p: '#onze-werkwijze' },
-              { n: 'Contact', p: '#contact' }
+              { n: 'Diensten', p: '/diensten' },
+              { n: 'Over Ons', p: '/over-ons' },
+              { n: 'Werkwijze', p: '/werkwijze' },
+              { n: 'Contact', p: '/contact' }
             ].map(item => (
               <li key={item.n}>
-                <a href={item.p} className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
+                <Link to={item.p} className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
                   {item.n}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -38,11 +39,16 @@ export default function Footer() {
         <div className="space-y-6">
           <h4 className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-white/50">Diensten</h4>
           <ul className="space-y-4">
-            {['Muizen & Ratten', 'Wespen', 'Kakkerlakken', 'Bedwantsen'].map(item => (
-              <li key={item}>
-                <a href="#onze-diensten" className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
-                  {item}
-                </a>
+            {[
+              { n: 'Muizen & Ratten', p: '/diensten?id=huismuis' },
+              { n: 'Wespen', p: '/diensten?id=wesp' },
+              { n: 'Kakkerlakken', p: '/diensten?id=kakkerlak' },
+              { n: 'Bedwantsen', p: '/diensten?id=bedwants' }
+            ].map(item => (
+              <li key={item.n}>
+                <Link to={item.p} className="text-white/60 hover:text-secondary text-sm font-bold transition-colors">
+                  {item.n}
+                </Link>
               </li>
             ))}
           </ul>
@@ -78,6 +84,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-

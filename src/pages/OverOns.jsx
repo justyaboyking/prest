@@ -51,7 +51,7 @@ export default function OverOns() {
       <div className="grain-overlay" />
 
       {/* CINEMATIC HERO */}
-      <header className="relative min-h-[90vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden text-center pt-24">
+      <header className="relative min-h-[85vh] md:min-h-[90vh] flex flex-col items-center justify-center bg-primary text-white overflow-hidden text-center pt-28 pb-16 md:pt-24">
         {/* Background Layer */}
         <div className="absolute inset-0 z-0">
           <img
@@ -62,12 +62,7 @@ export default function OverOns() {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/80 to-primary" />
         </div>
 
-        {/* Global Brand Overlays (Scanlines) */}
-        <div className="absolute inset-0 pointer-events-none z-[1] opacity-[0.05]">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-12">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +80,7 @@ export default function OverOns() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-7xl md:text-[10rem] font-display font-black tracking-tighter uppercase leading-[0.8] flex flex-col"
+            className="text-6xl md:text-8xl lg:text-[10rem] font-display font-black tracking-tighter uppercase leading-[0.8] flex flex-col"
           >
             Over <br />
             <span className="text-secondary italic">Ons</span>
@@ -96,7 +91,7 @@ export default function OverOns() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl md:text-3xl text-white/50 max-w-4xl mx-auto font-medium leading-[1.1] italic uppercase"
+            className="text-lg md:text-2xl text-white/50 max-w-4xl mx-auto font-medium leading-relaxed italic"
           >
             Ongediertevrij.be is de standaard voor strategische ongediertebestrijding in Vlaanderen. Snel, grondig en discreet.
           </motion.p>
@@ -128,12 +123,12 @@ export default function OverOns() {
       </section>
 
       {/* THE MISSION - BENTLY STYLE TEXT SECTION */}
-      <section className="py-32 md:py-48 bg-white overflow-hidden" id="missie">
+      <section className="py-20 md:py-48 bg-white overflow-hidden" id="missie">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
             <div className="lg:col-span-8 flex flex-col gap-12">
                <div className="tag-elite">Onze Missie</div>
-               <h2 className="text-5xl md:text-8xl font-display font-black text-primary uppercase leading-[0.9] tracking-tighter">
+               <h2 className="text-4xl md:text-6xl lg:text-8xl font-display font-black text-primary uppercase leading-[0.9] tracking-tighter">
                   Wij zijn er voor wie <span className="text-secondary italic">niet kan wachten</span> op een oplossing.
                </h2>
                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-on-surface/60 font-medium leading-relaxed text-xl">
@@ -157,7 +152,7 @@ export default function OverOns() {
       </section>
 
       {/* BENTO GRID STANDARDS */}
-      <section className="py-32 bg-surface-offset">
+      <section className="py-20 md:py-32 bg-surface-offset">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <div className="text-center space-y-4">
             <span className="text-secondary font-black tracking-[0.3em] uppercase text-xs">Technische Normen</span>
@@ -201,7 +196,7 @@ export default function OverOns() {
       </section>
 
       {/* THE SPECIALIST CALLOUT - MASSIVE IMAGE & TEXT SECTION */}
-      <section className="py-48 md:py-64 bg-primary text-white overflow-hidden relative">
+      <section className="py-24 md:py-64 bg-primary text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="relative group">
@@ -225,7 +220,7 @@ export default function OverOns() {
                    <div className="w-12 h-[2px] bg-secondary" />
                    <span className="text-secondary font-black uppercase tracking-[0.4em] text-xs">Waarom Wij Snel Staan</span>
                 </div>
-                <h2 className="text-5xl md:text-8xl font-display font-black uppercase leading-[0.85] tracking-tighter">
+                <h2 className="text-4xl md:text-6xl lg:text-8xl font-display font-black uppercase leading-[0.85] tracking-tighter">
                   Uw partner <br />
                   in de <span className="text-secondary italic">frontlinie</span>
                 </h2>
@@ -257,16 +252,16 @@ export default function OverOns() {
       </section>
 
       {/* FINAL JOIN THE FRONT LINE CALL TO ACTION */}
-      <section className="py-40 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-16">
+      <section className="py-20 md:py-40 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center space-y-12 md:space-y-16">
           <div className="space-y-6">
-            <h2 className="text-6xl md:text-8xl font-display font-black text-primary uppercase tracking-tighter leading-none">
+            <h2 className="text-5xl md:text-8xl font-display font-black text-primary uppercase tracking-tighter leading-none">
               Direct <br /> <span className="text-secondary italic">Ondersteuning</span>
             </h2>
-            <p className="text-xl md:text-2xl text-on-surface/40 font-medium">Blijf niet zitten met het probleem. Bel de specialisten van Ongediertevrij.be.</p>
+            <p className="text-lg md:text-2xl text-on-surface/40 font-medium">Blijf niet zitten met het probleem. Bel de specialisten van Ongediertevrij.be.</p>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-             <a href="tel:+3233000000" className="btn-elite py-6 px-12 text-xl w-full sm:w-auto shadow-impact rounded-full">Bel Nu Direct</a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8">
+             <a href="tel:+3233000000" className="btn-elite py-6 px-12 text-lg md:text-xl w-full sm:w-auto shadow-impact rounded-full">Bel Nu Direct</a>
              <div className="flex items-center gap-3">
                <div className="w-12 h-12 bg-surface-offset rounded-full flex items-center justify-center text-primary/40">
                   <Users size={20} />
