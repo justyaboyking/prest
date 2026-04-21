@@ -849,32 +849,45 @@ export default function ServicesPage() {
         const headerConfig = getHeaderConfig();
 
         return (
-          <header className="relative flex flex-col justify-start md:justify-center bg-primary text-white overflow-hidden transition-all duration-700 min-h-[100svh] md:min-h-[85vh] pt-28 pb-4 md:pt-48 md:pb-0">
-            <div className={`absolute inset-0 z-0 transition-all duration-1000 ${headerConfig.bgClass}`} style={{backgroundImage: `url("${headerConfig.image}")`}}></div>
+          <header className="relative flex flex-col bg-primary text-white overflow-hidden transition-all duration-700 min-h-0 md:min-h-[85vh] md:justify-center">
+            {/* Desktop: background image on the right side */}
+            <div className={`hidden md:block absolute inset-0 z-0 transition-all duration-1000 ${headerConfig.bgClass}`} style={{backgroundImage: `url("${headerConfig.image}")`}}></div>
             <div className="hidden md:block absolute inset-0 z-[1] bg-gradient-to-r from-primary via-primary/40 to-transparent"></div>
-            <div className="md:hidden absolute inset-0 z-[1] bg-gradient-to-b from-primary via-primary/90 to-transparent"></div>
-            <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-6 md:space-y-12 w-full flex-1 flex flex-col text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24">
-              <div className="flex items-center justify-center md:justify-start gap-4 mb-2 mt-4 md:mt-0" style={{opacity: 1, transform: 'none'}}>
+
+            {/* Text Content */}
+            <div className="relative z-10 max-w-7xl mx-auto px-6 space-y-5 md:space-y-12 w-full flex flex-col text-center md:text-left items-center md:items-start md:max-w-[50%] md:mx-0 md:pl-24 pt-28 md:pt-48 pb-6 md:pb-0">
+              <div className="flex items-center justify-center md:justify-start gap-4">
                 <div className="w-16 h-[1px] bg-secondary/30 hidden md:block"></div>
                 <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.5em] text-secondary border border-secondary/20 bg-secondary/10 px-4 py-2 rounded-full backdrop-blur-sm">Snel. Grondig. Discreet.</span>
               </div>
-              <h1 className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4" style={{opacity: 1, transform: 'none'}}>
-                <span className="text-5xl sm:text-6xl md:text-8xl text-white leading-[0.9]">{headerConfig.title}</span>
-                <span className="text-secondary text-4xl sm:text-5xl md:text-7xl italic leading-[0.9]">Wij komen langs<br className="hidden md:block" /><span className="md:hidden"> </span>en lossen het op.</span>
+              <h1 className="font-display font-black tracking-tighter uppercase w-full flex flex-col gap-1 md:gap-4">
+                <span className="text-[2.75rem] sm:text-6xl md:text-8xl text-white leading-[0.9]">{headerConfig.title}</span>
+                <span className="text-secondary text-3xl sm:text-5xl md:text-7xl italic leading-[0.9]">Wij komen langs<br className="hidden md:block" /><span className="md:hidden"> </span>en lossen het op.</span>
               </h1>
-              <div className="text-base md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight" style={{opacity: 1, transform: 'none'}}>
-                We zoeken waar ze vandaan komen en <span className="text-secondary italic">sluiten dat af</span>.<span className="text-white/40 text-[10px] md:text-sm block mt-4 md:mt-6 font-bold uppercase tracking-widest">Stap voor stap — tot het probleem weg is.</span>
-                <div className="mt-8 md:mt-10 flex flex-col sm:flex-row w-full md:w-auto gap-3 z-20">
-                  <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-phone text-white mr-2" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-                    Bel voor een afspraak
-                  </a>
-                  <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-message-square mr-2" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
-                    WhatsApp Foto → Advies
-                  </a>
-                </div>
+              <div className="text-sm md:text-2xl text-white/80 max-w-4xl font-medium leading-relaxed tracking-tight">
+                We zoeken waar ze vandaan komen en <span className="text-secondary italic">sluiten dat af</span>.
+                <span className="text-white/40 text-[10px] md:text-sm block mt-3 md:mt-6 font-bold uppercase tracking-widest">Stap voor stap — tot het probleem weg is.</span>
               </div>
+              <div className="flex flex-col sm:flex-row w-full md:w-auto gap-3 z-20">
+                <a href="tel:+3233000000" className="btn-elite group !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone text-white mr-2" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                  Bel voor een afspraak
+                </a>
+                <a href="https://wa.me/3233000000" className="btn-ghost-elite !text-white !border-white/20 hover:!bg-white/10 !py-4 !px-8 text-sm md:text-base rounded-full w-full sm:w-auto text-center flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-square mr-2" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+                  WhatsApp Foto → Advies
+                </a>
+              </div>
+            </div>
+
+            {/* Mobile: specimen image shown below content */}
+            <div className="md:hidden relative w-full h-[45vh] mt-auto">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary via-transparent to-primary/80 z-[1]" />
+              <img
+                src={headerConfig.image}
+                alt={headerConfig.title}
+                className="w-full h-full object-contain object-center relative z-0 opacity-90"
+              />
             </div>
           </header>
         );
